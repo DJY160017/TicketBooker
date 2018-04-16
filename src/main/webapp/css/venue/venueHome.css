@@ -1,0 +1,118 @@
+body {
+    background-color: #f9f9f9;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: #444444;
+}
+
+.banner-holder {
+    background: #222;
+    overflow: hidden;
+    position: relative;
+    height: 450px;
+}
+
+.banner-image-holder img {
+    width: 100%;
+    background-size: cover;
+    margin-top: -10%;
+    filter: brightness(60%);
+}
+
+.banner-desc {
+    background: transparent;
+
+    position: absolute;
+    top: 25%;
+    left: 0;
+    right: 0;
+}
+
+.banner-desc h1 {
+    color: #FFFFFF;
+    font-size: 48px;
+}
+
+.banner-desc a {
+    display: inline-block;
+}
+
+.modal-dialog {
+    width: 400px;
+}
+
+#loginLabel {
+    margin-left: 22px;
+}
+
+.modal-body {
+    margin-top: 30px;
+}
+
+.modal-body .form-group {
+    margin-bottom: 25px;
+}
+
+#rem-password {
+    padding-right: 66px;
+}
+
+.feature-wrapper-odd, .feature-wrapper-mean {
+    width: 100%;
+}
+
+body {
+    background: #EBEFF0;
+}
+
+.features {
+    margin: 0;
+}
+
+.feature-wrapper-odd, .feature-wrapper-mean {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.feature-wrapper-odd {
+    background-color: #F1F4F9;
+}
+
+.feature-wrapper-mean {
+    background-color: #FFFFFF;
+}
+
+.desc {
+    padding-left: 7%;
+    padding-top: 4%;
+}
+
+.desc {
+transformY(0);
+    transition: all ease .6s;
+}
+
+.card {
+    position: absolute;
+    top: 400px;
+    left: 30px;
+    width: 88%;
+}
+
+.venue-application {
+    font-size: 80px;
+    color: rgba(22, 225, 202, 1);
+}
+
+.venue-add {
+    font-size: 80px;
+    color: rgba(30, 120, 7, 1);
+}
+
+.venue-plan {
+    font-size: 80px;
+    color: #d9534f;
+}

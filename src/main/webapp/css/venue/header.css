@@ -1,0 +1,41 @@
+.nav-wrapper {
+    text-align: center;
+    width: 100%;
+    background: rgba(30, 30, 30, .8);
+    transition: all .7s ease;
+    border-color: transparent;
+}
+
+.nav-wrapper:hover {
+    background: rgba(30, 30, 30, .9);
+}
+
+.navbar-nav {
+    margin-left: 40%;
+}
+
+.navbar-header {
+    padding-left: 5%;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #BDBDBD;
+    margin-left: 15px;
+    margin-right: 15px;;
+    padding-left: 8px;
+    padding-right: 8px;
+    transition: all .2s;
+}
+
+.navbar li > a.act {
+    color: #FFFFFF;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 6px;
+    opacity: 1;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+    color: #FFFFFF;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 6px;
+}

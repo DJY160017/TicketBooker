@@ -1,0 +1,59 @@
+.venue-info-panel {
+    height: auto;
+}
+
+.venueInfo {
+    margin: 20px 20px 30px;
+}
+
+.venue-plan {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 90%;
+}
+
+.venueInfo-input {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.venueInfo-tile {
+    border-bottom: 1px solid rgba(51, 51, 51, 0.3);
+}
+
+.venueInfo-button {
+    margin-top: 40px;
+    margin-left: 280px;
+}
+
+.password-tile {
+    margin-top: 20px;
+    border-bottom: 1px solid rgba(51, 51, 51, 0.3);
+}
+
+.venue-password-panel {
+    margin-top: 60px;
+    margin-left: 225px;
+    width: 40%;
+}
+
+.venue-password-button {
+    margin-left: 100px;
+}
+
+.venue-account-tile {
+    margin-top: 20px;
+    border-bottom: 1px solid rgba(51, 51, 51, 0.3);
+}
+
+.venue-account-panel {
+    margin-top: 40px;
+    margin-left: 225px;
+    width: 40%;
+}
+
+.venue-account-button {
+    margin-left: 100px;
+}
+

@@ -1,0 +1,28 @@
+.venue-application-verify {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 10px;
+    min-height: 90%;
+}
+
+.manager-settlement {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 10px;
+    min-height: 90%;
+}
+
+.platform-data-center {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 10px;
+    height: 95%;
+}
+
+.venue-application-verify-tile {
+    border-bottom: 1px solid rgba(51, 51, 51, 0.3);
+}
+
+.manager-settlement-tile {
+    border-bottom: 1px solid rgba(51, 51, 51, 0.3);
+}

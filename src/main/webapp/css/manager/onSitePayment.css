@@ -1,0 +1,53 @@
+.choose-seat {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.seat-map {
+    margin-top: 68px;
+}
+
+.checkout-pay {
+    margin-top: 20px;
+    margin-left: 100px;
+}
+
+.your-order {
+    overflow-y: auto;
+    width: 530px;
+    height: 340px;
+}
+
+.search-now-button {
+    width: 210px;
+    height: 33px;
+}
+
+.search-now {
+    margin-top: 50px;
+    margin-left: 140px;
+}
+
+.ticket-choose-panel {
+    margin-top: 60px;
+    height: 88%;
+}
+
+.program-info-input {
+    margin-top: 150px;
+    width: 50%;
+    border-right: 1px solid rgba(51, 51, 51, 0.3);
+}
+
+.program-show-content {
+    margin-top: 40px;
+    width: 50%;
+}
+
+.program-show-info-body {
+    margin-left: 40px;
+    overflow-y: auto;
+    width: 500px;
+    height: 400px;
+}

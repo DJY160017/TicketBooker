@@ -1,0 +1,23 @@
+.search {
+    border: 1px solid rgba(51, 51, 51, 0.3);
+    height: 165px;
+    margin-top: 100px;
+}
+
+.search-city {
+    margin-top: 30px;
+}
+
+.search-time {
+    margin-top: 100px;
+}
+
+.card-program {
+    width: 90%;
+    margin-top: 20px;
+}
+
+.card-pagination {
+    margin-top: 20px;
+    margin-left: 900px;
+}

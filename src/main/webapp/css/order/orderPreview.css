@@ -1,0 +1,32 @@
+.order-preview {
+    margin-top: 30px;
+    margin-left: 200px;
+    width: 65%;
+}
+
+.pay-button {
+    position: absolute;
+    top: 500px;
+    left: 400px;
+}
+
+.pay-cancel {
+    width: 180px;
+    height: 33px;
+}
+
+.pay-confirm {
+    width: 180px;
+    height: 33px;
+}
+
+.coupon-return-button {
+    position: absolute;
+    top: 500px;
+    left: 500px;
+}
+
+.coupon-return {
+    width: 180px;
+    height: 33px;
+}

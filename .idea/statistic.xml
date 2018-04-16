@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Statistic">
+    <option name="excludedDirectories">
+      <list>
+        <option value="$PROJECT_DIR$/target" />
+        <option value="$PROJECT_DIR$/.idea" />
+        <option value="$PROJECT_DIR$/src/main/webapp/img" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/fonts" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/tool" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/tool" />
+      </list>
+    </option>
+  </component>
+</project>

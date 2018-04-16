@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:task="http://www.springframework.org/schema/task"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	 http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	 http://www.springframework.org/schema/context
+	 http://www.springframework.org/schema/context/spring-context-3.0.xsd
+	 http://www.springframework.org/schema/mvc
+	 http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd">
+
+
+    <!-- 注册用于支持基于注解的控制器请求处理方法的bean对象，激活@Controller模式 -->
+    <mvc:annotation-driven conversion-service="conversionService"/>
+    <!-- 对包中的所有类进行扫描，以完成Bean创建和自动依赖注入的功能 -->
+    <context:component-scan base-package="booker.controller"/>
+    <context:component-scan base-package="booker.task"/>
+
+
+    <!--&lt;!&ndash; task任务扫描注解，用于日常定期更新 &ndash;&gt;-->
+    <task:annotation-driven/>
+
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+        <property name="messageConverters">
+            <!--<list>-->
+            <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"/>
+            <!--<bean class="org.springframework.http.converter.ByteArrayHttpMessageConverter"/>-->
+            <!--<bean class="org.springframework.http.converter.xml.SourceHttpMessageConverter"/>-->
+            <!--<bean class="org.springframework.http.converter.FormHttpMessageConverter"/>-->
+            <!--<bean class="org.springframework.http.converter.StringHttpMessageConverter"/>-->
+            <!--</list>-->
+        </property>
+    </bean>
+    <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+        <property name="formatters">
+            <set>
+                <!--<bean class="com.edu.nju.asi.utilities.spring.LocalDateFormatter"/>-->
+            </set>
+        </property>
+    </bean>
+
+    <!-- don't handle the static resource -->
+    <mvc:default-servlet-handler/>
+
+    <bean id="viewResolver"
+          class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/jsp/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <bean id="activeInterceptor" class="booker.task.ActiveCheckTask"/>
+        </mvc:interceptor>
+        <mvc:interceptor>
+            <mvc:mapping path="/external/**"/>
+            <mvc:mapping path="/userInfoManage"/>
+            <mvc:mapping path="/req_log_out"/>
+            <mvc:mapping path="/req_getUserInfo"/>
+            <mvc:mapping path="/req_ModifyUserInfo"/>
+            <mvc:mapping path="/req_ModifyPassword"/>
+            <mvc:mapping path="/ticketBookerManager/**"/>
+            <mvc:mapping path="/member/**"/>
+            <mvc:mapping path="/order/**"/>
+            <mvc:mapping path="/program/req_getVenuePlanInit"/>
+            <mvc:mapping path="/program/req_getVenuePlanByPage"/>
+            <mvc:mapping path="/program/req_getPlanMaxPage"/>
+            <mvc:mapping path="/program/req_getPlanPageNow"/>
+            <mvc:mapping path="/program/req_getCarterVenueBook"/>
+            <mvc:mapping path="/ticket/choose"/>
+            <mvc:mapping path="/ticket/req_getChooseInfo"/>
+            <mvc:mapping path="/ticket/req_getOneTicket"/>
+            <mvc:mapping path="/ticket/req_getLowPrice"/>
+            <mvc:mapping path="/venue/book"/>
+            <mvc:mapping path="/venue/req_book"/>
+            <!-- 用户是否已经登录的检查 -->
+            <bean id="userLoginInterceptor" class="booker.task.UserLoginCheckTask"/>
+        </mvc:interceptor>
+        <mvc:interceptor>
+            <mvc:mapping path="/program/req_getMyVenuePlan"/>
+            <mvc:mapping path="/venue/venueInfoManage"/>
+            <mvc:mapping path="/venue/req_log_out"/>
+            <mvc:mapping path="/venue/req_getVenueState"/>
+            <mvc:mapping path="/venue/req_getVenueInfo"/>
+            <mvc:mapping path="/venue/req_venueInfoModify"/>
+            <mvc:mapping path="/venue/req_venueModifyPassword"/>
+            <!-- 场馆是否已经登录的检查 -->
+            <bean id="venueLoginInterceptor" class="booker.task.VenueLoginCheckTask"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
+</beans>
