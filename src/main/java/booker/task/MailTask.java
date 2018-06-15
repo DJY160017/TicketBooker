@@ -22,7 +22,7 @@ public class MailTask {
     /**
      * 系统发件人的密码
      */
-    private static final String senderPassword = "qazwsxedc1234567";
+    private static final String senderPassword = "qazwsxedc123456";
 
     /**
      * 邮件session对象
