@@ -4,9 +4,9 @@ public class ManagerAccount {
 
     private final static String account = "admin";
 
-    private final static String system_mail = "************";
+    private final static String system_mail = "ticketbooker0013@163.com";
 
-    private final static String account_password = "******";
+    private final static String account_password = "1234567890";
 
     private ManagerAccount() {}
 
