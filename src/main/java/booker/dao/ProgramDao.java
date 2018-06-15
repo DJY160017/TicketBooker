@@ -180,4 +180,12 @@ public interface ProgramDao {
      * @return List<Program>
      */
     List<Program> searchPrograms(String key, LocalDateTime time);
+
+    /**
+     * 根据节目ID集合获取节目
+     *
+     * @param programIDS 节目ID列表
+     * @return 节目集合
+     */
+    List<Program> getAllProgram(List<ProgramID> programIDS);
 }

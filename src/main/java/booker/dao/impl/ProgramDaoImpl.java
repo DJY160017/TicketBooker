@@ -172,7 +172,7 @@ public class ProgramDaoImpl implements ProgramDao {
 
         String hql = "select max(p.programID.reserve_time) from Program p where p.programType=:type";
         Query query = session.createQuery(hql);
-        query.setParameter("type",programType);
+        query.setParameter("type", programType);
         LocalDateTime localDateTime = (LocalDateTime) query.list().get(0);
         transaction.commit();
         session.close();
@@ -463,5 +463,25 @@ public class ProgramDaoImpl implements ProgramDao {
         transaction.commit();
         session.close();
         return result;
+    }
+
+    /**
+     * 根据节目ID集合获取节目
+     *
+     * @param programIDS 节目ID列表
+     * @return 节目集合
+     */
+    @Override
+    public List<Program> getAllProgram(List<ProgramID> programIDS) {
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
+
+        String hql = "from Program p where p.programID in :list";
+        Query query = session.createQuery(hql);
+        query.setParameter("list", programIDS);
+        List<Program> programs = query.list();
+        transaction.commit();
+        session.close();
+        return programs;
     }
 }
