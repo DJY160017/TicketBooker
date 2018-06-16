@@ -4,6 +4,7 @@ import booker.model.Program;
 import booker.model.Venue;
 import booker.model.id.ProgramID;
 import booker.statistics.dao.PublisherStatisticsDao;
+import booker.util.helper.VenueSizeHelper;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -78,21 +79,11 @@ public class PublisherStatisticsDaoImpl implements PublisherStatisticsDao {
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
 
-        int min_col = 0;
-        int min_raw = 0;
-        int max_col = 0;
-        int max_raw = 0;
-        if (size.equals("小")) {
-            min_col = 5;
-            min_raw = 5;
-            max_raw = 10;
-            max_col = 10;
-        } else {
-            min_col = 11;
-            min_raw = 11;
-            max_raw = 16;
-            max_col = 16;
-        }
+        Map<String, Integer> map = VenueSizeHelper.getSizeParm(size);
+        int min_col = map.get("min_col");
+        int min_raw = map.get("min_raw");
+        int max_col = map.get("max_col");
+        int max_raw = map.get("max_raw");
 
         String hql = "select v from Venue v where v.col_num between :min_col and :max_col and v.raw_num between :min_raw and :max_raw";
         Query query = session.createQuery(hql);
