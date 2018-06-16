@@ -139,12 +139,12 @@ public class VenueStatisticsDaoImpl implements VenueStatisticsDao {
         List<Object[]> result = query.list();
         List<TwoDimensionModel> data = new ArrayList<>();
         for (Object[] objects : result) {
-            TwoDimensionModel<String, Double> twoDimensionModel = new TwoDimensionModel<>();
             int days = (int) objects[0];
             int year = (int) objects[1];
             int month = (int) objects[2];
             int duration = TimeHelper.getMonthLength(year, month);
             double index = (double) days / (double) duration;
+            TwoDimensionModel<String, Double> twoDimensionModel = new TwoDimensionModel<>();
             twoDimensionModel.setTag(String.valueOf(year) + "/" + String.valueOf(month));
             twoDimensionModel.setData(index);
             data.add(twoDimensionModel);
@@ -228,7 +228,7 @@ public class VenueStatisticsDaoImpl implements VenueStatisticsDao {
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
 
-        String hql = "select count(v),sum(v.price) from Venue v where v.address like :area";
+        String hql = "select count(v),sum(v.price) from Venue v where v.city=:area";
         Query query = session.createQuery(hql);
         query.setParameter("area", area);
         Object[] objects = (Object[]) query.list().get(0);
@@ -290,7 +290,7 @@ public class VenueStatisticsDaoImpl implements VenueStatisticsDao {
         int max_col = map.get("max_col");
         int max_raw = map.get("max_raw");
 
-        String hql = "select count(v),sum(v.price) from Venue v where v.address like :area and v.col_num between :min_col and :max_col and v.raw_num between :min_raw and :max_raw";
+        String hql = "select count(v),sum(v.price) from Venue v where v.city=:area and v.col_num between :min_col and :max_col and v.raw_num between :min_raw and :max_raw";
         Query query = session.createQuery(hql);
         query.setParameter("area", area);
         query.setParameter("min_col", min_col);

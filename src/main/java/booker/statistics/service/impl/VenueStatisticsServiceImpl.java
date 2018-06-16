@@ -114,8 +114,7 @@ public class VenueStatisticsServiceImpl implements VenueStatisticsService {
     @Override
     public double averageAreaPrice(int venueID) {
         Venue venue = venueDao.getVenue(venueID);
-        String city = venue.getAddress().substring(0, 2);
-        return venueStatisticsDao.averageAreaPrice(city);
+        return venueStatisticsDao.averageAreaPrice(venue.getCity());
     }
 
     /**
@@ -141,7 +140,7 @@ public class VenueStatisticsServiceImpl implements VenueStatisticsService {
     public double averageSizeAreaPrice(int venueID) {
         Venue venue = venueDao.getVenue(venueID);
         String size = VenueSizeHelper.getSize(venue.getCol_num(), venue.getRaw_num());
-        String city = venue.getAddress().substring(0, 2);
+        String city = venue.getCity();
         return venueStatisticsDao.averageSizeAreaPrice(city, size);
     }
 

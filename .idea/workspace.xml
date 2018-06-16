@@ -7,13 +7,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="abe1ef56-cec2-40a7-9fda-b8e1ae5f50eb" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/booker/util/helper/TimeHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/booker/util/helper/VenueSizeHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/booker/util/dataModel/SuperTwoDimensionModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c86d11a2-b545-40d1-9063-43919680ef85.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c86d11a2-b545-40d1-9063-43919680ef85.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/booker/statistics/dao/VenueStatisticsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booker/statistics/dao/VenueStatisticsDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/PublisherStatisticsDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/PublisherStatisticsDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/booker/model/Venue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booker/model/Venue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/booker/statistics/dao/ManagerStatisticsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booker/statistics/dao/ManagerStatisticsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/ManagerStatisticsDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/ManagerStatisticsDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/UserStatisticsDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/UserStatisticsDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/VenueStatisticsDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/VenueStatisticsDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/booker/statistics/service/VenueStatisticsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booker/statistics/service/VenueStatisticsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/booker/statistics/service/ManagerStatisticsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booker/statistics/service/ManagerStatisticsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/booker/statistics/service/impl/ManagerStatisticsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booker/statistics/service/impl/ManagerStatisticsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/booker/statistics/service/impl/PublisherStatisticsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booker/statistics/service/impl/PublisherStatisticsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/booker/statistics/service/impl/UserStatisticsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booker/statistics/service/impl/UserStatisticsServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/booker/statistics/service/impl/VenueStatisticsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booker/statistics/service/impl/VenueStatisticsServiceImpl.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -60,11 +65,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PublisherStatisticsDaoImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/PublisherStatisticsDaoImpl.java">
+      <file leaf-file-name="ManagerStatisticsDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/dao/ManagerStatisticsDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="92" column="47" lean-forward="true" selection-start-line="89" selection-start-column="7" selection-end-line="92" selection-end-column="47" />
+            <state relative-caret-position="506">
+              <caret line="92" column="7" selection-start-line="92" selection-start-column="7" selection-end-line="92" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -72,70 +77,57 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VenueStatisticsDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/dao/VenueStatisticsDao.java">
+      <file leaf-file-name="ManagerStatisticsDaoImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/ManagerStatisticsDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="102" column="61" selection-start-line="102" selection-start-column="61" selection-end-line="102" selection-end-column="61" />
+            <state relative-caret-position="352">
+              <caret line="289" column="19" selection-start-line="289" selection-start-column="19" selection-end-line="289" selection-end-column="19" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#532#533#0" expanded="true" />
+                <element signature="e#584#585#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VenueStatisticsDaoImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/VenueStatisticsDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="319" column="142" selection-start-line="319" selection-start-column="142" selection-end-line="319" selection-end-column="142" />
-              <folding>
-                <element signature="e#452#453#0" expanded="true" />
-                <element signature="e#504#505#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TimeHelper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/booker/util/helper/TimeHelper.java">
+      <file leaf-file-name="OrderDaoImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/booker/dao/impl/OrderDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="200">
-              <caret line="10" column="60" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="60" />
-              <folding>
-                <element signature="e#177#178#0" expanded="true" />
-                <element signature="e#244#245#0" expanded="true" />
-              </folding>
+              <caret line="23" column="48" lean-forward="true" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VenueStatisticsService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/service/VenueStatisticsService.java">
+      <file leaf-file-name="SettlementID.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/booker/model/id/SettlementID.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="66" column="45" lean-forward="true" selection-start-line="60" selection-start-column="4" selection-end-line="66" selection-end-column="45" />
+            <state relative-caret-position="240">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ManagerStatisticsServiceImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/service/impl/ManagerStatisticsServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="232">
+              <caret line="219" column="71" lean-forward="true" selection-start-line="219" selection-start-column="71" selection-end-line="219" selection-end-column="71" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1584#1585#0" expanded="true" />
+                <element signature="e#1611#1612#0" expanded="true" />
+                <element signature="e#2065#2066#0" expanded="true" />
+                <element signature="e#2092#2093#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VenueStatisticsServiceImpl.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/service/impl/VenueStatisticsServiceImpl.java">
+      <file leaf-file-name="ManagerStatisticsService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/service/ManagerStatisticsService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="406">
-              <caret line="164" column="16" selection-start-line="164" selection-start-column="16" selection-end-line="164" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VenueSizeHelper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/booker/util/helper/VenueSizeHelper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+              <caret line="51" column="10" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -161,11 +153,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>properties.setProperty(&quot;</find>
-      <find>col-xs-3 col-md-3 crea-card anim-paiement-return delayed</find>
-      <find>OfStock</find>
-      <find>venue-info</find>
-      <find>#</find>
       <find>format</find>
       <find>req_userPay</find>
       <find>req_generateAutoOrder</find>
@@ -191,10 +178,16 @@
       <find>unSubscribed-table-detail-body</find>
       <find>unpaid-table-detail-body</find>
       <find>cacheOrder</find>
+      <find>sub</find>
+      <find>like</find>
+      <find>new TwoDimensionModel</find>
+      <find>new TwoDimensionModel&lt;&gt;()</find>
+      <find>setTag</find>
     </findStrings>
     <dirStrings>
       <dir>D:\workspace\idea-workspace\TicketBooker\src\main\webapp\js</dir>
       <dir>D:\workspace\idea-workspace\TicketBooker\src\main\webapp\jsp</dir>
+      <dir>D:\workspace\git-repository\TicketBooker\src\main\java\booker\statistics</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -203,11 +196,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/js/manager/checkTicket.js" />
-        <option value="$PROJECT_DIR$/src/main/java/booker/controller/ManagerController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/tool/jquery.seat-charts.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/manager/onSitePayment.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/manager/onSitePayment.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/venue/venueInfo.css" />
         <option value="$PROJECT_DIR$/src/main/java/booker/util/exception/AccountInvalidException.java" />
         <option value="$PROJECT_DIR$/src/main/java/booker/task/ValidateTask.java" />
@@ -234,26 +222,31 @@
         <option value="$PROJECT_DIR$/src/main/java/booker/statistics/controller/VenueManagerController.java" />
         <option value="$PROJECT_DIR$/src/main/java/booker/statistics/controller/ManagerController.java" />
         <option value="$PROJECT_DIR$/src/main/java/booker/statistics/controller/VenueStatisticsController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/booker/statistics/service/ManagerStatisticsService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/booker/statistics/service/impl/UserStatisticsServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/booker/statistics/service/impl/ManagerStatisticsServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/ManagerStatisticsDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/booker/dao/OrderDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/booker/dao/impl/OrderDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/UserStatisticsDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/booker/dao/TicketDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/booker/model/Ticket.java" />
         <option value="$PROJECT_DIR$/src/main/java/booker/statistics/service/PublisherStatisticsService.java" />
         <option value="$PROJECT_DIR$/src/main/java/booker/statistics/dao/PublisherStatisticsDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/booker/statistics/service/impl/PublisherStatisticsServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/PublisherStatisticsDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/booker/util/helper/QuarterHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/booker/util/helper/TimeHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/booker/util/helper/VenueSizeHelper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/booker/statistics/service/VenueStatisticsService.java" />
         <option value="$PROJECT_DIR$/src/main/java/booker/statistics/dao/VenueStatisticsDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/VenueStatisticsDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/booker/statistics/service/VenueStatisticsService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/booker/model/Venue.java" />
         <option value="$PROJECT_DIR$/src/main/java/booker/statistics/service/impl/VenueStatisticsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/booker/util/dataModel/ThreeDimensionModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/booker/util/dataModel/TriDimensionModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/booker/util/dataModel/SuperTwoDimensionModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/booker/statistics/service/impl/UserStatisticsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/booker/statistics/service/impl/PublisherStatisticsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/VenueStatisticsDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/UserStatisticsDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/booker/statistics/service/ManagerStatisticsService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/booker/statistics/dao/ManagerStatisticsDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/ManagerStatisticsDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/booker/statistics/service/impl/ManagerStatisticsServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -423,25 +416,6 @@
               <item name="service" type="462c0819:PsiDirectoryNode" />
               <item name="impl" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="TicketBooker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicketBooker" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="booker" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TicketBooker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicketBooker" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="booker" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-              <item name="helper" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -468,7 +442,7 @@
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="last.edited.regexp" value="元" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../idea-workspace/TicketBooker" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/booker/statistics" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path" value="D:/nodeJS/node" />
     <property name="project.structure.last.edited" value="Facets" />
@@ -483,8 +457,22 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\workspace\idea-workspace\TicketBooker\src\main\webapp\jsp\manager" />
+      <recent name="D:\workspace\idea-workspace\TicketBooker\src\main\webapp\jsp\venue\plan" />
+      <recent name="D:\workspace\idea-workspace\TicketBooker\src\main\webapp\jsp\venue\add" />
+      <recent name="D:\workspace\idea-workspace\TicketBooker\src\main\webapp\jsp\venue\apply" />
+      <recent name="D:\workspace\idea-workspace\TicketBooker\src\main\webapp\css\ticket" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="booker" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="booker.util.dataModel" />
+      <recent name="booker.util.exception" />
+      <recent name="booker.util.task" />
+      <recent name="booker.util.formatter" />
+      <recent name="booker.util.enums" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\workspace\idea-workspace\TicketBooker\src\main\webapp\js\manager" />
@@ -492,20 +480,6 @@
       <recent name="D:\workspace\idea-workspace\TicketBooker\src\main\webapp\css\tool" />
       <recent name="D:\workspace\idea-workspace\TicketBooker\src\main\webapp\js\tool" />
       <recent name="D:\workspace\idea-workspace\TicketBooker\src\main\webapp\img" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="booker.util.exception" />
-      <recent name="booker.util.task" />
-      <recent name="booker.util.formatter" />
-      <recent name="booker.util.enums" />
-      <recent name="booker.service.impl" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\workspace\idea-workspace\TicketBooker\src\main\webapp\jsp\manager" />
-      <recent name="D:\workspace\idea-workspace\TicketBooker\src\main\webapp\jsp\venue\plan" />
-      <recent name="D:\workspace\idea-workspace\TicketBooker\src\main\webapp\jsp\venue\add" />
-      <recent name="D:\workspace\idea-workspace\TicketBooker\src\main\webapp\jsp\venue\apply" />
-      <recent name="D:\workspace\idea-workspace\TicketBooker\src\main\webapp\css\ticket" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -878,7 +852,7 @@
       <workItem from="1528848825545" duration="455000" />
       <workItem from="1528849455529" duration="338000" />
       <workItem from="1529025781524" duration="4626000" />
-      <workItem from="1529110702116" duration="13291000" />
+      <workItem from="1529110702116" duration="21962000" />
     </task>
     <task id="LOCAL-00001" summary="为了跑起来，小修改">
       <created>1529028626829</created>
@@ -908,7 +882,14 @@
       <option name="project" value="LOCAL" />
       <updated>1529113641134</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="场馆指标设计逻辑层和数据层搭建完毕">
+      <created>1529130303509</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1529130303509</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -944,7 +925,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="766054000" />
+    <option name="totallyTimeSpent" value="774725000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -960,14 +941,14 @@
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="17" sideWeight="0.50075644" side_tool="true" weight="0.43729904" />
+      <window_info anchor="bottom" id="Event Log" order="17" sideWeight="0.50075644" side_tool="true" weight="0.4363929" />
       <window_info anchor="bottom" id="Application Servers" order="8" weight="0.3279743" />
       <window_info anchor="right" id="Maven Projects" order="10" weight="0.32980332" />
       <window_info anchor="bottom" id="Database Changes" order="18" weight="0.32850242" />
       <window_info anchor="right" id="Mongo Explorer" order="11" weight="0.32980332" />
       <window_info id="Capture Tool" order="1" />
       <window_info id="Designer" order="2" />
-      <window_info anchor="bottom" id="Statistic" order="0" sideWeight="0.49924356" weight="0.43729904" />
+      <window_info anchor="bottom" id="Statistic" order="0" sideWeight="0.49924356" weight="0.4363929" />
       <window_info anchor="bottom" id="EvoSuite" order="18" />
       <window_info anchor="right" id="Database" order="9" weight="0.32980332" />
       <window_info id="Structure" order="8" sideWeight="0.40032154" side_tool="true" weight="0.22012103" />
@@ -987,6 +968,7 @@
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.59967846" visible="true" weight="0.22012103" />
       <window_info anchor="bottom" id="Run with VisualVM" order="12" />
       <window_info id="Web" order="6" sideWeight="0.39871383" side_tool="true" weight="0.22012103" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.3279743" />
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info id="Favorites" order="7" sideWeight="0.40032154" side_tool="true" weight="0.22012103" />
       <window_info anchor="bottom" id="Debug with VisualVM" order="15" />
@@ -995,7 +977,6 @@
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Database Console" order="16" weight="0.329582" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.3279743" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Messages" order="14" weight="0.3268921" />
       <window_info anchor="bottom" id="Message" order="1" />
@@ -1054,7 +1035,8 @@
     <MESSAGE value="添加分析统计包用于实现管理信息系统的功能" />
     <MESSAGE value="会员指标分析逻辑层和数据层初步搭建完毕" />
     <MESSAGE value="节目发布者分析指标逻辑层与数据层初步搭建完毕" />
-    <option name="LAST_COMMIT_MESSAGE" value="节目发布者分析指标逻辑层与数据层初步搭建完毕" />
+    <MESSAGE value="场馆指标设计逻辑层和数据层搭建完毕" />
+    <option name="LAST_COMMIT_MESSAGE" value="场馆指标设计逻辑层和数据层搭建完毕" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1071,55 +1053,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/booker/dao/ExternalBalanceDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="38" column="12" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/booker/task/CodeTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/booker/controller/OrderController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3800">
-          <caret line="220" column="40" selection-start-line="220" selection-start-column="30" selection-end-line="220" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/booker/task/MD5Task.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/booker/util/enums/state/OrderState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/booker/service/impl/OrderServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="147" column="26" lean-forward="true" selection-start-line="147" selection-start-column="26" selection-end-line="147" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mail.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="28" lean-forward="true" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/booker/util/infoCarrier/ManagerAccount.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -1191,13 +1124,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/service/impl.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/service/ManagerStatisticsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/booker/service/impl/CouponServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -1212,31 +1138,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/service/impl/ManagerStatisticsServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/booker/dao/CouponDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/dao/ManagerStatisticsDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="37" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/ManagerStatisticsDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
@@ -1251,23 +1156,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="311">
           <caret line="480" column="45" selection-start-line="480" selection-start-column="45" selection-end-line="480" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/booker/util/dataModel/TwoDimensionModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="30" lean-forward="true" selection-start-column="30" selection-end-column="30" />
-          <folding>
-            <element signature="method#BrokenLineModel#0;class#BrokenLineModel#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/service/impl/UserStatisticsServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="119" column="23" lean-forward="true" selection-start-line="119" selection-start-column="23" selection-end-line="119" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -1372,40 +1260,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/service/impl/PublisherStatisticsServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="56" column="93" lean-forward="true" selection-start-line="56" selection-start-column="93" selection-end-line="56" selection-end-column="93" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/booker/dao/impl/OrderDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="195" column="55" selection-start-line="195" selection-start-column="55" selection-end-line="195" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/booker/model/Venue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="35" column="35" lean-forward="true" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/UserStatisticsDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="79" column="20" lean-forward="true" selection-start-line="62" selection-start-column="7" selection-end-line="79" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/dao/UserStatisticsDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="431">
@@ -1434,20 +1288,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/service/VenueStatisticsService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/PublisherStatisticsDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="66" column="45" lean-forward="true" selection-start-line="60" selection-start-column="4" selection-end-line="66" selection-end-column="45" />
+        <state relative-caret-position="306">
+          <caret line="92" column="47" lean-forward="true" selection-start-line="89" selection-start-column="7" selection-end-line="92" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/PublisherStatisticsDaoImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/service/VenueStatisticsService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="92" column="47" lean-forward="true" selection-start-line="89" selection-start-column="7" selection-end-line="92" selection-end-column="47" />
+        <state relative-caret-position="391">
+          <caret line="74" column="7" selection-start-line="74" selection-start-column="7" selection-end-line="74" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1464,21 +1318,172 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/VenueStatisticsDaoImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/booker/model/Venue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="319" column="142" selection-start-line="319" selection-start-column="142" selection-end-line="319" selection-end-column="142" />
-          <folding>
-            <element signature="e#452#453#0" expanded="true" />
-            <element signature="e#504#505#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="237">
+          <caret line="61" column="5" lean-forward="true" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/service/impl/VenueStatisticsServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="142" column="37" selection-start-line="142" selection-start-column="37" selection-end-line="142" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/service/impl/UserStatisticsServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="110" column="13" selection-start-line="110" selection-start-column="13" selection-end-line="110" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/VenueStatisticsDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="205" column="66" selection-start-line="205" selection-start-column="66" selection-end-line="205" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/service/impl/PublisherStatisticsServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="106" column="24" lean-forward="true" selection-start-line="106" selection-start-column="24" selection-end-line="106" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/booker/util/dataModel/SuperTwoDimensionModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="30" column="27" lean-forward="true" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
+          <folding>
+            <element signature="e#480#481#0" expanded="true" />
+            <element signature="e#506#507#0" expanded="true" />
+            <element signature="e#540#541#0" expanded="true" />
+            <element signature="e#570#571#0" expanded="true" />
+            <element signature="e#645#646#0" expanded="true" />
+            <element signature="e#673#674#0" expanded="true" />
+            <element signature="e#711#712#0" expanded="true" />
+            <element signature="e#745#746#0" expanded="true" />
+            <element signature="e#773#774#0" expanded="true" />
+            <element signature="e#801#802#0" expanded="true" />
+            <element signature="e#839#840#0" expanded="true" />
+            <element signature="e#873#874#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/UserStatisticsDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="126" column="22" selection-start-line="117" selection-start-column="7" selection-end-line="126" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/booker/model/id/SettlementID.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/booker/model/Settlement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/service/ManagerStatisticsService.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="406">
-          <caret line="164" column="16" selection-start-line="164" selection-start-column="16" selection-end-line="164" selection-end-column="16" />
+          <caret line="51" column="10" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/booker/util/enums/state/VenueState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/booker/dao/VenueDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="56" column="37" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/dao/ManagerStatisticsDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="92" column="7" selection-start-line="92" selection-start-column="7" selection-end-line="92" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/ManagerStatisticsDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="289" column="19" selection-start-line="289" selection-start-column="19" selection-end-line="289" selection-end-column="19" />
+          <folding>
+            <element signature="e#532#533#0" expanded="true" />
+            <element signature="e#584#585#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/booker/model/Order.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/booker/util/enums/state/OrderState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="23" lean-forward="true" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/booker/dao/impl/OrderDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="23" column="48" lean-forward="true" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/booker/util/dataModel/TwoDimensionModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/service/impl/ManagerStatisticsServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="219" column="71" lean-forward="true" selection-start-line="219" selection-start-column="71" selection-end-line="219" selection-end-column="71" />
+          <folding>
+            <element signature="e#1584#1585#0" expanded="true" />
+            <element signature="e#1611#1612#0" expanded="true" />
+            <element signature="e#2065#2066#0" expanded="true" />
+            <element signature="e#2092#2093#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1501,7 +1506,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Hibernate (TicketBooker)|Hibernate</last-edited>
+          <last-edited>JPA (TicketBooker)|JPA</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

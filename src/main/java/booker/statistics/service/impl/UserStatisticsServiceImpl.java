@@ -91,7 +91,7 @@ public class UserStatisticsServiceImpl implements UserStatisticsService {
         Map<String, Integer> result = new HashMap<>();
         for (Program program : programs) {
             Venue venue = program.getVenue();
-            String city = venue.getAddress().substring(0, 2);
+            String city = venue.getCity();
             if (!result.keySet().contains(city)) {
                 result.put(city, 1);
             } else {
@@ -110,10 +110,7 @@ public class UserStatisticsServiceImpl implements UserStatisticsService {
                 city = key;
             }
         }
-        TwoDimensionModel<String, Integer> data = new TwoDimensionModel<>();
-        data.setTag(city);
-        data.setData(result.get(city));
-        return data;
+        return new TwoDimensionModel<>(city, result.get(city));
     }
 
     /**

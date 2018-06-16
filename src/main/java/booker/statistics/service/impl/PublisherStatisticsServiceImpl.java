@@ -54,9 +54,7 @@ public class PublisherStatisticsServiceImpl implements PublisherStatisticsServic
         Map<Integer, Double> result = new TreeMap<>(map);
         List<TwoDimensionModel> data = new ArrayList<>();
         for (Integer key : result.keySet()) {
-            TwoDimensionModel<Integer, Double> twoDimensionModel = new TwoDimensionModel<>();
-            twoDimensionModel.setTag(key);
-            twoDimensionModel.setData(result.get(key));
+            TwoDimensionModel<Integer, Double> twoDimensionModel = new TwoDimensionModel<>(key, result.get(key));
             data.add(twoDimensionModel);
         }
         return data;
@@ -84,9 +82,7 @@ public class PublisherStatisticsServiceImpl implements PublisherStatisticsServic
         Map<Integer, Double> result = new TreeMap<>(map);
         List<TwoDimensionModel> data = new ArrayList<>();
         for (Integer key : result.keySet()) {
-            TwoDimensionModel<Integer, Double> twoDimensionModel = new TwoDimensionModel<>();
-            twoDimensionModel.setTag(key);
-            twoDimensionModel.setData(result.get(key));
+            TwoDimensionModel<Integer, Double> twoDimensionModel = new TwoDimensionModel<>(key, result.get(key));
             data.add(twoDimensionModel);
         }
         return data;

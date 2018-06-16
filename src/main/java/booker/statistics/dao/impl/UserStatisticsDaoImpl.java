@@ -111,7 +111,6 @@ public class UserStatisticsDaoImpl implements UserStatisticsDao {
      * 统计指定用户观看过的节目类型数量（以便统计最爱节目类型）
      *
      * @param userID      用户ID
-     * @param programType 指定节目类型
      * @return 每种节目类型观看的次数
      */
     @Override
