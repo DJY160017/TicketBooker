@@ -2,6 +2,7 @@ package booker.dao;
 
 import booker.model.Order;
 import booker.model.id.OrderID;
+import booker.model.id.ProgramID;
 import booker.util.enums.state.OrderState;
 
 import java.time.LocalDateTime;
@@ -75,4 +76,12 @@ public interface OrderDao {
      * @return boolean
      */
     boolean updateOrder(Order order);
+
+    /**
+     * 获取指定节目的总收益
+     *
+     * @param programID
+     * @return
+     */
+    double countSumPrice(ProgramID programID);
 }

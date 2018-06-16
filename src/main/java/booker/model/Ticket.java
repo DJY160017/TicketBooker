@@ -25,6 +25,9 @@ public class Ticket implements Serializable {
     @Column(name = "isCheck", columnDefinition = "bit default 0", nullable = false)
     private boolean check;
 
+    @Column(name="seat_type")
+    private String seatType;
+
     @ManyToOne(cascade = {CascadeType.ALL}, fetch = FetchType.EAGER)
     @JoinTable(name = "order_ticket",
             joinColumns = {@JoinColumn(name = "ticket_reserve_time", referencedColumnName = "reserve_time"),
@@ -73,5 +76,13 @@ public class Ticket implements Serializable {
 
     public void setCheck(boolean check) {
         this.check = check;
+    }
+
+    public String getSeatType() {
+        return seatType;
+    }
+
+    public void setSeatType(String seatType) {
+        this.seatType = seatType;
     }
 }

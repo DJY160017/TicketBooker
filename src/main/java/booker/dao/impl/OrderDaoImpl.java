@@ -3,6 +3,7 @@ package booker.dao.impl;
 import booker.dao.OrderDao;
 import booker.model.Order;
 import booker.model.id.OrderID;
+import booker.model.id.ProgramID;
 import booker.util.enums.state.OrderState;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -182,5 +183,25 @@ public class OrderDaoImpl implements OrderDao {
         transaction.commit();
         session.close();
         return true;
+    }
+
+    /**
+     * 获取指定节目的总收益
+     *
+     * @param programID
+     * @return
+     */
+    @Override
+    public double countSumPrice(ProgramID programID) {
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
+
+        String hql = "select sum(o.total_price) from Order o where o.programID=:programID";
+        Query query = session.createQuery(hql);
+        query.setParameter("programID", programID);
+        List<Double> result = query.list();
+        transaction.commit();
+        session.close();
+        return result.get(0);
     }
 }

@@ -1331,12 +1331,18 @@ settlement_time</ColNames>
       <DefaultExpression>b&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="312" parent="244" name="vid">
+    <column id="312" parent="244" name="seat_type">
+      <Position>8</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="313" parent="244" name="vid">
       <ColNames>vid
 reserve_time</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="313" parent="244" name="PRIMARY">
+    <key id="314" parent="244" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>reserve_time
 vid
@@ -1344,57 +1350,57 @@ raw
 col</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="314" parent="245" name="vid">
+    <column id="315" parent="245" name="vid">
       <Position>1</Position>
       <DataType>int(7)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="315" parent="245" name="password">
+    <column id="316" parent="245" name="password">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="316" parent="245" name="name">
+    <column id="317" parent="245" name="name">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="317" parent="245" name="address">
+    <column id="318" parent="245" name="address">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="318" parent="245" name="col_num">
+    <column id="319" parent="245" name="col_num">
       <Position>5</Position>
       <DataType>int(4)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="319" parent="245" name="raw_num">
+    <column id="320" parent="245" name="raw_num">
       <Position>6</Position>
       <DataType>int(5)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="320" parent="245" name="price">
+    <column id="321" parent="245" name="price">
       <Position>7</Position>
       <DataType>double|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="321" parent="245" name="state">
+    <column id="322" parent="245" name="state">
       <Position>8</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="322" parent="245" name="PRIMARY">
+    <key id="323" parent="245" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>vid</ColNames>
       <Primary>1</Primary>

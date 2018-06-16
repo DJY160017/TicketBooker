@@ -71,7 +71,7 @@ public class UserStatisticsDaoImpl implements UserStatisticsDao {
         List<TwoDimensionModel> data = new ArrayList<>();
         for (Object[] objects : result) {
             TwoDimensionModel<String, Double> twoDimensionModel = new TwoDimensionModel<>();
-            twoDimensionModel.setTag(String.valueOf(objects[1]) + "季度");
+            twoDimensionModel.setTag(String.valueOf(objects[1]));
             twoDimensionModel.setData((Double) objects[0]);
             data.add(twoDimensionModel);
         }
