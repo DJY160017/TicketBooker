@@ -83,4 +83,6 @@ public interface TicketDao {
      * @return List<Ticket>
      */
     List<Ticket> getAllTicket();
+
+    List<ProgramID> getAllProgramID();
 }

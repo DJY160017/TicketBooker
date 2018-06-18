@@ -54,7 +54,7 @@
                 <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
                 <prop key="hibernate.show_sql">false</prop>
                 <!-- 会自动创表，但是不会自动创建数据库，所以要先手动创建数据库。 -->
-                <!--<prop key="hibernate.hbm2ddl.auto">update</prop>-->
+                <prop key="hibernate.hbm2ddl.auto">update</prop>
                 <prop key="hibernate.format_sql">true</prop><!--为了方便调试是否在运行hibernate时在日志中输出sql语句 -->
                 <prop key="hibernate.search.default.directory_provider">${hibernate.search.directory_provider}</prop>
                 <prop key="hibernate.search.default.indexBase">${hibernate.search.indexBase}</prop>

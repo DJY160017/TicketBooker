@@ -7,6 +7,8 @@ import booker.task.MD5Task;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.Random;
+
 import static org.junit.Assert.*;
 
 public class MemberDaoImplTest {
@@ -22,15 +24,15 @@ public class MemberDaoImplTest {
     public void add() throws Exception {
         for (int i = 1; i < 100; i++) {
             Member member = new Member();
-            member.setMail("151250" + formate(i) + "@smail.nju.edu.cn");
-            member.setUsername(String.valueOf(i) + "号会员");
+            member.setMail("141250" + formate(i) + "@smail.nju.edu.cn");
+            member.setUsername(String.valueOf(i) + "号高级会员");
             member.setPassword(MD5Task.encodeMD5("1234567890"));
-            member.setCurrentMarks(i * 10);
-            member.setAccumulateMarks(i * 100);
+            int mark = randomMark();
+            member.setCurrentMarks(mark * 10);
+            member.setAccumulateMarks(mark * 100);
             member.setCancel(false);
             memberDao.add(member);
         }
-
     }
 
     @Test
@@ -61,6 +63,14 @@ public class MemberDaoImplTest {
             str_num = "0" + str_num;
         }
         return str_num;
+    }
+
+    private int randomMark() {
+        Integer v = new Random().nextInt(180);
+        if (v <= (Integer) 0) {
+            v = 100;
+        }
+        return v;
     }
 
 }

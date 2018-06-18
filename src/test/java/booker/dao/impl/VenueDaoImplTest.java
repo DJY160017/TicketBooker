@@ -8,6 +8,8 @@ import booker.task.MD5Task;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.*;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -50,6 +52,20 @@ public class VenueDaoImplTest {
     }
 
     @Test
+    public void addNewVenue() throws Exception {
+        List<Venue> venues = readNewVenueInfo();
+        for (Venue venue : venues) {
+            venue.setPrice(createPrice());
+            venue.setPassword(MD5Task.encodeMD5("qwertyuiop"));
+            venue.setVenueState(VenueState.AlreadyPassed);
+            venue.setCol_num(12);
+            venue.setRaw_num(12);
+            int venueID = venueDao.addVenue(venue);
+            System.out.println(venueID);
+        }
+    }
+
+    @Test
     public void getVenueByState() throws Exception {
         List<Venue> venues = venueDao.getVenueByState(VenueState.Unapproved);
         for (Venue venue : venues) {
@@ -60,8 +76,17 @@ public class VenueDaoImplTest {
 
     @Test
     public void updateVenueState() throws Exception {
-
-        venueDao.updateVenueState(100, VenueState.AlreadyPassed);
+        List<Venue> venues = venueDao.getVenueByState(VenueState.AlreadyPassed);
+        for (Venue venue : venues) {
+            String address = venue.getAddress();
+            String cityInfo = address;
+            if (address.contains("省")) {
+                cityInfo = address.split("省")[1];
+            }
+            String city = cityInfo.split("市")[0];
+            venue.setCity(city);
+            venueDao.modifyVenue(venue);
+        }
     }
 
     @Test
@@ -117,6 +142,31 @@ public class VenueDaoImplTest {
         int result = 0;
         while (result < 10000) {
             result = (int) (Math.random() * 100000);
+        }
+        return result;
+    }
+
+    private List<Venue> readNewVenueInfo() {
+        File file = new File("C:\\Users\\Byron Dong\\Desktop\\other\\venue.txt");
+        List<Venue> result = new ArrayList<>();
+        try {
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(file)));
+            String line = null;
+            while ((line = bufferedReader.readLine()) != null) {
+                if (line.endsWith(",")) {
+                    line = line + "附近";
+                }
+                Venue venue = new Venue();
+                String info[] = line.split(",");
+                venue.setName(info[0]);
+                venue.setCity(info[1]);
+                venue.setAddress(info[1] + info[2] + info[3] + info[4] + info[5]);
+                result.add(venue);
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
         return result;
     }

@@ -84,4 +84,6 @@ public interface SettlementDao {
      * @return boolean
      */
     boolean updateUnsettledSettlementState(List<SettlementID> settlementIDs);
+
+    Settlement getOne(SettlementID settlementID);
 }

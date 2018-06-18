@@ -208,4 +208,14 @@ public class SettlementDaoImpl implements SettlementDao {
         session.close();
         return true;
     }
+
+    @Override
+    public Settlement getOne(SettlementID settlementID) {
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
+        Settlement settlement = session.get(Settlement.class, settlementID);
+        transaction.commit();
+        session.close();
+        return settlement;
+    }
 }

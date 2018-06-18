@@ -2,11 +2,17 @@ package booker.dao.impl;
 
 import booker.dao.DaoManager;
 import booker.dao.ExternalBalanceDao;
+import booker.dao.MemberDao;
+import booker.dao.VenueDao;
 import booker.model.BankAccount;
 import booker.model.ExternalBalance;
+import booker.model.Member;
+import booker.model.Venue;
+import booker.util.enums.state.VenueState;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.List;
 import java.util.Random;
 
 import static org.junit.Assert.*;
@@ -15,9 +21,15 @@ public class ExternalBalanceDaoImplTest {
 
     private ExternalBalanceDao externalBalanceDao;
 
+    private MemberDao memberDao;
+
+    private VenueDao venueDao;
+
     @Before
     public void setUp() throws Exception {
         externalBalanceDao = DaoManager.externalBalanceDao;
+        memberDao = DaoManager.memberDao;
+        venueDao = DaoManager.venueDao;
     }
 
     @Test
@@ -64,17 +76,22 @@ public class ExternalBalanceDaoImplTest {
 
     @Test
     public void addBankAccount() throws Exception {
-        String account1 = "6201000000";
-        String account2 = "6201020000";
-        String account3 = "6201030000";
-        String account4 = "6201040000";
-        //venue
-        String account5 = "6201050000";
-        String account6 = "6203080000";
-        for (int i = 0; i < 100; i++) {
+        List<Member> members = memberDao.getLevelMembers();
+        List<Venue> venues = venueDao.getVenueByState(VenueState.AlreadyPassed);
+        List<ExternalBalance> all = externalBalanceDao.getAllExternalBalance();
+        List<ExternalBalance> member_all = all.subList(0, members.size());
+        List<ExternalBalance> venue_all = all.subList(members.size(), (venues.size() + members.size()));
+        for (int i = 0; i < members.size(); i++) {
             BankAccount bankAccount = new BankAccount();
-            bankAccount.setUserID(String.valueOf(i + 101));
-            bankAccount.setAccount(account6 + formate(i));
+            bankAccount.setUserID(members.get(i).getMail());
+            bankAccount.setAccount(member_all.get(i).getAccount());
+            externalBalanceDao.addBankAccount(bankAccount);
+        }
+
+        for (int i = 0; i < venues.size(); i++) {
+            BankAccount bankAccount = new BankAccount();
+            bankAccount.setUserID(String.valueOf(venues.get(i).getVenueID()));
+            bankAccount.setAccount(venue_all.get(i).getAccount());
             externalBalanceDao.addBankAccount(bankAccount);
         }
     }

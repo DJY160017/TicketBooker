@@ -6,8 +6,11 @@ import booker.model.ExternalBalance;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 @Repository
 public class ExternalBalanceDaoImpl implements ExternalBalanceDao {
@@ -134,5 +137,22 @@ public class ExternalBalanceDaoImpl implements ExternalBalanceDao {
         transaction.commit();
         session.close();
         return true;
+    }
+
+    /**
+     * 获取数据库中所有的外部支付实体
+     *
+     * @return
+     */
+    @Override
+    public List<ExternalBalance> getAllExternalBalance() {
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
+        String hql = "from ExternalBalance";
+        Query query = session.createQuery(hql);
+        List<ExternalBalance> result = query.list();
+        transaction.commit();
+        session.close();
+        return result;
     }
 }

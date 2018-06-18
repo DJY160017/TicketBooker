@@ -3,6 +3,8 @@ package booker.dao;
 import booker.model.BankAccount;
 import booker.model.ExternalBalance;
 
+import java.util.List;
+
 public interface ExternalBalanceDao {
 
     /**
@@ -61,4 +63,11 @@ public interface ExternalBalanceDao {
      * @return BankAccount
      */
     boolean updateBankAccount(BankAccount bankAccount);
+
+    /**
+     * 获取数据库中所有的外部支付实体
+     *
+     * @return
+     */
+    List<ExternalBalance> getAllExternalBalance();
 }

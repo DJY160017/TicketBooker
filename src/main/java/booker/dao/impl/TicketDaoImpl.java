@@ -207,4 +207,18 @@ public class TicketDaoImpl implements TicketDao {
         session.close();
         return tickets;
     }
+
+    @Override
+    public List<ProgramID> getAllProgramID() {
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
+
+        String hql = "select t.ticketID.programID from Ticket t where t.ticketState=:state";
+        Query query = session.createQuery(hql);
+        query.setParameter("state", TicketState.Invalid);
+        List<ProgramID> tickets = query.list();
+        transaction.commit();
+        session.close();
+        return tickets;
+    }
 }
