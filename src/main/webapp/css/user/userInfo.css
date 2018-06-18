@@ -56,3 +56,9 @@
 .profile-password-button {
     margin-left: 140px;
 }
+
+.check-my-statistics{
+    position: absolute;
+    left: 120px;
+    top: 250px;
+}

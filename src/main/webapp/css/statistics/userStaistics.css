@@ -1,0 +1,65 @@
+.user-statistics-info-panel {
+    min-height: 95%;
+}
+
+.my-consumption-statistics {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.my-favorite-statistics {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.return-my-info {
+    position: absolute;
+    left: 105px;
+    top: 120px;
+}
+
+.consumption-tile {
+    border-bottom: 1px solid rgba(51, 51, 51, 0.3);
+}
+
+.consumption-range {
+    margin-top: 40px;
+    font-size: 20px;
+}
+
+.chart-type {
+    margin-top: 40px;
+}
+
+.user-consumption-show-chart {
+    margin-top: 15px;
+    height: 400px
+}
+
+.favorite-program-type-tile {
+    border-bottom: 1px solid rgba(51, 51, 51, 0.3);
+}
+
+.favorite-area-tile {
+    border-bottom: 1px solid rgba(51, 51, 51, 0.3);
+}
+
+.program-type-show {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.program-type-chart {
+    height: 400px;
+}
+
+.area-show {
+    margin-top: 30px;
+}
+
+.area-show-chart {
+    height: 400px;
+}
+

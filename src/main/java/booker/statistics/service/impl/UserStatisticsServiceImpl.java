@@ -29,7 +29,7 @@ public class UserStatisticsServiceImpl implements UserStatisticsService {
     }
 
     /**
-     * 统计指定ID用户的花销
+     * 统计指定ID用户的花销 （year,unit_time）
      *
      * @param userID   用户ID
      * @param unitTime 单位时间（月，季度，年）
@@ -48,14 +48,46 @@ public class UserStatisticsServiceImpl implements UserStatisticsService {
     }
 
     /**
-     * 统计指定ID用户的花销
+     * 统计指定ID用户的花销（year, 全部）
      *
      * @param userID 用户ID
+     * @param year   指定年份
      * @return 以单位时间为单位的统计数据
      */
     @Override
-    public List<TwoDimensionModel> costByUnitTime(String userID) {
-        return userStatisticsDao.costByYear(userID);
+    public List<TwoDimensionModel> costByUnitTime(String userID, int year) {
+        return userStatisticsDao.costByYearAll(userID, year);
+    }
+
+    /**
+     * 统计指定ID用户的花销（全部，(unit_time) ）
+     *
+     * @param userID   用户ID
+     * @param unitTime
+     * @return 以单位时间为单位的统计数据
+     */
+    @Override
+    public List<TwoDimensionModel> costByUnitTime(String userID, UnitTime unitTime) {
+        List<TwoDimensionModel> result = null;
+        if (unitTime.equals(UnitTime.MONTH)) {
+            result = userStatisticsDao.costByAllMonth(userID);
+        } else if (unitTime.equals(UnitTime.QUARTER)) {
+            result = userStatisticsDao.costByAllQuarter(userID);
+        } else {
+            result = userStatisticsDao.costByAllYear(userID);
+        }
+        return result;
+    }
+
+    /**
+     * 获取用户的每笔订单的详细交易价格(全部， 全部)
+     *
+     * @param userID 用户ID
+     * @return
+     */
+    @Override
+    public List<TwoDimensionModel> getDetailPrice(String userID) {
+        return userStatisticsDao.getDetailPrice(userID);
     }
 
     /**
@@ -85,7 +117,7 @@ public class UserStatisticsServiceImpl implements UserStatisticsService {
      * @return 可能的常住地
      */
     @Override
-    public TwoDimensionModel countCity(String userID) {
+    public Map<String, Integer> countCity(String userID) {
         List<ProgramID> ids = userStatisticsDao.getALlUserProgramID(userID);
         List<Program> programs = programDao.getAllProgram(ids);
         Map<String, Integer> result = new HashMap<>();
@@ -98,30 +130,7 @@ public class UserStatisticsServiceImpl implements UserStatisticsService {
                 result.put(city, result.get(city) + 1);
             }
         }
-
-        String city = null;
-        for (String key : result.keySet()) {
-            if (city == null) {
-                city = key;
-                continue;
-            }
-
-            if (result.get(key) > result.get(city)) {
-                city = key;
-            }
-        }
-        return new TwoDimensionModel<>(city, result.get(city));
-    }
-
-    /**
-     * 获取用户的每笔订单的详细交易价格
-     *
-     * @param userID 用户ID
-     * @return
-     */
-    @Override
-    public List<TwoDimensionModel> getDetailPrice(String userID) {
-        return userStatisticsDao.getDetailPrice(userID);
+        return result;
     }
 
     /**
@@ -131,7 +140,7 @@ public class UserStatisticsServiceImpl implements UserStatisticsService {
      * @return 价格区间
      */
     @Override
-    public int[] countCostRange(String userID) {
+    public double[] countCostRange(String userID) {
         return userStatisticsDao.countCostRange(userID);
     }
 }

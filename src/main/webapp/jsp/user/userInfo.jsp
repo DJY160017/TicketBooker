@@ -63,7 +63,6 @@
                 </li>
             </ul>
         </div>
-
         <div class="col-md-9 panel panel-default user-info-panel">
             <div class="my-info" id="my-info">
                 <div class="profile-tile">
@@ -248,6 +247,9 @@
                     <p class="text-center">喔喔！ 您尚未租用过场馆</p>
                 </div>
             </div>
+        </div>
+        <div class="check-my-statistics">
+            <a href="<c:url value="/statistics/user/"/>">查看我的分析&gt;&gt;</a>
         </div>
     </div>
 </div>

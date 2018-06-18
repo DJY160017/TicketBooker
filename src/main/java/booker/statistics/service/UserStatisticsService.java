@@ -9,7 +9,7 @@ import java.util.Map;
 public interface UserStatisticsService {
 
     /**
-     * 统计指定ID用户的花销
+     * 统计指定ID用户的花销（year,unit_time）
      *
      * @param userID   用户ID
      * @param year     指定年份
@@ -19,12 +19,29 @@ public interface UserStatisticsService {
     List<TwoDimensionModel> costByUnitTime(String userID, UnitTime unitTime, int year);
 
     /**
-     * 统计指定ID用户的花销
+     * 统计指定ID用户的花销（year, 全部）
      *
-     * @param userID   用户ID
+     * @param userID 用户ID
+     * @param year   指定年份
      * @return 以单位时间为单位的统计数据
      */
-    List<TwoDimensionModel> costByUnitTime(String userID);
+    List<TwoDimensionModel> costByUnitTime(String userID, int year);
+
+    /**
+     * 统计指定ID用户的花销（全部，(unit_time) ）
+     *
+     * @param userID 用户ID
+     * @return 以单位时间为单位的统计数据
+     */
+    List<TwoDimensionModel> costByUnitTime(String userID, UnitTime unitTime);
+
+    /**
+     * 获取用户的每笔订单的详细交易价格(全部， 全部)
+     *
+     * @param userID 用户ID
+     * @return
+     */
+    List<TwoDimensionModel> getDetailPrice(String userID);
 
     /**
      * 统计指定用户观看过的节目类型数量（以便统计最爱节目类型）
@@ -40,15 +57,7 @@ public interface UserStatisticsService {
      * @param userID 用户ID
      * @return 可能的常住地
      */
-    TwoDimensionModel countCity(String userID);
-
-    /**
-     * 获取用户的每笔订单的详细交易价格
-     *
-     * @param userID 用户ID
-     * @return
-     */
-    List<TwoDimensionModel> getDetailPrice(String userID);
+    Map<String, Integer> countCity(String userID);
 
     /**
      * 获取客户的消费价格区间
@@ -56,6 +65,6 @@ public interface UserStatisticsService {
      * @param userID 用户ID
      * @return 价格区间
      */
-    int[] countCostRange(String userID);
+    double[] countCostRange(String userID);
 
 }

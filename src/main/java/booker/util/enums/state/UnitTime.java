@@ -3,9 +3,10 @@ package booker.util.enums.state;
 public enum UnitTime {
 
     DAY("日"),
-    MONTH("月"),
+    MONTH("月份"),
     QUARTER("季度"),
-    YEAR("年");
+    YEAR("年份"),
+    ALL("全部");
 
     private String repre;
 
