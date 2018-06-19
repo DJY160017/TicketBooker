@@ -1,6 +1,9 @@
 package booker.util.helper;
 
+import booker.util.enums.state.UnitTime;
+
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class TimeHelper {
 
@@ -36,6 +39,25 @@ public class TimeHelper {
             return 366;
         } else {
             return 365;
+        }
+    }
+
+    public static int getUnitTimeValue(UnitTime unitTime, LocalDateTime localDateTime) {
+        if (unitTime.equals(UnitTime.MONTH)) {
+            return localDateTime.getMonthValue();
+        } else if (unitTime.equals(UnitTime.QUARTER)) {
+            int month = localDateTime.getMonthValue();
+            if (month <= 3) {
+                return 1;
+            } else if (month <= 6) {
+                return 2;
+            } else if (month <= 9) {
+                return 3;
+            } else {
+                return 4;
+            }
+        } else {
+            return localDateTime.getYear();
         }
     }
 

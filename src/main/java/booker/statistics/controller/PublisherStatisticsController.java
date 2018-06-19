@@ -3,6 +3,8 @@ package booker.statistics.controller;
 import booker.model.Venue;
 import booker.service.VenueService;
 import booker.statistics.service.PublisherStatisticsService;
+import booker.util.dataModel.TwoDimensionModel;
+import booker.util.enums.state.UnitTime;
 import booker.util.helper.VenueSizeHelper;
 import com.alibaba.fastjson.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -73,6 +75,30 @@ public class PublisherStatisticsController {
 
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("result", need_result);
+        return jsonObject.toString();
+    }
+
+    /**
+     * 【请求】根据单位获取节目收入数据
+     */
+    @PostMapping(value = "/req_programIncomeByUnitTime", produces = "text/json;charset=UTF-8;")
+    public @ResponseBody
+    String reqProgramIncomeByUnitTime(@RequestParam("unit_time") String unitTime, @RequestParam("unit_time_year") String year, HttpServletRequest request, HttpServletResponse response) {
+        HttpSession session = request.getSession(false);
+        String userID = String.valueOf(session.getAttribute("user_mail"));
+        UnitTime unit = UnitTime.getEnum(unitTime);
+        List<TwoDimensionModel> result = null;
+        if (unit.equals(UnitTime.ALL) && year.equals("全部")) {
+            result = publisherStatisticsService.getDetailPrice(userID);
+        } else if (unit.equals(UnitTime.ALL) && !year.equals("全部")) {
+            result = publisherStatisticsService.costByUnitTime(userID, Integer.parseInt(year));
+        } else if (!unit.equals(UnitTime.ALL) && year.equals("全部")) {
+            result = publisherStatisticsService.costByUnitTime(userID, unit);
+        } else {
+            result = publisherStatisticsService.costByUnitTime(userID, unit, Integer.parseInt(year));
+        }
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("result", result);
         return jsonObject.toString();
     }
 }

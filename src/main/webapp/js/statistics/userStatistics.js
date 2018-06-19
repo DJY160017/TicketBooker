@@ -5,6 +5,9 @@ function showConsumptionStatistics() {
     $('#my-favorite-statistics').hide();
     $('#my-favorite-a').parent().removeClass("active");
     $('#my-favorite-a').css("color", "#1b6d85");
+    $('#my-program-statistics').hide();
+    $('#my-program-a').parent().removeClass("active");
+    $('#my-program-a').css("color", "#1b6d85");
 
     $('#show-year').html("");
     $('#show-year').html('2018<span class="caret"></span>');
@@ -31,6 +34,10 @@ function showConsumptionStatistics() {
             year: '2018'
         },
         success: function (data) {
+            $('#user-consumption-show-chart').remove();
+            var new_chart_div = $('<div class="user-consumption-show-chart col-md-offset-1 col-md-10 col-md-offset-1" id="user-consumption-show-chart"></div>');
+            $("#my-consumption-statistics").append(new_chart_div);
+
             var myData = [];
             for (var index in data['result']) {
                 var item = [];
@@ -53,7 +60,9 @@ function showFavorite() {
     $('#my-favorite-statistics').show();
     $('#my-favorite-a').parent().addClass("active");
     $('#my-favorite-a').css("color", "");
-
+    $('#my-program-statistics').hide();
+    $('#my-program-a').parent().removeClass("active");
+    $('#my-program-a').css("color", "#1b6d85");
     $.ajax({
         type: "post",
         dataType: 'json',
@@ -105,6 +114,47 @@ function showFavorite() {
         }
     });
 }
+
+function showProgram() {
+    $('#my-consumption-statistics').hide();
+    $('#my-consumption-a').parent().removeClass("active");
+    $('#my-consumption-a').css("color", "#1b6d85");
+    $('#my-favorite-statistics').hide();
+    $('#my-favorite-a').parent().removeClass("active");
+    $('#my-favorite-a').css("color", "#1b6d85");
+    $('#my-program-statistics').show();
+    $('#my-program-a').parent().addClass("active");
+    $('#my-program-a').css("color", "");
+    $.ajax({
+        type: "post",
+        dataType: 'json',
+        url: "/statistics/publisher/req_programIncomeByUnitTime",
+        data: {
+            unit_time: '全部',
+            unit_time_year: '2018'
+        },
+        success: function (data) {
+            $('#program-income-chart').remove();
+            var new_chart_div = $('<div class="program-chart col-md-offset-1 col-md-10 col-md-offset-1" id="program-income-chart" style=" margin-top: 15px;height: 400px;"></div>');
+            $("#my-program-statistics").append(new_chart_div);
+
+            var myData = [];
+            for (var index in data['result']) {
+                var item = [];
+                item.push(data['result'][index]['tag']);
+                item.push(data['result'][index]['data']);
+                myData.push(item);
+            }
+            console.log('enter');
+            createIncomeChart('program-income-chart', myData, '您的2018年详细节目收入统计');
+        },
+        error: function (result) {
+            console.log(result);
+        }
+    });
+
+}
+
 
 function showChartByUnitTime(unit_time) {
     var unitTime = $(unit_time).text();
@@ -162,7 +212,7 @@ function showChartByAll() {
                 item.push(data['result'][index]['data']);
                 myData.push(item);
             }
-            createConsumptionChart('user-consumption-show-chart', myData,  '您的详细年份花销统计');
+            createConsumptionChart('user-consumption-show-chart', myData, '您的详细年份花销统计');
         },
         error: function (result) {
             console.log(result);
@@ -368,6 +418,207 @@ function createFavoriteChart(id, json_data, title1, subTitle1, title2) {
                 }
             })
         }]
+    };
+    chart.setOption(option);
+    chart.hideLoading();
+    return chart;
+}
+
+//---------------------------------------------------------------------------------------------------
+function showChartByUnitTimeForIncome(unit_time) {
+    var unitTime = $(unit_time).text();
+    $('#program-show-unit-time').html("");
+    $('#program-show-unit-time').html(unitTime + '<span class="caret"></span>');
+
+    $('#program-all-type-btn').removeClass('btn-primary');
+    $('#program-all-type-btn').addClass('btn-default');
+    //接下俩取数据更新chart
+    getIncomeChartData();
+}
+
+function showChartByYearForIncome(year) {
+    var year_time = $(year).text();
+    $('#program-show-year').html("");
+    $('#program-show-year').html(year_time + '<span class="caret"></span>');
+
+    var unit_time = $('#program-show-unit-time').text();
+    if (unit_time === '年份') {
+        $('#program-show-unit-time').html("");
+        $('#program-show-unit-time').html('全部<span class="caret"></span>');
+    }
+    $('#program-all-type-btn').removeClass('btn-primary');
+    $('#program-all-type-btn').addClass('btn-default');
+    //接下俩取数据更新chart
+    getIncomeChartData();
+}
+
+function showChartByAllForIncome() {
+    $('#program-show-unit-time').html("");
+    $('#program-show-unit-time').html('年份<span class="caret"></span>');
+    $('#program-show-year').html("");
+    $('#program-show-year').html('全部<span class="caret"></span>');
+
+    $('#program-all-type-btn').removeClass('btn-default');
+    $('#program-all-type-btn').addClass('btn-primary');
+    var need_unitTime = "年份";
+    var need_year = '全部';
+    $.ajax({
+        type: "post",
+        dataType: 'json',
+        url: "/statistics/publisher/req_programIncomeByUnitTime",
+        data: {
+            unit_time: need_unitTime,
+            unit_time_year: need_year
+        },
+        success: function (data) {
+            $('#program-income-chart').remove();
+            var new_chart_div = $('<div class="program-chart col-md-offset-1 col-md-10 col-md-offset-1" id="program-income-chart" style=" margin-top: 15px;height: 400px;"></div>');
+            $("#my-program-statistics").append(new_chart_div);
+            var myData = [];
+            for (var index in data['result']) {
+                var item = [];
+                item.push(data['result'][index]['tag']);
+                item.push(data['result'][index]['data']);
+                myData.push(item);
+            }
+
+            var mine = '您的节目';
+            var unit_year = '';
+            var unit_time_unit = '';
+            var end = '收入统计';
+            if (need_unitTime === '全部') {
+                unit_time_unit = '详细';
+            } else {
+                unit_time_unit = need_unitTime;
+            }
+            if (need_year === '全部') {
+                unit_year = '详细';
+            } else {
+                unit_year = need_year + "年";
+            }
+            createIncomeChart('program-income-chart', myData, mine + unit_year + unit_time_unit + end);
+        },
+        error: function (result) {
+            console.log(result);
+        }
+    });
+}
+
+function getIncomeChartData() {
+    var need_unitTime = $('#program-show-unit-time').text().trim();
+    var need_year = $('#program-show-year').text().trim();
+    $.ajax({
+        type: "post",
+        dataType: 'json',
+        url: "/statistics/publisher/req_programIncomeByUnitTime",
+        data: {
+            unit_time: need_unitTime,
+            unit_time_year: need_year
+        },
+        success: function (data) {
+            $('#program-income-chart').remove();
+            var new_chart_div = $('<div class="program-chart col-md-offset-1 col-md-10 col-md-offset-1" id="program-income-chart" style=" margin-top: 15px;height: 400px;"></div>');
+            $("#my-program-statistics").append(new_chart_div);
+            var myData = [];
+            for (var index in data['result']) {
+                var item = [];
+                item.push(data['result'][index]['tag']);
+                item.push(data['result'][index]['data']);
+                myData.push(item);
+            }
+
+            var mine = '您的节目';
+            var unit_year = '';
+            var unit_time_unit = '';
+            var end = '收入统计';
+            if (need_unitTime === '全部') {
+                unit_time_unit = '详细';
+            } else {
+                unit_time_unit = need_unitTime;
+            }
+            if (need_year === '全部') {
+                unit_year = '详细';
+            } else {
+                unit_year = need_year + "年";
+            }
+            createIncomeChart('program-income-chart', myData, mine + unit_year + unit_time_unit + end);
+        },
+        error: function (result) {
+            console.log(result);
+        }
+    });
+}
+
+//数据格式：[['name1','1'],['name2','2']]
+function createIncomeChart(id, data, seriesTitle) {
+    function splitData(rawData) {
+        var values = [];
+        var categories = [];
+        for (var i = 0; i < rawData.length; i++) {
+            var name = rawData[i].splice(0, 1)[0];
+            var value = rawData[i].splice(0, 1)[0];
+            values.push(value);
+            categories.push(name);
+        }
+        return {
+            categories: categories,
+            values: values
+        };
+    }
+
+    var needData = splitData(data);
+    var chart = echarts.init(document.getElementById(id));
+    chart.showLoading();
+    var option = {
+        title: {
+            text: seriesTitle
+        },
+        tooltip: {
+            trigger: 'axis'
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap: true,
+            data: needData.categories,
+            axisLine: {
+                show: true
+            }
+        },
+        yAxis: {
+            type: 'value',
+            boundaryGap: true,
+            axisLabel: {
+                formatter: '{value} 元'
+            },
+            min: function (value) {
+                return value.min * 0.7;
+            },
+            max: function (value) {
+                return value.max * 1.3;
+            },
+            axisLine: {
+                show: true
+            }
+        },
+        series: [
+            {
+                name: '收入总计',
+                type: 'line',
+                smooth: true,
+                data: needData.values,
+                markPoint: {
+                    data: [
+                        {type: 'max', name: '最大收入'},
+                        {type: 'min', name: '最小收入'}
+                    ]
+                },
+                markLine: {
+                    data: [
+                        {type: 'average', name: '平均值'}
+                    ]
+                }
+            }
+        ]
     };
     chart.setOption(option);
     chart.hideLoading();

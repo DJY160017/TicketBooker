@@ -56,20 +56,20 @@ public interface UserStatisticsDao {
     List<TwoDimensionModel> costByAllYear(String userID);
 
     /**
-     * 统计指定用户观看过的节目类型数量（以便统计最爱节目类型）
-     *
-     * @param userID 用户ID
-     * @return 每种节目类型观看的次数
-     */
-    List<ProgramID> getALlUserProgramID(String userID);
-
-    /**
      * 获取用户的每笔订单的详细交易价格
      *
      * @param userID 用户ID
      * @return
      */
     List<TwoDimensionModel> getDetailPrice(String userID);
+
+    /**
+     * 统计指定用户观看过的节目类型数量（以便统计最爱节目类型）
+     *
+     * @param userID 用户ID
+     * @return 每种节目类型观看的次数
+     */
+    List<ProgramID> getALlUserProgramID(String userID);
 
     /**
      * 获取客户的消费价格区间

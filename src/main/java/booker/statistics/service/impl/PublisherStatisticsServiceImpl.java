@@ -8,6 +8,7 @@ import booker.statistics.dao.PublisherStatisticsDao;
 import booker.statistics.service.PublisherStatisticsService;
 import booker.util.dataModel.TwoDimensionModel;
 import booker.util.enums.state.UnitTime;
+import booker.util.helper.TimeHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -31,58 +32,94 @@ public class PublisherStatisticsServiceImpl implements PublisherStatisticsServic
     }
 
     /**
-     * 统计指定ID发布者节目的收入
+     * 统计指定ID用户的花销（year,unit_time）
      *
-     * @param caterer  发布者ID
-     * @param unitTime 单位时间（月，季度，年）
+     * @param caterer  用户ID
+     * @param unitTime 单位时间（月，季度）
      * @param year     指定年份
      * @return 以单位时间为单位的统计数据
      */
     @Override
     public List<TwoDimensionModel> costByUnitTime(String caterer, UnitTime unitTime, int year) {
         List<Program> programs = publisherStatisticsDao.getPrograms(caterer, year);
-        Map<Integer, Double> map = new HashMap<>();
+        Map<String, Double> map = new TreeMap<>();
         for (Program program : programs) {
             double total_price = orderDao.countSumPrice(program.getProgramID());
-            Integer tag = createTag(unitTime, program.getStart_time());
+            String tag = String.valueOf(year) + "/" + String.valueOf(TimeHelper.getUnitTimeValue(unitTime, program.getEnd_time()));
             if (!map.keySet().contains(tag)) {
                 map.put(tag, 0.0);
             }
             map.put(tag, map.get(tag) + total_price);
         }
 
-        Map<Integer, Double> result = new TreeMap<>(map);
         List<TwoDimensionModel> data = new ArrayList<>();
-        for (Integer key : result.keySet()) {
-            TwoDimensionModel<Integer, Double> twoDimensionModel = new TwoDimensionModel<>(key, result.get(key));
+        for (String key : map.keySet()) {
+            TwoDimensionModel<String, Double> twoDimensionModel = new TwoDimensionModel<>(key, map.get(key));
             data.add(twoDimensionModel);
         }
         return data;
     }
 
     /**
-     * 统计指定ID发布者节目的收入
+     * 统计指定ID用户的花销（year, 全部）
      *
-     * @param caterer 发布者ID
+     * @param caterer 用户ID
+     * @param year    指定年份
      * @return 以单位时间为单位的统计数据
      */
     @Override
-    public List<TwoDimensionModel> costByUnitTime(String caterer) {
-        List<Program> programs = publisherStatisticsDao.getPrograms(caterer);
-        Map<Integer, Double> map = new HashMap<>();
+    public List<TwoDimensionModel> costByUnitTime(String caterer, int year) {
+        List<Program> programs = publisherStatisticsDao.getPrograms(caterer, year);
+        List<TwoDimensionModel> data = new ArrayList<>();
         for (Program program : programs) {
             double total_price = orderDao.countSumPrice(program.getProgramID());
-            Integer tag = program.getStart_time().getYear();
+            TwoDimensionModel<LocalDateTime, Double> twoDimensionModel = new TwoDimensionModel<>(program.getEnd_time(), total_price);
+            data.add(twoDimensionModel);
+        }
+        return data;
+    }
+
+    /**
+     * 统计指定ID用户的花销（全部，(unit_time) ）
+     *
+     * @param caterer  用户ID
+     * @param unitTime
+     * @return 以单位时间为单位的统计数据
+     */
+    @Override
+    public List<TwoDimensionModel> costByUnitTime(String caterer, UnitTime unitTime) {
+        List<Program> programs = publisherStatisticsDao.getPrograms(caterer);
+        Map<String, Double> map = new TreeMap<>();
+        for (Program program : programs) {
+            double total_price = orderDao.countSumPrice(program.getProgramID());
+            String tag = String.valueOf(TimeHelper.getUnitTimeValue(unitTime, program.getEnd_time()));
             if (!map.keySet().contains(tag)) {
                 map.put(tag, 0.0);
             }
             map.put(tag, map.get(tag) + total_price);
         }
 
-        Map<Integer, Double> result = new TreeMap<>(map);
         List<TwoDimensionModel> data = new ArrayList<>();
-        for (Integer key : result.keySet()) {
-            TwoDimensionModel<Integer, Double> twoDimensionModel = new TwoDimensionModel<>(key, result.get(key));
+        for (String key : map.keySet()) {
+            TwoDimensionModel<String, Double> twoDimensionModel = new TwoDimensionModel<>(key, map.get(key));
+            data.add(twoDimensionModel);
+        }
+        return data;
+    }
+
+    /**
+     * 获取用户的每笔订单的详细交易价格(全部， 全部)
+     *
+     * @param caterer 用户ID
+     * @return
+     */
+    @Override
+    public List<TwoDimensionModel> getDetailPrice(String caterer) {
+        List<Program> programs = publisherStatisticsDao.getPrograms(caterer);
+        List<TwoDimensionModel> data = new ArrayList<>();
+        for (Program program : programs) {
+            double total_price = orderDao.countSumPrice(program.getProgramID());
+            TwoDimensionModel<LocalDateTime, Double> twoDimensionModel = new TwoDimensionModel<>(program.getEnd_time(), total_price);
             data.add(twoDimensionModel);
         }
         return data;

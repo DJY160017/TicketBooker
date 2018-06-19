@@ -3,6 +3,7 @@ package booker.statistics.dao;
 import booker.model.Program;
 import booker.model.Venue;
 import booker.model.id.ProgramID;
+import booker.util.dataModel.TwoDimensionModel;
 
 import java.util.List;
 import java.util.Map;

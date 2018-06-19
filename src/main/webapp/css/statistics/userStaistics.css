@@ -14,10 +14,16 @@
     margin-right: 20px;
 }
 
+.my-program-statistics {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
 .return-my-info {
     position: absolute;
     left: 105px;
-    top: 120px;
+    top: 155px;
 }
 
 .consumption-tile {
@@ -62,4 +68,3 @@
 .area-show-chart {
     height: 400px;
 }
-

@@ -75,6 +75,9 @@
                 <li role="presentation">
                     <a href="javascript:void(0)" id="my-favorite-a" onclick="showFavorite()" style="color: #1b6d85">喜爱节目统计</a>
                 </li>
+                <li role="presentation">
+                    <a href="javascript:void(0)" id="my-program-a" onclick="showProgram()" style="color: #1b6d85">我的节目收益分析</a>
+                </li>
             </ul>
         </div>
         <div class="col-md-9 panel panel-default user-statistics-info-panel">
@@ -154,6 +157,61 @@
                 <div class="area-show" id="area-show">
                     <div class="area-show-chart col-md-12" id="area-chart"></div>
                 </div>
+            </div>
+            <div class="my-program-statistics" id="my-program-statistics" style="min-width: 95%" hidden>
+                <div class="program-income-tile" style="border-bottom: 1px solid rgba(51, 51, 51, 0.3);">
+                    <p class="program-income-title-p">节目收入统计</p>
+                </div>
+                <div class="chart-type col-md-offset-8 col-md-4">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default dropdown-toggle btn-sm" id="program-show-year"
+                                data-toggle="dropdown">
+                            2018<span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="javascript:void(0)" onclick="showChartByYearForIncome(this)">2018</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" onclick="showChartByYearForIncome(this)">2017</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" onclick="showChartByYearForIncome(this)">2016</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" onclick="showChartByYearForIncome(this)">2015</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" onclick="showChartByYearForIncome(this)">全部</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default dropdown-toggle btn-sm" id="program-show-unit-time"
+                                data-toggle="dropdown">
+                            全部<span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="javascript:void(0)" onclick="showChartByUnitTimeForIncome(this)">月份</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" onclick="showChartByUnitTimeForIncome(this)">季度</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" onclick="showChartByUnitTimeForIncome(this)">全部</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn-group" style="border-left: 1px solid rgba(51, 51, 51, 0.3);height: 30px;"></div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-default" id="program-all-type-btn"
+                                onclick="showChartByAllForIncome()">按年全部
+                        </button>
+                    </div>
+                </div>
+                <div class="program-income-chart col-md-offset-1 col-md-10 col-md-offset-1" id="program-income-chart"
+                     style=" margin-top: 15px;height: 400px;"></div>
             </div>
         </div>
         <div class="return-my-info">

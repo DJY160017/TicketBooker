@@ -4,6 +4,7 @@ import booker.model.Program;
 import booker.model.Venue;
 import booker.model.id.ProgramID;
 import booker.statistics.dao.PublisherStatisticsDao;
+import booker.util.dataModel.TwoDimensionModel;
 import booker.util.helper.VenueSizeHelper;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -12,6 +13,7 @@ import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -38,7 +40,7 @@ public class PublisherStatisticsDaoImpl implements PublisherStatisticsDao {
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
 
-        String hql = "select p from Program p where p.caterer=:caterer and YEAR(p.programID.reserve_time)=:year";
+        String hql = "select p from Program p where p.caterer=:caterer and YEAR(p.end_time)=:year order by p.end_time";
         Query query = session.createQuery(hql);
         query.setParameter("year", year);
         query.setParameter("caterer", caterer);
@@ -59,7 +61,7 @@ public class PublisherStatisticsDaoImpl implements PublisherStatisticsDao {
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
 
-        String hql = "select p from Program p where p.caterer=:caterer";
+        String hql = "select p from Program p where p.caterer=:caterer order by p.end_time";
         Query query = session.createQuery(hql);
         query.setParameter("caterer", caterer);
         List<Program> ids = query.list();
