@@ -152,7 +152,7 @@ public class VenueStatisticsServiceImpl implements VenueStatisticsService {
      * @return
      */
     @Override
-    public List<LocalDateTime> countTopTimeRange(int venueID, int year) {
+    public List<TwoDimensionModel> countTopTimeRange(int venueID, int year) {
         return venueStatisticsDao.getAllStartTime(venueID, year);
     }
 }

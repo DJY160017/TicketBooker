@@ -73,5 +73,5 @@ public interface VenueStatisticsService {
      * @param year
      * @return
      */
-    List<LocalDateTime> countTopTimeRange(int venueID, int year);
+    List<TwoDimensionModel> countTopTimeRange(int venueID, int year);
 }

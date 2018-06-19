@@ -38,7 +38,7 @@
                     $('#venue_col').val(data['venue']['col_num']);
                     $('#venue_price').val(data['venue']['price']);
                     $('#address').val(data['venue']['address']);
-                    if(data['account'] !== 'null'){
+                    if (data['account'] !== 'null') {
                         $('#venue-account-value').val(data['account']);
                     }
                     var state = data['venue']['venueState'];
@@ -204,6 +204,9 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="check-my-statistics">
+            <a href="<c:url value="/statistics/venue/"/>">市场分析和场馆定价分析&gt;&gt;</a>
         </div>
     </div>
 </div>

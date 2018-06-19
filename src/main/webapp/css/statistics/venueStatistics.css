@@ -1,0 +1,46 @@
+.venue-statistics-info-panel {
+    min-height: 95%;
+}
+
+.market-compare-statistics {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.venue-price-statistics {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.return-venue-info {
+    position: absolute;
+    left: 105px;
+    top: 120px;
+}
+
+.market-compare-tile {
+    border-bottom: 1px solid rgba(51, 51, 51, 0.3);
+}
+
+.market-compare-table {
+    margin-top: 20px;
+}
+
+/*----------------------------------------------------------------------------*/
+.venue-price-tile {
+    border-bottom: 1px solid rgba(51, 51, 51, 0.3);
+}
+
+.average-price {
+    margin-top: 30px;
+}
+
+.book-index-condition {
+    margin-top: 30px;
+}
+
+.top-book-time-condition {
+    margin-top: 30px;
+}

@@ -100,5 +100,5 @@ public interface VenueStatisticsDao {
      * @param venueID 场馆ID
      * @return
      */
-    List<LocalDateTime> getAllStartTime(int venueID, int year);
+    List<TwoDimensionModel> getAllStartTime(int venueID, int year);
 }

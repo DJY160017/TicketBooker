@@ -41,7 +41,7 @@ public class VenueStatisticsDaoImpl implements VenueStatisticsDao {
         Query query = session.createQuery(hql);
         Object[] result = (Object[]) query.list().get(0);
         double total_price = (double) result[0];
-        int total_num = (int) result[1];
+        int total_num = ((Long) result[1]).intValue();
         double price = total_price / (double) total_num;
         transaction.commit();
         session.close();
@@ -61,6 +61,7 @@ public class VenueStatisticsDaoImpl implements VenueStatisticsDao {
 
         String hql = "select sum(o.total_price) from Order o where o.programID.venueID=:venueID";
         Query query = session.createQuery(hql);
+        query.setParameter("venueID", venueID);
         double price = (double) query.list().get(0);
         transaction.commit();
         session.close();
@@ -98,7 +99,8 @@ public class VenueStatisticsDaoImpl implements VenueStatisticsDao {
 
         String hql = "select count(p) from Program p where p.programID.venueID=:venueID";
         Query query = session.createQuery(hql);
-        int num = (int) query.list().get(0);
+        query.setParameter("venueID", venueID);
+        int num = ((Long) query.list().get(0)).intValue();
         transaction.commit();
         session.close();
         return num;
@@ -116,7 +118,7 @@ public class VenueStatisticsDaoImpl implements VenueStatisticsDao {
 
         String hql = "select count(p) from Program p";
         Query query = session.createQuery(hql);
-        int num = (int) query.list().get(0);
+        int num = ((Long) query.list().get(0)).intValue();
         transaction.commit();
         session.close();
         return num;
@@ -133,13 +135,13 @@ public class VenueStatisticsDaoImpl implements VenueStatisticsDao {
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
 
-        String hql = "select sum(DAY(p.end_time)-DAY(p.start_time)), YEAR(p.start_time), MONTH(p.start_time) from Program p where p.programID.venueID=:venueID group by YEAR(p.start_time), MONTH(p.start_time) order by YEAR(P.start_time), MONTH(P.start_time)";
+        String hql = "select sum(DAY(p.end_time)-DAY(p.start_time)), YEAR(p.start_time), MONTH(p.start_time) from Program p where p.programID.venueID=:venueID group by YEAR(p.start_time), MONTH(p.start_time) order by YEAR(p.start_time), MONTH(p.start_time)";
         Query query = session.createQuery(hql);
         query.setParameter("venueID", venueID);
         List<Object[]> result = query.list();
         List<TwoDimensionModel> data = new ArrayList<>();
         for (Object[] objects : result) {
-            int days = (int) objects[0];
+            int days = ((Long) objects[0]).intValue();
             int year = (int) objects[1];
             int month = (int) objects[2];
             int duration = TimeHelper.getMonthLength(year, month);
@@ -165,14 +167,14 @@ public class VenueStatisticsDaoImpl implements VenueStatisticsDao {
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
 
-        String hql = "select sum(DAY(p.end_time)-DAY(p.start_time)), YEAR(p.start_time), QUARTER(p.start_time) from Program p where p.programID.venueID=:venueID group by YEAR(p.start_time), QUARTER(p.start_time) order by YEAR(P.start_time), QUARTER(P.start_time)";
+        String hql = "select sum(DAY(p.end_time)-DAY(p.start_time)), YEAR(p.start_time), QUARTER(p.start_time) from Program p where p.programID.venueID=:venueID group by YEAR(p.start_time), QUARTER(p.start_time) order by YEAR(p.start_time), QUARTER(p.start_time)";
         Query query = session.createQuery(hql);
         query.setParameter("venueID", venueID);
         List<Object[]> result = query.list();
         List<TwoDimensionModel> data = new ArrayList<>();
         for (Object[] objects : result) {
             TwoDimensionModel<String, Double> twoDimensionModel = new TwoDimensionModel<>();
-            int days = (int) objects[0];
+            int days = ((Long) objects[0]).intValue();
             int year = (int) objects[1];
             int quarter = (int) objects[2];
             int duration = TimeHelper.getMonthLength(year, quarter);
@@ -197,14 +199,14 @@ public class VenueStatisticsDaoImpl implements VenueStatisticsDao {
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
 
-        String hql = "select sum(DAY(p.end_time)-DAY(p.start_time)), YEAR(p.start_time) from Program p where p.programID.venueID=:venueID group by YEAR(p.start_time) order by YEAR(P.start_time)";
+        String hql = "select sum(DAY(p.end_time)-DAY(p.start_time)), YEAR(p.start_time) from Program p where p.programID.venueID=:venueID group by YEAR(p.start_time) order by YEAR(p.start_time)";
         Query query = session.createQuery(hql);
         query.setParameter("venueID", venueID);
         List<Object[]> result = query.list();
         List<TwoDimensionModel> data = new ArrayList<>();
         for (Object[] objects : result) {
             TwoDimensionModel<String, Double> twoDimensionModel = new TwoDimensionModel<>();
-            int days = (int) objects[0];
+            int days = ((Long) objects[0]).intValue();
             int year = (int) objects[1];
             int duration = TimeHelper.getYearLength(year);
             double index = (double) days / (double) duration;
@@ -232,9 +234,9 @@ public class VenueStatisticsDaoImpl implements VenueStatisticsDao {
         Query query = session.createQuery(hql);
         query.setParameter("area", area);
         Object[] objects = (Object[]) query.list().get(0);
-        double total_num = (double) objects[0];
+        double total_num = ((Long) objects[0]).doubleValue();
         double total_price = (double) objects[1];
-        double index = total_num / total_price;
+        double index = total_price / total_num;
         transaction.commit();
         session.close();
         return index;
@@ -264,9 +266,9 @@ public class VenueStatisticsDaoImpl implements VenueStatisticsDao {
         query.setParameter("min_raw", min_raw);
         query.setParameter("max_raw", max_raw);
         Object[] objects = (Object[]) query.list().get(0);
-        double total_num = (double) objects[0];
+        double total_num = ((Long) objects[0]).doubleValue();
         double total_price = (double) objects[1];
-        double index = total_num / total_price;
+        double index = total_price / total_num;
         transaction.commit();
         session.close();
         return index;
@@ -298,9 +300,9 @@ public class VenueStatisticsDaoImpl implements VenueStatisticsDao {
         query.setParameter("min_raw", min_raw);
         query.setParameter("max_raw", max_raw);
         Object[] objects = (Object[]) query.list().get(0);
-        double total_num = (double) objects[0];
+        double total_num = ((Long) objects[0]).doubleValue();
         double total_price = (double) objects[1];
-        double index = total_num / total_price;
+        double index = total_price / total_num;
         transaction.commit();
         session.close();
         return index;
@@ -313,17 +315,23 @@ public class VenueStatisticsDaoImpl implements VenueStatisticsDao {
      * @return
      */
     @Override
-    public List<LocalDateTime> getAllStartTime(int venueID, int year) {
+    public List<TwoDimensionModel> getAllStartTime(int venueID, int year) {
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
 
-        String hql = "select p.start_time from Program p where p.programID.venueID=:venueID and YEAR(p.start_time)=:year order by p.start_time";
+        String hql = "select p.start_time,(DAY(p.end_time)-DAY(p.start_time)) from Program p where p.programID.venueID=:venueID and YEAR(p.start_time)=:year order by p.start_time";
         Query query = session.createQuery(hql);
         query.setParameter("venueID", venueID);
         query.setParameter("year", year);
-        List<LocalDateTime> times = query.list();
+        List<Object[]> times = query.list();
+        List<TwoDimensionModel> result = new ArrayList<>();
+        for (Object[] objects : times) {
+            LocalDateTime start = (LocalDateTime) objects[0];
+            int day = ((Long) objects[1]).intValue();
+            TwoDimensionModel<LocalDateTime, Integer> twoDimensionModel = new TwoDimensionModel<>(start, day);
+        }
         transaction.commit();
         session.close();
-        return times;
+        return result;
     }
 }
