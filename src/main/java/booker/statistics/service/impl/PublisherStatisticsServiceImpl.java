@@ -95,29 +95,33 @@ public class PublisherStatisticsServiceImpl implements PublisherStatisticsServic
      * @return
      */
     @Override
-    public Map<String, Double[]> getSmallVenueSeatPriceRange(int venueID) {
+    public List<Map<String, Double[]>> getSmallVenueSeatPriceRange(int venueID) {
         Venue venue = venueDao.getVenue(venueID);
         List<Program> programs = venue.getPrograms();
-        Map<String, Double[]> result = new HashMap<>();
+        List<Map<String, Double[]>> data = new ArrayList<>();
         for (Program program : programs) {
             Map<String, Double> map = publisherStatisticsDao.countProgramRange(program.getProgramID());
+            Map<String, Double[]> result = new HashMap<>();
             for (String key : map.keySet()) {
-                if (!result.keySet().contains(key)) {
-                    result.put(key, new Double[]{0.0, map.get(key)});
+                String real_key = program.getName() + "/" + key;
+                if (!result.keySet().contains(real_key)) {
+                    result.put(real_key, new Double[]{0.0, map.get(key)});
                 } else {
-                    Double[] price = result.get(key);
+                    Double[] price = result.get(real_key);
                     double need_price = map.get(key);
                     if (need_price < price[0]) {
                         price[0] = need_price;
                     } else if (need_price > price[1]) {
                         price[1] = need_price;
+                    } else if (price[0] == 0.0) { //当且仅当price[0] =0.0
+                        price[0] = need_price;
                     }
-                    result.put(key, price);
+                    result.put(real_key, price);
                 }
             }
-
+            data.add(result);
         }
-        return result;
+        return data;
     }
 
     /**
@@ -138,6 +142,45 @@ public class PublisherStatisticsServiceImpl implements PublisherStatisticsServic
     }
 
     /**
+     * 获取同一场馆,相同节目类型座位类型价格区间(1,0,3)
+     *
+     * @param venueID     场馆ID
+     * @param programType
+     * @return
+     */
+    @Override
+    public List<Map<String, Double[]>> getSmallVenueSeatPriceRange(int venueID, String programType) {
+        Venue venue = venueDao.getVenue(venueID);
+        List<Program> programs = venue.getPrograms();
+        List<Map<String, Double[]>> data = new ArrayList<>();
+        for (Program program : programs) {
+            if (program.getProgramType().equals(programType)) {
+                Map<String, Double[]> result = new HashMap<>();
+                Map<String, Double> map = publisherStatisticsDao.countProgramRange(program.getProgramID());
+                for (String key : map.keySet()) {
+                    String real_key = program.getName() + "/" + key;
+                    if (!result.keySet().contains(real_key)) {
+                        result.put(real_key, new Double[]{0.0, map.get(key)});
+                    } else {
+                        Double[] price = result.get(real_key);
+                        double need_price = map.get(key);
+                        if (need_price < price[0]) {
+                            price[0] = need_price;
+                        } else if (need_price > price[1]) {
+                            price[1] = need_price;
+                        } else if (price[0] == 0.0) { //当且仅当price[0] =0.0
+                            price[0] = need_price;
+                        }
+                        result.put(real_key, price);
+                    }
+                }
+                data.add(result);
+            }
+        }
+        return data;
+    }
+
+    /**
      * 获取同等规模场馆类型,相同节目类型座位类型价格区间
      *
      * @param size        场馆规模
@@ -150,27 +193,30 @@ public class PublisherStatisticsServiceImpl implements PublisherStatisticsServic
         List<Map<String, Double[]>> data = new ArrayList<>();
         for (Venue venue : venues) {
             List<Program> programs = venue.getPrograms();
-            Map<String, Double[]> result = new HashMap<>();
             for (Program program : programs) {
                 if (program.getProgramType().equals(programType)) {
+                    Map<String, Double[]> result = new HashMap<>();
                     Map<String, Double> map = publisherStatisticsDao.countProgramRange(program.getProgramID());
                     for (String key : map.keySet()) {
-                        if (!result.keySet().contains(key)) {
-                            result.put(key, new Double[]{0.0, map.get(key)});
+                        String real_key = program.getName() + "/" + key;
+                        if (!result.keySet().contains(real_key)) {
+                            result.put(real_key, new Double[]{0.0, map.get(key)});
                         } else {
-                            Double[] price = result.get(key);
+                            Double[] price = result.get(real_key);
                             double need_price = map.get(key);
                             if (need_price < price[0]) {
                                 price[0] = need_price;
                             } else if (need_price > price[1]) {
                                 price[1] = need_price;
+                            } else if (price[0] == 0.0) { //当且仅当price[0] =0.0
+                                price[0] = need_price;
                             }
-                            result.put(key, price);
+                            result.put(real_key, price);
                         }
                     }
+                    data.add(result);
                 }
             }
-            data.add(result);
         }
         return data;
     }
@@ -206,17 +252,20 @@ public class PublisherStatisticsServiceImpl implements PublisherStatisticsServic
         for (Program program : programs) {
             Map<String, Double> map = publisherStatisticsDao.countProgramRange(program.getProgramID());
             for (String key : map.keySet()) {
-                if (!result.keySet().contains(key)) {
-                    result.put(key, new Double[]{0.0, map.get(key)});
+                String real_key = program.getName() + "/" + key;
+                if (!result.keySet().contains(real_key)) {
+                    result.put(real_key, new Double[]{0.0, map.get(key)});
                 } else {
-                    Double[] price = result.get(key);
+                    Double[] price = result.get(real_key);
                     double need_price = map.get(key);
                     if (need_price < price[0]) {
                         price[0] = need_price;
                     } else if (need_price > price[1]) {
                         price[1] = need_price;
+                    } else if (price[0] == 0.0) { //当且仅当price[0] =0.0
+                        price[0] = need_price;
                     }
-                    result.put(key, price);
+                    result.put(real_key, price);
                 }
             }
 

@@ -224,3 +224,15 @@ function venueBook() {
 function showRule() {
     $('#rule-explain').modal('show');
 }
+
+function seatPriceDecideHelp() {
+    var address = getRequestParam('address');
+    var type = $('#reg_program_type').text().trim();
+    if (type === '@节目类型') {
+        $('#seat-decide-tip').modal('show');
+    } else {
+        var url = '/statistics/publisher/?address=' + address + '&type=' + type;
+        window.open(url, '_self');
+    }
+}
+

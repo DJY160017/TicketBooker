@@ -1,5 +1,6 @@
 package booker.dao;
 
+import booker.statistics.dao.PublisherStatisticsDao;
 import booker.util.helper.ApplicationContextHelper;
 import org.springframework.context.ApplicationContext;
 
@@ -9,9 +10,9 @@ import org.springframework.context.ApplicationContext;
  */
 public class DaoManager {
 
-    public final static  ExternalBalanceDao externalBalanceDao;
+    public final static ExternalBalanceDao externalBalanceDao;
 
-    public final static  MemberDao memberDao;
+    public final static MemberDao memberDao;
 
     public final static OrderDao orderDao;
 
@@ -25,6 +26,8 @@ public class DaoManager {
 
     public final static CouponDao couponDao;
 
+    public final static PublisherStatisticsDao publisherStatisticsDao;
+
     static {
         ApplicationContext applicationContext = ApplicationContextHelper.getApplicationContext();
         externalBalanceDao = applicationContext.getBean(ExternalBalanceDao.class);
@@ -35,6 +38,7 @@ public class DaoManager {
         ticketDao = applicationContext.getBean(TicketDao.class);
         venueDao = applicationContext.getBean(VenueDao.class);
         couponDao = applicationContext.getBean(CouponDao.class);
+        publisherStatisticsDao = applicationContext.getBean(PublisherStatisticsDao.class);
     }
 
 }

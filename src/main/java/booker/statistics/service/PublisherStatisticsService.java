@@ -27,15 +27,15 @@ public interface PublisherStatisticsService {
     List<TwoDimensionModel> costByUnitTime(String caterer);
 
     /**
-     * 获取同一场馆类型,不同节目的座位类型价格区间
+     * 获取同一场馆类型,不同节目的座位类型价格区间(1,0,0)
      *
      * @param venueID 场馆ID
      * @return
      */
-    Map<String, Double[]> getSmallVenueSeatPriceRange(int venueID);
+    List<Map<String, Double[]>> getSmallVenueSeatPriceRange(int venueID);
 
     /**
-     * 获取同等规模场馆类型,不同节目的座位类型价格区间
+     * 获取同等规模场馆类型,不同节目的座位类型价格区间(0,2,0)
      *
      * @param size 场馆规模
      * @return
@@ -43,7 +43,15 @@ public interface PublisherStatisticsService {
     List<Map<String, Double[]>> getSmallSizeSeatPriceRange(String size);
 
     /**
-     * 获取同等规模场馆类型,相同节目类型座位类型价格区间
+     * 获取同一场馆,相同节目类型座位类型价格区间(1,0,3)
+     *
+     * @param venueID 场馆ID
+     * @return
+     */
+    List<Map<String, Double[]>> getSmallVenueSeatPriceRange(int venueID, String programType);
+
+    /**
+     * 获取同等规模场馆类型,相同节目类型座位类型价格区间(0,2,3)
      *
      * @param size 场馆规模
      * @return

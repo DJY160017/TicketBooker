@@ -2,22 +2,24 @@ package booker.dao.impl;
 
 import booker.dao.DaoManager;
 import booker.dao.VenueDao;
+import booker.model.Program;
 import booker.model.Venue;
+import booker.statistics.dao.PublisherStatisticsDao;
 import booker.util.enums.state.VenueState;
 import booker.task.MD5Task;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 import static org.junit.Assert.*;
 
 public class VenueDaoImplTest {
 
     private VenueDao venueDao;
+
+    private PublisherStatisticsDao publisherStatisticsDao;
 
     private String[] province = {"深圳市", "北京市", "吉林省长春市", "江苏省南京市", "辽宁省大连市", "广东省广州市", "浙江省杭州市", "湖南省长沙市",
             "河北省石家庄市", "新疆维吾尔自治区乌鲁木齐市", "山东省青岛市", "河南省郑州市", "山西省太原市", "江西省南昌市", "安徽省合肥市", "湖北省武汉市", "内蒙古自治区呼和浩特市",
@@ -32,6 +34,7 @@ public class VenueDaoImplTest {
     @Before
     public void setUp() throws Exception {
         venueDao = DaoManager.venueDao;
+        publisherStatisticsDao = DaoManager.publisherStatisticsDao;
     }
 
     @Test
@@ -169,5 +172,40 @@ public class VenueDaoImplTest {
             e.printStackTrace();
         }
         return result;
+    }
+
+    @Test
+    public void test() {
+        long start = System.currentTimeMillis();
+        List<Venue> venues = publisherStatisticsDao.getSmallSizeVenue("小");
+        List<Map<String, Double[]>> data = new ArrayList<>();
+        for (Venue venue : venues) {
+            List<Program> programs = venue.getPrograms();
+            for (Program program : programs) {
+                if (program.getProgramType().equals("音乐会")) {
+                    Map<String, Double[]> result = new HashMap<>();
+                    Map<String, Double> map = publisherStatisticsDao.countProgramRange(program.getProgramID());
+                    for (String key : map.keySet()) {
+                        String real_key = program.getName() + "/" + key;
+                        if (!result.keySet().contains(real_key)) {
+                            result.put(real_key, new Double[]{0.0, map.get(key)});
+                        } else {
+                            Double[] price = result.get(real_key);
+                            double need_price = map.get(key);
+                            if (need_price < price[0]) {
+                                price[0] = need_price;
+                            } else if (need_price > price[1]) {
+                                price[1] = need_price;
+                            } else if (price[0] == 0.0) { //当且仅当price[0] =0.0
+                                price[0] = need_price;
+                            }
+                            result.put(real_key, price);
+                        }
+                    }
+                    data.add(result);
+                }
+            }
+        }
+        System.out.println(System.currentTimeMillis()-start);
     }
 }

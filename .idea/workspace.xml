@@ -6,22 +6,24 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="abe1ef56-cec2-40a7-9fda-b8e1ae5f50eb" name="Default" comment="底层数据全部更新完成">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/statistics/userStaistics.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/statistics/userStatistics.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/statistics/managerStatistics.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/statistics/publisherStatistics.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/statistics/userStatistics.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/statistics/venueStatistics.jsp" afterDir="false" />
+    <list default="true" id="abe1ef56-cec2-40a7-9fda-b8e1ae5f50eb" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/statistics/publisherStatistics.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/statistics/publisherStatistics.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/booker/statistics/controller/UserStatisticsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booker/statistics/controller/UserStatisticsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/booker/statistics/dao/UserStatisticsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booker/statistics/dao/UserStatisticsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/booker/dao/DaoManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booker/dao/DaoManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/booker/statistics/controller/PublisherStatisticsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booker/statistics/controller/PublisherStatisticsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/booker/statistics/dao/PublisherStatisticsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booker/statistics/dao/PublisherStatisticsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/PublisherStatisticsDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/PublisherStatisticsDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/UserStatisticsDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/UserStatisticsDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/booker/statistics/service/UserStatisticsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booker/statistics/service/UserStatisticsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/booker/statistics/service/impl/UserStatisticsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booker/statistics/service/impl/UserStatisticsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/booker/util/enums/state/UnitTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booker/util/enums/state/UnitTime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/user/userInfo.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/user/userInfo.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/user/userInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/user/userInfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/booker/statistics/service/PublisherStatisticsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booker/statistics/service/PublisherStatisticsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/booker/statistics/service/impl/PublisherStatisticsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booker/statistics/service/impl/PublisherStatisticsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/venue/venueBook.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/venue/venueBook.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/statistics/userStatistics.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/statistics/userStatistics.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/venue/venueBook.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/venue/venueBook.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/statistics/publisherStatistics.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/statistics/publisherStatistics.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/venue/add/venueBook.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/venue/add/venueBook.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/booker/dao/impl/VenueDaoImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/booker/dao/impl/VenueDaoImplTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -66,98 +68,90 @@
     <favorites_list name="TicketBooker" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
+      <file leaf-file-name="publisherStatistics.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/statistics/publisherStatistics.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="7" column="55" selection-start-line="7" selection-start-column="55" selection-end-line="7" selection-end-column="55" />
+              <folding>
+                <element signature="n#!!block;n#getRequestParam#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="publisherStatistics.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/css/statistics/publisherStatistics.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="publisherStatistics.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/statistics/publisherStatistics.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="301">
+              <caret line="59" column="77" selection-start-line="59" selection-start-column="77" selection-end-line="59" selection-end-column="77" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="userStatistics.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/statistics/userStatistics.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="119" column="30" selection-start-line="119" selection-start-column="30" selection-end-line="119" selection-end-column="30" />
+            <state relative-caret-position="243">
+              <caret line="115" column="26" lean-forward="true" selection-start-line="93" selection-start-column="20" selection-end-line="115" selection-end-column="26" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#style#0;n#div#2;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#div#3;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="userStatistics.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/statistics/userStatistics.js">
+      <file leaf-file-name="PublisherStatisticsController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/controller/PublisherStatisticsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="127" column="37" selection-start-line="127" selection-start-column="37" selection-end-line="127" selection-end-column="37" />
-              <folding>
-                <element signature="n#!!block;n#showInfo#0" />
-                <element signature="n#!!block;n#showOrder#0" />
-                <element signature="n#!!block;n#createCustmizedChart#0" />
-                <element signature="e#1538#1751#0" />
-              </folding>
+            <state relative-caret-position="207">
+              <caret line="50" column="61" selection-start-line="50" selection-start-column="61" selection-end-line="50" selection-end-column="61" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="userStaistics.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/css/statistics/userStaistics.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="59" column="1" lean-forward="true" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserStatisticsController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/controller/UserStatisticsController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="63" column="53" lean-forward="true" selection-start-line="63" selection-start-column="53" selection-end-line="63" selection-end-column="53" />
-              <folding>
-                <element signature="e#347#348#0" expanded="true" />
-                <element signature="e#377#378#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserStatisticsServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/service/impl/UserStatisticsServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="76" column="47" selection-start-line="76" selection-start-column="47" selection-end-line="76" selection-end-column="47" />
-              <folding>
-                <element signature="e#3865#3866#0" expanded="true" />
-                <element signature="e#3928#3929#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserStatisticsDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/dao/UserStatisticsDao.java">
+      <file leaf-file-name="PublisherStatisticsService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/service/PublisherStatisticsService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="182">
-              <caret line="55" column="28" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
+              <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserStatisticsDaoImpl.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/UserStatisticsDaoImpl.java">
+      <file leaf-file-name="PublisherStatisticsServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/service/impl/PublisherStatisticsServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="182" column="66" selection-start-line="182" selection-start-column="66" selection-end-line="182" selection-end-column="66" />
+            <state relative-caret-position="362">
+              <caret line="190" column="72" selection-start-line="190" selection-start-column="72" selection-end-line="190" selection-end-column="72" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserStatisticsService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/service/UserStatisticsService.java">
+      <file leaf-file-name="DaoManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/booker/dao/DaoManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
+            <state relative-caret-position="227">
+              <caret line="40" column="90" selection-start-line="40" selection-start-column="90" selection-end-line="40" selection-end-column="90" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="applicationContext.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="12" column="57" lean-forward="true" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -173,14 +167,13 @@
         <option value="Interface" />
         <option value="Class" />
         <option value="Jsp File" />
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>format</find>
       <find>req_userPay</find>
       <find>req_generateAutoOrder</find>
       <find>Local</find>
@@ -210,6 +203,7 @@
       <find>new TwoDimensionModel</find>
       <find>new TwoDimensionModel&lt;&gt;()</find>
       <find>setTag</find>
+      <find>map</find>
     </findStrings>
     <dirStrings>
       <dir>D:\workspace\idea-workspace\TicketBooker\src\main\webapp\js</dir>
@@ -223,26 +217,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/booker/statistics/service/PublisherStatisticsService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/booker/statistics/dao/PublisherStatisticsDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/PublisherStatisticsDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/booker/util/helper/QuarterHelper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/booker/util/helper/TimeHelper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/booker/util/helper/VenueSizeHelper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/booker/statistics/dao/VenueStatisticsDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/booker/statistics/service/VenueStatisticsService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/booker/model/Venue.java" />
-        <option value="$PROJECT_DIR$/src/main/java/booker/statistics/service/impl/VenueStatisticsServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/booker/util/dataModel/ThreeDimensionModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/booker/util/dataModel/TriDimensionModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/booker/util/dataModel/SuperTwoDimensionModel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/booker/statistics/service/impl/PublisherStatisticsServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/VenueStatisticsDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/booker/statistics/service/ManagerStatisticsService.java" />
         <option value="$PROJECT_DIR$/src/main/java/booker/statistics/dao/ManagerStatisticsDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/ManagerStatisticsDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/booker/statistics/service/impl/ManagerStatisticsServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/test/java/booker/dao/impl/VenueDaoImplTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/booker/dao/impl/MemberDaoImplTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/booker/dao/MemberDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/booker/dao/impl/MemberDaoImpl.java" />
@@ -250,7 +232,6 @@
         <option value="$PROJECT_DIR$/src/test/java/booker/dao/impl/ProgramDaoImplTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/booker/dao/TicketDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/booker/dao/impl/TicketDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
         <option value="$PROJECT_DIR$/src/test/java/booker/dao/impl/OrderDaoImplTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/booker/dao/ExternalBalanceDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/booker/dao/impl/ExternalBalanceDaoImpl.java" />
@@ -262,7 +243,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/statistics/venueStatiatics.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/statistics/managerStatistics.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/statistics/venueStatistics.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/statistics/publisherStatistics.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/user/userInfo.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/user/userInfo.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/booker/util/enums/state/UnitTime.java" />
@@ -272,8 +252,22 @@
         <option value="$PROJECT_DIR$/src/main/java/booker/statistics/service/UserStatisticsService.java" />
         <option value="$PROJECT_DIR$/src/main/java/booker/statistics/controller/UserStatisticsController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/statistics/userStatistics.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/statistics/userStatistics.js" />
         <option value="$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/UserStatisticsDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/statistics/userStatistics.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/venue/venueBook.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/venue/venueBook.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/venue/add/venueBook.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/booker/statistics/dao/PublisherStatisticsDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/PublisherStatisticsDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/booker/statistics/service/PublisherStatisticsService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/statistics/publisherStatistics.css" />
+        <option value="$PROJECT_DIR$/src/main/java/booker/dao/DaoManager.java" />
+        <option value="$PROJECT_DIR$/src/test/java/booker/dao/impl/VenueDaoImplTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/booker/statistics/controller/PublisherStatisticsController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/booker/statistics/service/impl/PublisherStatisticsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/statistics/publisherStatistics.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/statistics/publisherStatistics.jsp" />
       </list>
     </option>
   </component>
@@ -330,6 +324,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="TicketBooker" type="1abcf292:AndroidViewProjectNode" />
+              <item name="TicketBooker" type="e9137016:NonAndroidModuleNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -370,7 +375,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="booker" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TicketBooker" type="b2602c69:ProjectViewProjectNode" />
@@ -436,7 +441,49 @@
               <item name="TicketBooker" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicketBooker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicketBooker" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicketBooker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicketBooker" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicketBooker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicketBooker" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="order" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicketBooker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicketBooker" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="statistics" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicketBooker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicketBooker" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="venue" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TicketBooker" type="b2602c69:ProjectViewProjectNode" />
@@ -453,7 +500,25 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="manager" type="462c0819:PsiDirectoryNode" />
+              <item name="statistics" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicketBooker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicketBooker" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="ticket" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicketBooker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicketBooker" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="venue" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TicketBooker" type="b2602c69:ProjectViewProjectNode" />
@@ -470,7 +535,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="manager" type="462c0819:PsiDirectoryNode" />
+              <item name="order" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TicketBooker" type="b2602c69:ProjectViewProjectNode" />
@@ -490,23 +555,52 @@
               <item name="jsp" type="462c0819:PsiDirectoryNode" />
               <item name="ticket" type="462c0819:PsiDirectoryNode" />
             </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView">
-        <subPane>
-          <expand>
             <path>
-              <item name="TicketBooker" type="1abcf292:AndroidViewProjectNode" />
-              <item name="TicketBooker" type="e9137016:NonAndroidModuleNode" />
+              <item name="TicketBooker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicketBooker" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="jsp" type="462c0819:PsiDirectoryNode" />
+              <item name="venue" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicketBooker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicketBooker" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="jsp" type="462c0819:PsiDirectoryNode" />
+              <item name="venue" type="462c0819:PsiDirectoryNode" />
+              <item name="add" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicketBooker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicketBooker" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicketBooker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicketBooker" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicketBooker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicketBooker" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -656,7 +750,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="TicketDaoImplTest.addTickets" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="VenueDaoImplTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TicketBooker" />
       <extension name="coverage">
         <pattern>
@@ -667,8 +761,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="booker.dao.impl" />
-      <option name="MAIN_CLASS_NAME" value="booker.dao.impl.TicketDaoImplTest" />
-      <option name="METHOD_NAME" value="addTickets" />
+      <option name="MAIN_CLASS_NAME" value="booker.dao.impl.VenueDaoImplTest" />
+      <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -823,19 +917,19 @@
     </configuration>
     <list>
       <item itemvalue="Tomcat Server.Unnamed" />
-      <item itemvalue="JUnit.TicketDaoImplTest.addTickets" />
       <item itemvalue="Application.OrderDaoImplTest" />
       <item itemvalue="JUnit.OrderDaoImplTest.randomAddOrder" />
       <item itemvalue="JUnit.ExternalBalanceDaoImplTest.addBankAccount" />
       <item itemvalue="JUnit.SettlementDaoImplTest.addSettlement" />
+      <item itemvalue="JUnit.VenueDaoImplTest.test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.VenueDaoImplTest.test" />
         <item itemvalue="JUnit.SettlementDaoImplTest.addSettlement" />
         <item itemvalue="JUnit.ExternalBalanceDaoImplTest.addBankAccount" />
         <item itemvalue="JUnit.OrderDaoImplTest.randomAddOrder" />
         <item itemvalue="Application.OrderDaoImplTest" />
-        <item itemvalue="JUnit.TicketDaoImplTest.addTickets" />
       </list>
     </recent_temporary>
   </component>
@@ -929,7 +1023,8 @@
       <workItem from="1529025781524" duration="4626000" />
       <workItem from="1529110702116" duration="26548000" />
       <workItem from="1529196902220" duration="22180000" />
-      <workItem from="1529286083628" duration="36841000" />
+      <workItem from="1529286083628" duration="37018000" />
+      <workItem from="1529366527918" duration="20290000" />
     </task>
     <task id="LOCAL-00001" summary="为了跑起来，小修改">
       <created>1529028626829</created>
@@ -980,19 +1075,17 @@
       <option name="project" value="LOCAL" />
       <updated>1529291733914</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="会员指标分析打通，该部分结束">
+      <created>1529337806490</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1529337806490</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="OrderDaoImplTest_randomAddOrder - 2018.06.17 at 15h 12m 36s.xml">
-      <configuration name="OrderDaoImplTest.randomAddOrder" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="OrderDaoImplTest_randomAddOrder - 2018.06.17 at 17h 03m 56s.xml">
-      <configuration name="OrderDaoImplTest.randomAddOrder" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="OrderDaoImplTest_randomAddOrder - 2018.06.17 at 18h 19m 13s.xml">
-      <configuration name="OrderDaoImplTest.randomAddOrder" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="OrderDaoImplTest_randomAddOrder - 2018.06.17 at 18h 36m 51s.xml">
       <configuration name="OrderDaoImplTest.randomAddOrder" configurationId="JUnit" />
     </history-entry>
@@ -1014,9 +1107,18 @@
     <history-entry file="SettlementDaoImplTest_addSettlement - 2018.06.18 at 11h 05m 55s.xml">
       <configuration name="SettlementDaoImplTest.addSettlement" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="VenueDaoImplTest_test - 2018.06.19 at 14h 19m 38s.xml">
+      <configuration name="VenueDaoImplTest.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VenueDaoImplTest_test - 2018.06.19 at 14h 22m 25s.xml">
+      <configuration name="VenueDaoImplTest.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VenueDaoImplTest_test - 2018.06.19 at 14h 26m 44s.xml">
+      <configuration name="VenueDaoImplTest.test" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="838332000" />
+    <option name="totallyTimeSpent" value="858799000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1029,7 +1131,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="17" sideWeight="0.50075644" side_tool="true" weight="0.431562" />
@@ -1053,7 +1154,7 @@
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32850242" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="bottom" id="Version Control" order="13" weight="0.32850242" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49924356" visible="true" weight="0.431562" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.49924356" visible="true" weight="0.41706926" />
       <window_info anchor="bottom" id="Spring" order="9" weight="0.3279743" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.3268921" />
       <window_info id="Persistence" order="5" sideWeight="0.40032154" side_tool="true" weight="0.22012103" />
@@ -1085,6 +1186,7 @@
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="3" />
+      <window_info id="Web" order="6" sideWeight="0.39871383" side_tool="true" weight="0.22012103" />
       <window_info id="Favorites" order="7" sideWeight="0.40032154" side_tool="true" weight="0.22012103" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.3279743" />
       <window_info id="Capture Tool" order="1" />
@@ -1092,7 +1194,6 @@
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Event Log" order="17" sideWeight="0.50075644" side_tool="true" weight="0.43729904" />
       <window_info anchor="bottom" id="Messages" order="14" weight="0.3279743" />
-      <window_info anchor="bottom" id="TODO" order="7" weight="0.3279743" />
       <window_info anchor="right" id="Mongo Explorer" order="11" weight="0.32980332" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Run with VisualVM" order="12" />
@@ -1104,7 +1205,7 @@
       <window_info anchor="right" id="Database" order="9" weight="0.32980332" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Debug with VisualVM" order="15" />
-      <window_info id="Web" order="6" sideWeight="0.39871383" side_tool="true" weight="0.22012103" />
+      <window_info anchor="bottom" id="TODO" order="7" weight="0.3279743" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info anchor="bottom" id="Statistic" order="0" sideWeight="0.49924356" weight="0.43729904" />
       <window_info anchor="right" id="Theme Preview" order="6" />
@@ -1129,11 +1230,12 @@
     <MESSAGE value="场馆指标设计逻辑层和数据层搭建完毕" />
     <MESSAGE value="平台指标设计逻辑层和数据层搭建完毕" />
     <MESSAGE value="底层数据全部更新完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="底层数据全部更新完成" />
+    <MESSAGE value="会员指标分析打通，该部分结束" />
+    <option name="LAST_COMMIT_MESSAGE" value="会员指标分析打通，该部分结束" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="99" />
+      <option name="time" value="104" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -1161,193 +1263,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/booker/dao/impl/OrderDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="23" column="48" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/booker/dao/impl/MemberDaoImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/booker/dao/impl/VenueDaoImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="170" column="22" selection-start-line="149" selection-start-column="8" selection-end-line="170" selection-end-column="22" />
-          <folding>
-            <element signature="method#getVenueByState#0;class#VenueDaoImplTest#0" />
-            <element signature="method#updateVenueState#0;class#VenueDaoImplTest#0" />
-            <element signature="method#getVenues#0;class#VenueDaoImplTest#0" />
-            <element signature="method#formatPrice#0;class#VenueDaoImplTest#0" />
-            <element signature="method#createPrice#0;class#VenueDaoImplTest#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/booker/dao/MemberDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="53" column="35" lean-forward="true" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/booker/dao/impl/MemberDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="130" column="5" selection-start-line="130" selection-start-column="5" selection-end-line="130" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/booker/dao/impl/TicketDaoImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="41" column="9" lean-forward="true" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
-          <folding>
-            <element signature="method#getOneTicket#0;class#TicketDaoImplTest#0" />
-            <element signature="method#updateTicketState#0;class#TicketDaoImplTest#0" />
-            <element signature="method#updateTicketsState#0;class#TicketDaoImplTest#0" />
-            <element signature="method#getProgramLowPrice#0;class#TicketDaoImplTest#0" />
-            <element signature="method#getProgramTicket#0;class#TicketDaoImplTest#0" />
-            <element signature="method#getProgramTicket1#0;class#TicketDaoImplTest#0" />
-            <element signature="method#calculatePrice#0;class#TicketDaoImplTest#0" />
-            <element signature="method#calculatePrice#1;class#TicketDaoImplTest#0" />
-            <element signature="method#calculatePrice#1;class#TicketDaoImplTest#0" />
-            <element signature="method#createAreaName#0;class#TicketDaoImplTest#0" />
-            <element signature="method#createArea#0;class#TicketDaoImplTest#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/booker/dao/impl/ProgramDaoImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="51" column="49" selection-start-line="51" selection-start-column="49" selection-end-line="51" selection-end-column="49" />
-          <folding>
-            <element signature="method#addOneProgram#0;class#ProgramDaoImplTest#0" />
-            <element signature="method#getPrograms#0;class#ProgramDaoImplTest#0" />
-            <element signature="method#getPlanByState#0;class#ProgramDaoImplTest#0" />
-            <element signature="method#getPlanByState1#0;class#ProgramDaoImplTest#0" />
-            <element signature="method#getPlanByTime#0;class#ProgramDaoImplTest#0" />
-            <element signature="method#getOneProgram#0;class#ProgramDaoImplTest#0" />
-            <element signature="method#getLastTime#0;class#ProgramDaoImplTest#0" />
-            <element signature="method#getMaxRecords#0;class#ProgramDaoImplTest#0" />
-            <element signature="method#getPlan#0;class#ProgramDaoImplTest#0" />
-            <element signature="method#getPlanMaxRecords#0;class#ProgramDaoImplTest#0" />
-            <element signature="method#getPlans#0;class#ProgramDaoImplTest#0" />
-            <element signature="method#getSearchPlanMaxRecords#0;class#ProgramDaoImplTest#0" />
-            <element signature="method#getPlans1#0;class#ProgramDaoImplTest#0" />
-            <element signature="method#findPlanMaxAndMinTime#0;class#ProgramDaoImplTest#0" />
-            <element signature="method#getProgramName#0;class#ProgramDaoImplTest#0" />
-            <element signature="method#formate#0;class#ProgramDaoImplTest#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/booker/util/enums/state/TicketState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="55" column="50" lean-forward="true" selection-start-line="55" selection-start-column="50" selection-end-line="55" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/booker/dao/TicketDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1180">
-          <caret line="59" column="17" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/booker/dao/impl/TicketDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2680">
-          <caret line="134" column="24" selection-start-line="134" selection-start-column="24" selection-end-line="134" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/booker/dao/impl/OrderDaoImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2220">
-          <caret line="111" column="64" selection-start-line="111" selection-start-column="64" selection-end-line="111" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/booker/dao/ExternalBalanceDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="67" column="22" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/booker/dao/impl/ExternalBalanceDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="146" column="13" lean-forward="true" selection-start-line="146" selection-start-column="13" selection-end-line="146" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/booker/dao/impl/ExternalBalanceDaoImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="97" lean-forward="true" selection-start-line="97" selection-end-line="97" />
-          <folding>
-            <element signature="method#add#0;class#ExternalBalanceDaoImplTest#0" />
-            <element signature="method#get#0;class#ExternalBalanceDaoImplTest#0" />
-            <element signature="method#updateBalance#0;class#ExternalBalanceDaoImplTest#0" />
-            <element signature="method#randomPassword#0;class#ExternalBalanceDaoImplTest#0" />
-            <element signature="method#randomBalance#0;class#ExternalBalanceDaoImplTest#0" />
-            <element signature="method#formate#0;class#ExternalBalanceDaoImplTest#0" />
-            <element signature="method#idFormate#0;class#ExternalBalanceDaoImplTest#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/booker/model/Program.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/booker/dao/SettlementDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/booker/dao/ProgramDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3531">
-          <caret line="189" column="60" selection-start-line="189" selection-start-column="60" selection-end-line="189" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/booker/dao/impl/ProgramDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="39" column="19" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/booker/dao/impl/SettlementDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="218" column="25" selection-start-line="218" selection-start-column="25" selection-end-line="218" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/booker/dao/impl/SettlementDaoImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
@@ -1369,13 +1284,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/statistics/publisherStatistics.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -1523,17 +1431,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/controller/UserStatisticsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="63" column="53" lean-forward="true" selection-start-line="63" selection-start-column="53" selection-end-line="63" selection-end-column="53" />
-          <folding>
-            <element signature="e#347#348#0" expanded="true" />
-            <element signature="e#377#378#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/service/UserStatisticsService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
@@ -1541,57 +1438,224 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/UserStatisticsDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="205" column="46" lean-forward="true" selection-start-line="205" selection-start-column="46" selection-end-line="205" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/service/impl/UserStatisticsServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="76" column="47" selection-start-line="76" selection-start-column="47" selection-end-line="76" selection-end-column="47" />
-          <folding>
-            <element signature="e#3865#3866#0" expanded="true" />
-            <element signature="e#3928#3929#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="351">
+          <caret line="127" column="36" lean-forward="true" selection-start-line="127" selection-start-column="36" selection-end-line="127" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/dao/UserStatisticsDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
-          <caret line="55" column="28" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
+          <caret line="63" column="20" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/statistics/userStatistics.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/venue/venueBook.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="119" column="30" selection-start-line="119" selection-start-column="30" selection-end-line="119" selection-end-column="30" />
+        <state relative-caret-position="118">
+          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/order/orderPreview.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="68" column="11" lean-forward="true" selection-start-line="68" selection-start-column="11" selection-end-line="68" selection-end-column="11" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#div#2;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#3;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/order/orderPreview.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/order/orderPreview.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="18" column="17" lean-forward="true" selection-end-line="31" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/ticket/program.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="366" column="32" lean-forward="true" selection-start-line="366" selection-start-column="32" selection-end-line="366" selection-end-column="32" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#65#72#1" expanded="true" />
+            <element signature="e#65#72#1" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#65#72#1" expanded="true" />
+            <element signature="e#65#72#1" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#65#72#1" expanded="true" />
+            <element signature="e#65#72#1" expanded="true" />
+            <element signature="e#65#72#1" expanded="true" />
+            <element signature="e#65#72#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/controller/UserStatisticsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="46" column="5" lean-forward="true" selection-start-line="34" selection-start-column="4" selection-end-line="46" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/venue/venueBook.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="227" column="32" lean-forward="true" selection-start-line="227" selection-start-column="32" selection-end-line="227" selection-end-column="32" />
+          <folding>
+            <element signature="n#!!block;n#prevPages#0" />
+            <element signature="n#!!block;n#nextPages#0" />
+            <element signature="n#!!block;n#getPlanByPage#0" />
+            <element signature="n#!!block;n#getMaxPage#0" />
+            <element signature="n#!!block;n#getPageNow#0" />
+            <element signature="n#!!block;n#venueBook#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/venue/add/venueBook.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="249" column="33" lean-forward="true" selection-start-line="249" selection-start-column="33" selection-end-line="249" selection-end-column="33" />
+          <folding>
+            <element signature="e#65#72#1" expanded="true" />
+            <element signature="e#65#72#1" expanded="true" />
+            <element signature="n#div#5;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/PublisherStatisticsDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="100" column="23" lean-forward="true" selection-start-line="100" selection-start-column="23" selection-end-line="100" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/dao/PublisherStatisticsDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="36" column="23" lean-forward="true" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.3.RELEASE/spring-web-5.0.3.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.3.RELEASE/spring-webmvc-5.0.3.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="561" selection-start-line="561" selection-end-line="561" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.3.RELEASE/spring-webmvc-5.0.3.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/statistics/userStatistics.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="127" column="37" selection-start-line="127" selection-start-column="37" selection-end-line="127" selection-end-column="37" />
+        <state relative-caret-position="291">
+          <caret line="291" column="1" lean-forward="true" selection-start-line="217" selection-end-line="291" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/statistics/publisherStatistics.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/booker/dao/DaoManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="40" column="90" selection-start-line="40" selection-start-column="90" selection-end-line="40" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="12" column="57" lean-forward="true" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/booker/dao/impl/VenueDaoImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1180">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/statistics/userStatistics.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="115" column="26" lean-forward="true" selection-start-line="93" selection-start-column="20" selection-end-line="115" selection-end-column="26" />
           <folding>
-            <element signature="n#!!block;n#showInfo#0" />
-            <element signature="n#!!block;n#showOrder#0" />
-            <element signature="n#!!block;n#createCustmizedChart#0" />
-            <element signature="e#1538#1751#0" />
+            <element signature="n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/UserStatisticsDaoImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/controller/PublisherStatisticsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="182" column="66" selection-start-line="182" selection-start-column="66" selection-end-line="182" selection-end-column="66" />
+        <state relative-caret-position="207">
+          <caret line="50" column="61" selection-start-line="50" selection-start-column="61" selection-end-line="50" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/service/PublisherStatisticsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/service/impl/PublisherStatisticsServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="190" column="72" selection-start-line="190" selection-start-column="72" selection-end-line="190" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/statistics/publisherStatistics.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="55" selection-start-line="7" selection-start-column="55" selection-end-line="7" selection-end-column="55" />
+          <folding>
+            <element signature="n#!!block;n#getRequestParam#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/statistics/publisherStatistics.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="59" column="77" selection-start-line="59" selection-start-column="77" selection-end-line="59" selection-end-column="77" />
         </state>
       </provider>
     </entry>

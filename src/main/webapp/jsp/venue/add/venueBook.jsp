@@ -140,7 +140,8 @@
     <p class="text-center">喔喔！ 未找到符合要求的计划</p>
 </div>
 <div class="container venue-book-title">
-    <p class="venue-book-p">租用场馆 <span class="glyphicon glyphicon-info-sign" style="font-size: 15px" onclick="showRule()"></span></p>
+    <p class="venue-book-p">租用场馆 <span class="glyphicon glyphicon-info-sign" style="font-size: 15px"
+                                       onclick="showRule()"></span></p>
 </div>
 <div class="container book panel panel-default">
     <div class="program-info">
@@ -251,6 +252,9 @@
         </div>
     </div>
     <div class="useless" style="margin-top: 90px"></div>
+    <div class="seat-price-statistics">
+        <a href="javascript:void(0)" onclick="seatPriceDecideHelp()">座位定价帮助&gt;&gt;</a>
+    </div>
 </div>
 <div class="modal fade" id="rule-explain" tabindex="-1" role="dialog" aria-labelledby="ruleLabel"
      aria-hidden="true">
@@ -268,6 +272,20 @@
                 <h6>1排1座价格为：130元</h6>
                 <h6>3排1座价格为：120元</h6>
                 <h6>1排4座价格为：140元</h6>
+            </div>
+            <div class="modal-footer">
+                <div>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<div class="modal fade" id="seat-decide-tip" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body text-left">
+                <h5>请选择节目类型</h5>
             </div>
             <div class="modal-footer">
                 <div>

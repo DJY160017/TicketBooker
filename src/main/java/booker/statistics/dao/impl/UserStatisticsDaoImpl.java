@@ -200,7 +200,7 @@ public class UserStatisticsDaoImpl implements UserStatisticsDao {
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
 
-        String hql = "select o.programID from Order o where o.orderID.userID=:userID";
+        String hql = "select distinct o.programID from Order o where o.orderID.userID=:userID";
         Query query = session.createQuery(hql);
         query.setParameter("userID", userID);
         List<ProgramID> result = query.list();

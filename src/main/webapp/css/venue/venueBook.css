@@ -12,3 +12,9 @@
 .program-info{
     margin-top: 30px;
 }
+
+.seat-price-statistics{
+    position: absolute;
+    left: 1000px;
+    top: 445px;
+}

@@ -64,7 +64,7 @@ function showFavorite() {
             $('#program-type-show').append(new_program_chart_div);
             var pty = data['pty'];
             var pty_must_key = '';
-            var pty_must_num = 0;
+            var pty_must_num = -1;
             var pty_all = 0;
             for (var key in pty) {
                 pty_all = pty_all + pty[key];
@@ -84,7 +84,7 @@ function showFavorite() {
             $('#area-show').append(new_area_chart_div);
             var area = data['area'];
             var area_must_city = '';
-            var area_must_num = 0;
+            var area_must_num = -1;
             var area_all = 0;
             for (var city in area) {
                 area_all = area_all + area[city];

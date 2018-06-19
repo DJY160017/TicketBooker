@@ -1,0 +1,26 @@
+.seat-price-decide {
+    margin-top: 30px;
+    margin-left: 200px;
+    width: 65%;
+    min-height: 90%;
+}
+
+.seat-price-decide-content{
+    margin-top: 50px;
+}
+
+.seat-price-decide-show-chart{
+    height: 400px;
+    margin-top: 10px;
+}
+
+.seat-price-decide-return-button {
+    position: absolute;
+    top: 575px;
+    left: 560px;
+}
+
+.seat-price-decide-return {
+    width: 180px;
+    height: 33px;
+}

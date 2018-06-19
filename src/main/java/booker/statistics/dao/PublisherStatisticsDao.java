@@ -34,7 +34,7 @@ public interface PublisherStatisticsDao {
     List<Venue> getSmallSizeVenue(String size);
 
     /**
-     * 统计一个节目的各种座位类型的价格区间
+     * 统计一个节目的各种座位类型的价格
      *
      * @param programID
      * @return

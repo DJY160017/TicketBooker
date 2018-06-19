@@ -12,6 +12,7 @@
     <context:component-scan base-package="booker.model.id"/>
     <context:component-scan base-package="booker.model"/>
     <context:component-scan base-package="booker.dao"/>
+    <context:component-scan base-package="booker.statistics.dao"/>
     <context:component-scan base-package="booker.service"/>
 
     <!-- c3p0数据源 -->
