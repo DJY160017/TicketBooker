@@ -8,7 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="abe1ef56-cec2-40a7-9fda-b8e1ae5f50eb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/VenueStatisticsDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/VenueStatisticsDaoImpl.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -63,11 +62,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VenueStatisticsDaoImpl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="VenueStatisticsDaoImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/VenueStatisticsDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-8">
-              <caret line="317" column="43" selection-start-line="317" selection-start-column="43" selection-end-line="317" selection-end-column="43" />
+            <state relative-caret-position="332">
+              <caret line="334" column="24" lean-forward="true" selection-start-line="334" selection-start-column="24" selection-end-line="334" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="venueBook.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/venue/add/venueBook.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3780">
+              <folding>
+                <element signature="e#65#72#1" expanded="true" />
+                <element signature="e#65#72#1" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -390,6 +401,59 @@
               <item name="statistics" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
               <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicketBooker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicketBooker" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="booker" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicketBooker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicketBooker" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="booker" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+              <item name="state" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicketBooker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicketBooker" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicketBooker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicketBooker" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="jsp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicketBooker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicketBooker" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="jsp" type="462c0819:PsiDirectoryNode" />
+              <item name="venue" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicketBooker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicketBooker" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="jsp" type="462c0819:PsiDirectoryNode" />
+              <item name="venue" type="462c0819:PsiDirectoryNode" />
+              <item name="add" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -831,7 +895,7 @@
       <workItem from="1529196902220" duration="22180000" />
       <workItem from="1529286083628" duration="37018000" />
       <workItem from="1529366527918" duration="42015000" />
-      <workItem from="1529453854156" duration="40784000" />
+      <workItem from="1529453854156" duration="41367000" />
     </task>
     <task id="LOCAL-00001" summary="为了跑起来，小修改">
       <created>1529028626829</created>
@@ -924,7 +988,14 @@
       <option name="project" value="LOCAL" />
       <updated>1529509162256</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="debug: 忘记添加数据到list中了">
+      <created>1529510154948</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1529510154948</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -960,7 +1031,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="921308000" />
+    <option name="totallyTimeSpent" value="921891000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -973,7 +1044,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="17" sideWeight="0.5015129" side_tool="true" weight="0.41706926" />
@@ -989,7 +1059,7 @@
       <window_info id="Structure" order="8" sideWeight="0.75414366" side_tool="true" weight="0.20499243" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="3" />
-      <window_info active="true" anchor="bottom" id="Debug" order="4" visible="true" weight="0.39774558" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.39774558" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.3279743" />
       <window_info anchor="bottom" id="Messages" order="14" weight="0.3268921" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
@@ -1001,7 +1071,7 @@
       <window_info anchor="bottom" id="Spring" order="9" weight="0.3279743" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.3268921" />
       <window_info id="Persistence" order="5" sideWeight="0.40032154" side_tool="true" weight="0.22012103" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.24585636" visible="true" weight="0.20499243" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.24585636" visible="true" weight="0.26701966" />
       <window_info anchor="bottom" id="Run with VisualVM" order="12" />
       <window_info id="Web" order="6" sideWeight="0.39871383" side_tool="true" weight="0.22012103" />
       <window_info anchor="right" id="Theme Preview" order="6" />
@@ -1079,18 +1149,11 @@
     <MESSAGE value="场馆定价和场馆分析指标基本完成，但由于数据不够好，图表不够明显，后面需要填补数据" />
     <MESSAGE value="平台指标设计完成，接下来细化细节" />
     <MESSAGE value="修改发布者的底层使其更快一些" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改发布者的底层使其更快一些" />
+    <MESSAGE value="debug: 忘记添加数据到list中了" />
+    <option name="LAST_COMMIT_MESSAGE" value="debug: 忘记添加数据到list中了" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/VenueStatisticsDaoImpl.java</url>
-          <line>327</line>
-          <properties />
-          <option name="timeStamp" value="110" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="111" />
     </breakpoint-manager>
   </component>
@@ -1124,13 +1187,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/booker/dao/impl/VenueDaoImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1180">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/order/orderPreview.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="386">
@@ -1593,8 +1649,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/VenueStatisticsDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="317" column="43" selection-start-line="317" selection-start-column="43" selection-end-line="317" selection-end-column="43" />
+        <state relative-caret-position="332">
+          <caret line="334" column="24" lean-forward="true" selection-start-line="334" selection-start-column="24" selection-end-line="334" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/venue/add/venueBook.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3780">
+          <folding>
+            <element signature="e#65#72#1" expanded="true" />
+            <element signature="e#65#72#1" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

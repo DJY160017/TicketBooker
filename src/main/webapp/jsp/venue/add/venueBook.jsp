@@ -201,15 +201,31 @@
                             </li>
                             <li role="presentation">
                                 <a role="menuitem" tabindex="-1" href="javascript:void(0)"
-                                   onclick="chooseProgramType(this)">话剧</a>
+                                   onclick="chooseProgramType(this)">演唱会</a>
                             </li>
                             <li role="presentation">
                                 <a role="menuitem" tabindex="-1" href="javascript:void(0)"
-                                   onclick="chooseProgramType(this)">体育比赛</a>
+                                   onclick="chooseProgramType(this)">话剧歌剧</a>
                             </li>
                             <li role="presentation">
                                 <a role="menuitem" tabindex="-1" href="javascript:void(0)"
-                                   onclick="chooseProgramType(this)">动漫</a>
+                                   onclick="chooseProgramType(this)">体育赛事</a>
+                            </li>
+                            <li role="presentation">
+                                <a role="menuitem" tabindex="-1" href="javascript:void(0)"
+                                   onclick="chooseProgramType(this)">儿童亲子</a>
+                            </li>
+                            <li role="presentation">
+                                <a role="menuitem" tabindex="-1" href="javascript:void(0)"
+                                   onclick="chooseProgramType(this)">展览休闲</a>
+                            </li>
+                            <li role="presentation">
+                                <a role="menuitem" tabindex="-1" href="javascript:void(0)"
+                                   onclick="chooseProgramType(this)">曲艺杂谈</a>
+                            </li>
+                            <li role="presentation">
+                                <a role="menuitem" tabindex="-1" href="javascript:void(0)"
+                                   onclick="chooseProgramType(this)">舞蹈芭蕾</a>
                             </li>
                         </ul>
                     </div>
