@@ -44,7 +44,7 @@ public interface ManagerStatisticsDao {
      * @param year 年份
      * @return 收入
      */
-    List<TwoDimensionModel> averageVenueIncomeByMonth(int year);
+    List<SuperTwoDimensionModel> averageVenueIncomeByMonth(int year);
 
     /**
      * 场馆的平均收入（季度）
@@ -52,7 +52,7 @@ public interface ManagerStatisticsDao {
      * @param year 年份
      * @return 收入
      */
-    List<TwoDimensionModel> averageVenueIncomeByQuarter(int year);
+    List<SuperTwoDimensionModel> averageVenueIncomeByQuarter(int year);
 
     /**
      * 节目的平均收入（月）
@@ -60,7 +60,7 @@ public interface ManagerStatisticsDao {
      * @param year 年份
      * @return 收入
      */
-    List<TwoDimensionModel> averageProgramIncomeByMonth(int year);
+    List<SuperTwoDimensionModel> averageProgramIncomeByMonth(int year);
 
     /**
      * 节目的平均收入（季度）
@@ -68,7 +68,7 @@ public interface ManagerStatisticsDao {
      * @param year 年份
      * @return 收入
      */
-    List<TwoDimensionModel> averageProgramIncomeByQuarter(int year);
+    List<SuperTwoDimensionModel> averageProgramIncomeByQuarter(int year);
 
     /**
      * 场馆的周转(所有的场馆)
@@ -76,7 +76,7 @@ public interface ManagerStatisticsDao {
      * @param year 年份
      * @return 周转天数
      */
-    double turnover(int year);
+    double turnover(int venueID, int year);
 
     /**
      * 获取场馆的总收入
@@ -92,4 +92,11 @@ public interface ManagerStatisticsDao {
      * @return 关系
      */
     List<SuperTwoDimensionModel> statisByProgramIncome();
+
+    /**
+     * 活跃会员与地域的关系
+     *
+     * @return 关系
+     */
+    List<TwoDimensionModel> countMemberArea();
 }

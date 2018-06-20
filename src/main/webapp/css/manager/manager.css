@@ -26,3 +26,9 @@
 .manager-settlement-tile {
     border-bottom: 1px solid rgba(51, 51, 51, 0.3);
 }
+
+.check-system-statistics{
+    position: absolute;
+    left: 120px;
+    top: 160px;
+}

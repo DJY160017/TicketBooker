@@ -58,7 +58,7 @@ public class ManagerStatisticsServiceImpl implements ManagerStatisticsService {
 
         for (int i = 0; i < now_year.size(); i++) {
             double index = (now_year.get(i) - last_year.get(i)) / last_year.get(i);
-            TwoDimensionModel<Integer, Double> twoDimensionModel = new TwoDimensionModel<>(i, index);
+            TwoDimensionModel<Integer, Double> twoDimensionModel = new TwoDimensionModel<>(i + 1, index);
             result.add(twoDimensionModel);
         }
         return result;
@@ -86,7 +86,7 @@ public class ManagerStatisticsServiceImpl implements ManagerStatisticsService {
 
         for (int i = 0; i < now_year.size(); i++) {
             double index = (now_year.get(i) - last_year.get(i)) / last_year.get(i);
-            TwoDimensionModel<Integer, Double> twoDimensionModel = new TwoDimensionModel<>(i, index);
+            TwoDimensionModel<Integer, Double> twoDimensionModel = new TwoDimensionModel<>(i + 1, index);
             result.add(twoDimensionModel);
         }
         return result;
@@ -100,7 +100,7 @@ public class ManagerStatisticsServiceImpl implements ManagerStatisticsService {
      * @return 收入
      */
     @Override
-    public List<TwoDimensionModel> averageVenueIncome(UnitTime unitTime, int year) {
+    public List<SuperTwoDimensionModel> averageVenueIncome(UnitTime unitTime, int year) {
         if (unitTime.equals(UnitTime.MONTH)) {
             return managerStatisticsDao.averageVenueIncomeByMonth(year);
         } else {
@@ -116,7 +116,7 @@ public class ManagerStatisticsServiceImpl implements ManagerStatisticsService {
      * @return 收入
      */
     @Override
-    public List<TwoDimensionModel> averageProgramIncome(UnitTime unitTime, int year) {
+    public List<SuperTwoDimensionModel> averageProgramIncome(UnitTime unitTime, int year) {
         if (unitTime.equals(UnitTime.MONTH)) {
             return managerStatisticsDao.averageProgramIncomeByMonth(year);
         } else {
@@ -127,13 +127,22 @@ public class ManagerStatisticsServiceImpl implements ManagerStatisticsService {
     /**
      * 场馆的周转(所有的场馆)
      *
-     * @param unitTime 单位时间
-     * @param year     年份
+     * @param year 年份
      * @return 周转
      */
     @Override
-    public double turnover(UnitTime unitTime, int year) {
-        return managerStatisticsDao.turnover(year);
+    public double turnover(int year) {
+        List<Venue> venues = venueDao.getVenueByState(VenueState.AlreadyPassed);
+        double turnover_sum = 0;
+        int real_size = 0;
+        for (Venue venue : venues) {
+            double venue_turnover = managerStatisticsDao.turnover(venue.getVenueID(), year);
+            if (venue_turnover != 0) {
+                turnover_sum = turnover_sum + venue_turnover;
+                real_size++;
+            }
+        }
+        return turnover_sum / ((double) real_size);
     }
 
     /**
@@ -180,7 +189,7 @@ public class ManagerStatisticsServiceImpl implements ManagerStatisticsService {
                 map.put(size, price);
             } else {
                 double price = managerStatisticsDao.countVenueIncome(venue.getVenueID());
-                map.put(size, map.get(venue.getCity()) + price);
+                map.put(size, map.get(size) + price);
             }
         }
 
@@ -210,22 +219,6 @@ public class ManagerStatisticsServiceImpl implements ManagerStatisticsService {
      */
     @Override
     public List<TwoDimensionModel> countMemberArea() {
-        List<Order> orders = orderDao.getOrderByState(OrderState.AlreadyPaid);
-        Map<String, Integer> map = new HashMap<>();
-        for (Order order : orders) {
-            Venue venue = venueDao.getVenue(order.getProgramID().getVenueID());
-            if (!map.keySet().contains(venue.getCity())) {
-                map.put(venue.getCity(), 1);
-            } else {
-                map.put(venue.getCity(), map.get(venue.getCity()) + 1);
-            }
-        }
-
-        List<TwoDimensionModel> result = new ArrayList<>();
-        for (String city : map.keySet()) {
-            TwoDimensionModel<String, Integer> twoDimensionModel = new TwoDimensionModel<>(city, map.get(city));
-            result.add(twoDimensionModel);
-        }
-        return result;
+        return managerStatisticsDao.countMemberArea();
     }
 }

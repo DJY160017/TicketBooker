@@ -5,9 +5,9 @@ function showVenueApplication() {
     $('#manager-settlement').hide();
     $('#manager-settlement-a').parent().removeClass("active");
     $('#manager-settlement-a').css("color", "#1b6d85");
-    $('#platform-data-center').hide();
-    $('#platform-data-center-a').parent().removeClass("active");
-    $('#platform-data-center-a').css("color", "#1b6d85");
+    // $('#platform-data-center').hide();
+    // $('#platform-data-center-a').parent().removeClass("active");
+    // $('#platform-data-center-a').css("color", "#1b6d85");
     $.ajax({
         type: "post",
         dataType: 'json',
@@ -63,9 +63,9 @@ function showManagerSettlement() {
     $('#manager-settlement').show();
     $('#manager-settlement-a').parent().addClass("active");
     $('#manager-settlement-a').css("color", "");
-    $('#platform-data-center').hide();
-    $('#platform-data-center-a').parent().removeClass("active");
-    $('#platform-data-center-a').css("color", "#1b6d85");
+    // $('#platform-data-center').hide();
+    // $('#platform-data-center-a').parent().removeClass("active");
+    // $('#platform-data-center-a').css("color", "#1b6d85");
     $.ajax({
         type: "post",
         dataType: 'json',

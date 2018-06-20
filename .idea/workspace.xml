@@ -7,17 +7,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="abe1ef56-cec2-40a7-9fda-b8e1ae5f50eb" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/statistics/venueStatistics.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/statistics/venueStatistics.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/statistics/managerStatistics.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/statistics/managerStatistics.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/tool/bmap.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/booker/statistics/controller/VenueStatisticsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booker/statistics/controller/VenueStatisticsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/booker/statistics/dao/VenueStatisticsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booker/statistics/dao/VenueStatisticsDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/VenueStatisticsDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/VenueStatisticsDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/booker/statistics/service/VenueStatisticsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booker/statistics/service/VenueStatisticsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/booker/statistics/service/impl/VenueStatisticsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booker/statistics/service/impl/VenueStatisticsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/venue/venueInfo.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/venue/venueInfo.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/statistics/venueStatistics.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/statistics/venueStatistics.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/venue/venueInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/venue/venueInfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/booker/dao/DaoManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booker/dao/DaoManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/booker/statistics/controller/ManagerStatisticsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booker/statistics/controller/ManagerStatisticsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/booker/statistics/dao/ManagerStatisticsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booker/statistics/dao/ManagerStatisticsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/ManagerStatisticsDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/ManagerStatisticsDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/booker/statistics/service/ManagerStatisticsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booker/statistics/service/ManagerStatisticsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/booker/statistics/service/impl/ManagerStatisticsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/booker/statistics/service/impl/ManagerStatisticsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/manager/manager.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/manager/manager.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/manager/manager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/manager/manager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/manager/manager.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/manager/manager.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/statistics/managerStatistics.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/statistics/managerStatistics.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/booker/dao/impl/ProgramDaoImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/booker/dao/impl/ProgramDaoImplTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -62,100 +67,143 @@
     <favorites_list name="TicketBooker" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="venueStatistics.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/statistics/venueStatistics.jsp">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="ManagerStatisticsController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/controller/ManagerStatisticsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="165" column="50" selection-start-line="165" selection-start-column="50" selection-end-line="165" selection-end-column="50" />
+            <state relative-caret-position="246">
+              <caret line="142" column="47" selection-start-line="142" selection-start-column="27" selection-end-line="142" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ManagerStatisticsService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/service/ManagerStatisticsService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="127">
+              <caret line="78" column="46" lean-forward="true" selection-start-line="73" selection-start-column="4" selection-end-line="78" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ManagerStatisticsServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/service/impl/ManagerStatisticsServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="767">
+              <caret line="222" column="5" lean-forward="true" selection-start-line="222" selection-start-column="5" selection-end-line="222" selection-end-column="5" />
               <folding>
-                <element signature="n#div#0;n#div#2;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#style#0;n#div#0;n#div#3;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#div#4;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#style#0;n#div#0;n#div#5;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#7103#7104#0" expanded="true" />
+                <element signature="e#7170#7171#0" expanded="true" />
+                <element signature="e#7358#7359#0" expanded="true" />
+                <element signature="e#7387#7388#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VenueStatisticsDaoImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/VenueStatisticsDaoImpl.java">
+      <file leaf-file-name="ManagerStatisticsDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/dao/ManagerStatisticsDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1265">
-              <caret line="133" column="35" selection-start-line="133" selection-start-column="35" selection-end-line="133" selection-end-column="35" />
+            <state relative-caret-position="247">
+              <caret line="100" column="46" selection-start-line="100" selection-start-column="46" selection-end-line="100" selection-end-column="46" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="venueInfo.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/venue/venueInfo.jsp">
+      <file leaf-file-name="managerStatistics.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/statistics/managerStatistics.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="208" column="60" selection-start-line="208" selection-start-column="60" selection-end-line="208" selection-end-column="60" />
+            <state relative-caret-position="46">
+              <caret line="267" column="102" selection-start-line="267" selection-start-column="102" selection-end-line="267" selection-end-column="102" />
+              <folding>
+                <element signature="n#ul#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#3;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#ul#0;n#div#0;n#div#2;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#ul#0;n#div#1;n#div#2;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#4;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#ul#0;n#div#0;n#div#4;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#div#0;n#div#3;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#div#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#1;n#div#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#div#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#div#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#4;n#div#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#3;n#div#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#3;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#3;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="venueStatistics.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/statistics/venueStatistics.js">
+      <file leaf-file-name="managerStatistics.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/css/statistics/managerStatistics.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-505">
-              <caret line="127" column="10" lean-forward="true" selection-start-line="127" selection-start-column="10" selection-end-line="127" selection-end-column="10" />
+            <state relative-caret-position="147">
+              <caret line="60" column="115" selection-start-line="60" selection-start-column="115" selection-end-line="60" selection-end-column="115" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="managerStatistics.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/statistics/managerStatistics.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="242" column="1" lean-forward="true" selection-start-line="242" selection-start-column="1" selection-end-line="242" selection-end-column="1" />
               <folding>
                 <element signature="n#!!block;n#showConsumptionStatistics#0" />
-                <element signature="e#340#1636#0" />
+                <element signature="e#574#1083#0" />
+                <element signature="n#!!block;n#showFavorite#0" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#!!block;n#showProgram#0" />
+                <element signature="e#5601#6398#0" />
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#!!block;n#showChartByUnitTime#0" />
+                <element signature="n#!!block;n#showProfitVenuShowByYear#1" />
                 <element signature="n#!!block;n#createConsumptionChart#0" />
-                <element signature="n#!!block;n#createMarketChart#1" />
+                <element signature="n#!!block;n#showProfitVenueShowByYear#1" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#!!block;n#showProfitProgramShowByYear#1" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#!!block;n#showVenueIncomeShowByYear#1" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#!!block;n#showProgramIncomeShowByYear#1" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#!!block;n#createIncomeChart#0" />
+                <element signature="n#!!block;n#createBarChart#0" />
+                <element signature="n#!!block;n#createBarChart#1" />
+                <element signature="n#!!block;n#createVenueSizeChart#0" />
+                <element signature="n#!!block;n#createVenueSizeChart#1" />
+                <element signature="e#26087#95523#0" />
+                <element signature="e#26606#26954#0" />
+                <element signature="e#33470#36854#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="venueStatistics.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/css/statistics/venueStatistics.css">
+      <file leaf-file-name="ManagerStatisticsDaoImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/ManagerStatisticsDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="44" column="21" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VenueStatisticsService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/service/VenueStatisticsService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="42" column="28" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VenueStatisticsServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/service/impl/VenueStatisticsServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="99" column="45" selection-start-line="99" selection-start-column="45" selection-end-line="99" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VenueStatisticsDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/dao/VenueStatisticsDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="53" column="28" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VenueStatisticsController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/controller/VenueStatisticsController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
-              <caret line="85" column="30" selection-start-line="85" selection-start-column="24" selection-end-line="85" selection-end-column="30" />
+            <state relative-caret-position="232">
+              <caret line="332" column="58" selection-start-line="332" selection-start-column="58" selection-end-line="332" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -171,16 +219,13 @@
         <option value="Interface" />
         <option value="Class" />
         <option value="Jsp File" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>req_userPay</find>
-      <find>req_generateAutoOrder</find>
-      <find>Local</find>
       <find>width</find>
       <find>setWidth</find>
       <find>req_book</find>
@@ -208,6 +253,9 @@
       <find>new TwoDimensionModel&lt;&gt;()</find>
       <find>setTag</find>
       <find>map</find>
+      <find>year</find>
+      <find>countVenueIncome</find>
+      <find>乌</find>
     </findStrings>
     <dirStrings>
       <dir>D:\workspace\idea-workspace\TicketBooker\src\main\webapp\js</dir>
@@ -221,20 +269,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/booker/dao/impl/TicketDaoImplTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/booker/dao/impl/ProgramDaoImplTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/booker/dao/TicketDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/booker/dao/impl/TicketDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/test/java/booker/dao/impl/OrderDaoImplTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/booker/dao/ExternalBalanceDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/booker/dao/impl/ExternalBalanceDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/test/java/booker/dao/impl/ExternalBalanceDaoImplTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/booker/dao/ProgramDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/booker/dao/SettlementDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/booker/dao/impl/SettlementDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/test/java/booker/dao/impl/SettlementDaoImplTest.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/statistics/venueStatiatics.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/statistics/managerStatistics.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/user/userInfo.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/user/userInfo.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/booker/util/enums/state/UnitTime.java" />
@@ -246,9 +281,7 @@
         <option value="$PROJECT_DIR$/src/main/webapp/js/venue/venueBook.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/venue/add/venueBook.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/statistics/publisherStatistics.css" />
-        <option value="$PROJECT_DIR$/src/main/java/booker/dao/DaoManager.java" />
         <option value="$PROJECT_DIR$/src/test/java/booker/dao/impl/VenueDaoImplTest.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/statistics/publisherStatistics.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/statistics/publisherStatistics.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/booker/statistics/service/PublisherStatisticsService.java" />
@@ -272,6 +305,21 @@
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/statistics/venueStatistics.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/statistics/venueStatistics.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/venue/venueInfo.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/manager/manager.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/manager/manager.css" />
+        <option value="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/booker/dao/DaoManager.java" />
+        <option value="$PROJECT_DIR$/src/test/java/booker/dao/impl/ProgramDaoImplTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/booker/statistics/service/ManagerStatisticsService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/booker/statistics/controller/ManagerStatisticsController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/manager/manager.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/booker/statistics/dao/ManagerStatisticsDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/booker/statistics/service/impl/ManagerStatisticsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/ManagerStatisticsDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/tool/bmap.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/statistics/managerStatistics.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/statistics/managerStatistics.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/statistics/managerStatistics.js" />
       </list>
     </option>
   </component>
@@ -328,6 +376,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -339,6 +388,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -379,15 +429,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="booker" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TicketBooker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicketBooker" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="booker" type="462c0819:PsiDirectoryNode" />
               <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -473,6 +514,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="manager" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicketBooker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicketBooker" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
               <item name="statistics" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -490,16 +540,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="order" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TicketBooker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicketBooker" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="statistics" type="462c0819:PsiDirectoryNode" />
+              <item name="manager" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TicketBooker" type="b2602c69:ProjectViewProjectNode" />
@@ -516,7 +557,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="order" type="462c0819:PsiDirectoryNode" />
+              <item name="manager" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TicketBooker" type="b2602c69:ProjectViewProjectNode" />
@@ -526,24 +567,6 @@
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="jsp" type="462c0819:PsiDirectoryNode" />
               <item name="statistics" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TicketBooker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicketBooker" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="ticket" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TicketBooker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicketBooker" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="venue" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TicketBooker" type="b2602c69:ProjectViewProjectNode" />
@@ -570,8 +593,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -638,17 +659,6 @@
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
-    <configuration name="OrderDaoImplTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="booker.dao.impl.OrderDaoImplTest" />
-      <module name="TicketBooker" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="booker.dao.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -688,6 +698,29 @@
       <option name="PACKAGE_NAME" value="booker.dao.impl" />
       <option name="MAIN_CLASS_NAME" value="booker.dao.impl.OrderDaoImplTest" />
       <option name="METHOD_NAME" value="randomAddOrder" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="ProgramDaoImplTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TicketBooker" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="booker.dao.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="booker.dao.impl" />
+      <option name="MAIN_CLASS_NAME" value="booker.dao.impl.ProgramDaoImplTest" />
+      <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -888,19 +921,19 @@
     </configuration>
     <list>
       <item itemvalue="Tomcat Server.Unnamed" />
-      <item itemvalue="Application.OrderDaoImplTest" />
       <item itemvalue="JUnit.OrderDaoImplTest.randomAddOrder" />
       <item itemvalue="JUnit.ExternalBalanceDaoImplTest.addBankAccount" />
       <item itemvalue="JUnit.SettlementDaoImplTest.addSettlement" />
       <item itemvalue="JUnit.VenueDaoImplTest.test" />
+      <item itemvalue="JUnit.ProgramDaoImplTest.test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ProgramDaoImplTest.test" />
         <item itemvalue="JUnit.VenueDaoImplTest.test" />
         <item itemvalue="JUnit.SettlementDaoImplTest.addSettlement" />
         <item itemvalue="JUnit.ExternalBalanceDaoImplTest.addBankAccount" />
         <item itemvalue="JUnit.OrderDaoImplTest.randomAddOrder" />
-        <item itemvalue="Application.OrderDaoImplTest" />
       </list>
     </recent_temporary>
   </component>
@@ -995,7 +1028,8 @@
       <workItem from="1529110702116" duration="26548000" />
       <workItem from="1529196902220" duration="22180000" />
       <workItem from="1529286083628" duration="37018000" />
-      <workItem from="1529366527918" duration="41310000" />
+      <workItem from="1529366527918" duration="42015000" />
+      <workItem from="1529453854156" duration="35958000" />
     </task>
     <task id="LOCAL-00001" summary="为了跑起来，小修改">
       <created>1529028626829</created>
@@ -1067,13 +1101,17 @@
       <option name="project" value="LOCAL" />
       <updated>1529394925726</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="场馆定价和场馆分析指标基本完成，但由于数据不够好，图表不够明显，后面需要填补数据">
+      <created>1529418889040</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1529418889040</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="OrderDaoImplTest_randomAddOrder - 2018.06.17 at 18h 36m 51s.xml">
-      <configuration name="OrderDaoImplTest.randomAddOrder" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="OrderDaoImplTest_randomAddOrder - 2018.06.17 at 18h 39m 00s.xml">
       <configuration name="OrderDaoImplTest.randomAddOrder" configurationId="JUnit" />
     </history-entry>
@@ -1101,9 +1139,12 @@
     <history-entry file="VenueDaoImplTest_test - 2018.06.19 at 14h 26m 44s.xml">
       <configuration name="VenueDaoImplTest.test" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ProgramDaoImplTest_test - 2018.06.20 at 14h 49m 58s.xml">
+      <configuration name="ProgramDaoImplTest.test" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="879819000" />
+    <option name="totallyTimeSpent" value="916482000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1129,7 +1170,7 @@
       <window_info anchor="bottom" id="Statistic" order="0" sideWeight="0.49924356" weight="0.4363929" />
       <window_info anchor="bottom" id="EvoSuite" order="18" weight="0.32850242" />
       <window_info anchor="right" id="Database" order="9" weight="0.32980332" />
-      <window_info id="Structure" order="8" sideWeight="0.40032154" side_tool="true" weight="0.22012103" />
+      <window_info id="Structure" order="8" sideWeight="0.75414366" side_tool="true" weight="0.20499243" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="3" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.39774558" />
@@ -1144,7 +1185,7 @@
       <window_info anchor="bottom" id="Spring" order="9" weight="0.3279743" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.3268921" />
       <window_info id="Persistence" order="5" sideWeight="0.40032154" side_tool="true" weight="0.22012103" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.59967846" visible="true" weight="0.20499243" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.24585636" visible="true" weight="0.20499243" />
       <window_info anchor="bottom" id="Run with VisualVM" order="12" />
       <window_info id="Web" order="6" sideWeight="0.39871383" side_tool="true" weight="0.22012103" />
       <window_info anchor="right" id="Theme Preview" order="6" />
@@ -1172,7 +1213,6 @@
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="3" />
-      <window_info id="Web" order="6" sideWeight="0.39871383" side_tool="true" weight="0.22012103" />
       <window_info id="Favorites" order="7" sideWeight="0.40032154" side_tool="true" weight="0.22012103" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.3279743" />
       <window_info id="Capture Tool" order="1" />
@@ -1180,6 +1220,7 @@
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Event Log" order="17" sideWeight="0.50075644" side_tool="true" weight="0.43729904" />
       <window_info anchor="bottom" id="Messages" order="14" weight="0.3279743" />
+      <window_info anchor="bottom" id="TODO" order="7" weight="0.3279743" />
       <window_info anchor="right" id="Mongo Explorer" order="11" weight="0.32980332" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Run with VisualVM" order="12" />
@@ -1191,7 +1232,7 @@
       <window_info anchor="right" id="Database" order="9" weight="0.32980332" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Debug with VisualVM" order="15" />
-      <window_info anchor="bottom" id="TODO" order="7" weight="0.3279743" />
+      <window_info id="Web" order="6" sideWeight="0.39871383" side_tool="true" weight="0.22012103" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info anchor="bottom" id="Statistic" order="0" sideWeight="0.49924356" weight="0.43729904" />
       <window_info anchor="right" id="Theme Preview" order="6" />
@@ -1219,15 +1260,21 @@
     <MESSAGE value="会员指标分析打通，该部分结束" />
     <MESSAGE value="场馆座位定价分析" />
     <MESSAGE value="节目发布者指标设计完成，但是座位定价部分数据取得慢，后面需要改善" />
-    <option name="LAST_COMMIT_MESSAGE" value="节目发布者指标设计完成，但是座位定价部分数据取得慢，后面需要改善" />
+    <MESSAGE value="场馆定价和场馆分析指标基本完成，但由于数据不够好，图表不够明显，后面需要填补数据" />
+    <option name="LAST_COMMIT_MESSAGE" value="场馆定价和场馆分析指标基本完成，但由于数据不够好，图表不够明显，后面需要填补数据" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="105" />
+      <option name="time" value="110" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="breakpointCondition">
+      <expression>
+        <expression-string>resultList.get(0) == null</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>info.length&lt;=2</expression-string>
         <language-id>JAVA</language-id>
@@ -1251,154 +1298,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="2992" column="25" selection-start-line="2992" selection-start-column="25" selection-end-line="2992" selection-end-column="25" />
-          <folding>
-            <element signature="e#117893#117894#0" expanded="true" />
-            <element signature="e#117955#117956#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/manager/manager.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="26" column="63" lean-forward="true" selection-start-line="25" selection-start-column="3" selection-end-line="26" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/user/memberCenter.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-600" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/ticket/program.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-780">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#65#72#1" expanded="true" />
-            <element signature="e#65#72#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/booker/util/enums/state/UnitTime.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/venue/venueBook.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/order/orderPreview.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="68" column="11" lean-forward="true" selection-start-line="68" selection-start-column="11" selection-end-line="68" selection-end-column="11" />
-          <folding>
-            <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/order/orderPreview.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="18" column="17" lean-forward="true" selection-end-line="31" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/ticket/program.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="366" column="32" lean-forward="true" selection-start-line="366" selection-start-column="32" selection-end-line="366" selection-end-column="32" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#65#72#1" expanded="true" />
-            <element signature="e#65#72#1" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#65#72#1" expanded="true" />
-            <element signature="e#65#72#1" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#65#72#1" expanded="true" />
-            <element signature="e#65#72#1" expanded="true" />
-            <element signature="e#65#72#1" expanded="true" />
-            <element signature="e#65#72#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/venue/venueBook.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="227" column="32" lean-forward="true" selection-start-line="227" selection-start-column="32" selection-end-line="227" selection-end-column="32" />
-          <folding>
-            <element signature="n#!!block;n#prevPages#0" />
-            <element signature="n#!!block;n#nextPages#0" />
-            <element signature="n#!!block;n#getPlanByPage#0" />
-            <element signature="n#!!block;n#getMaxPage#0" />
-            <element signature="n#!!block;n#getPageNow#0" />
-            <element signature="n#!!block;n#venueBook#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/venue/add/venueBook.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="249" column="33" lean-forward="true" selection-start-line="249" selection-start-column="33" selection-end-line="249" selection-end-column="33" />
-          <folding>
-            <element signature="e#65#72#1" expanded="true" />
-            <element signature="e#65#72#1" expanded="true" />
-            <element signature="n#div#5;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.3.RELEASE/spring-web-5.0.3.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="57" selection-start-line="57" selection-end-line="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.3.RELEASE/spring-webmvc-5.0.3.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="561" selection-start-line="561" selection-end-line="561" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.3.RELEASE/spring-webmvc-5.0.3.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/booker/dao/DaoManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="40" column="90" selection-start-line="40" selection-start-column="90" selection-end-line="40" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="12" column="57" lean-forward="true" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/booker/dao/impl/VenueDaoImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1180">
@@ -1458,13 +1357,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/service/impl/UserStatisticsServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2240">
-          <caret line="127" column="36" lean-forward="true" selection-start-line="127" selection-start-column="36" selection-end-line="127" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/UserStatisticsDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3268">
@@ -1520,49 +1412,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/statistics/userStaistics.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="691">
-          <caret line="70" selection-end-line="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/user/userInfo.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="252" column="14" lean-forward="true" selection-start-line="250" selection-start-column="8" selection-end-line="252" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/user/userInfo.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="59" selection-start-line="59" selection-end-line="63" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/css/venue/venueInfo.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="62" column="11" selection-start-line="62" selection-start-column="11" selection-end-line="62" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/controller/UserStatisticsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="46" column="5" lean-forward="true" selection-start-line="34" selection-start-column="3" selection-end-line="46" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/statistics/userStatistics.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="135" column="26" lean-forward="true" selection-start-line="119" selection-start-column="20" selection-end-line="135" selection-end-column="26" />
-          <folding>
-            <element signature="n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1582,71 +1435,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/service/VenueStatisticsService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
+        <state relative-caret-position="740">
           <caret line="42" column="28" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/service/impl/VenueStatisticsServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="99" column="45" selection-start-line="99" selection-start-column="45" selection-end-line="99" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/dao/VenueStatisticsDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="53" column="28" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/statistics/userStatistics.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="271" column="28" lean-forward="true" selection-start-line="271" selection-start-column="28" selection-end-line="271" selection-end-column="28" />
-          <folding>
-            <element signature="n#!!block;n#showFavorite#0" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#!!block;n#showChartByUnitTime#0" />
-            <element signature="n#!!block;n#showChartByYear#0" />
-            <element signature="n#!!block;n#showChartByAll#0" />
-            <element signature="n#!!block;n#getConsumptionChartData#0" />
-            <element signature="n#!!block;n#createFavoriteChart#0" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/css/statistics/venueStatistics.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
+        <state relative-caret-position="880">
           <caret line="44" column="21" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/controller/VenueStatisticsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
+        <state relative-caret-position="1380">
           <caret line="85" column="30" selection-start-line="85" selection-start-column="24" selection-end-line="85" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/statistics/venueStatistics.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-505">
-          <caret line="127" column="10" lean-forward="true" selection-start-line="127" selection-start-column="10" selection-end-line="127" selection-end-column="10" />
-          <folding>
-            <element signature="n#!!block;n#showConsumptionStatistics#0" />
-            <element signature="e#340#1636#0" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#!!block;n#createConsumptionChart#0" />
-            <element signature="n#!!block;n#createMarketChart#1" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1657,30 +1461,324 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/statistics/venueStatistics.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="165" column="50" selection-start-line="165" selection-start-column="50" selection-end-line="165" selection-end-column="50" />
-          <folding>
-            <element signature="n#div#0;n#div#2;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#4;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#div#0;n#div#5;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/VenueStatisticsDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1265">
+        <state relative-caret-position="2660">
           <caret line="133" column="35" selection-start-line="133" selection-start-column="35" selection-end-line="133" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/venue/venueInfo.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="208" column="60" selection-start-line="208" selection-start-column="60" selection-end-line="208" selection-end-column="60" />
+        <state relative-caret-position="246">
+          <caret line="206" column="14" selection-start-line="206" selection-start-column="14" selection-end-line="206" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/dao/VenueStatisticsDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="53" column="28" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/statistics/venueStatistics.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2540">
+          <caret line="127" column="10" selection-start-line="127" selection-start-column="10" selection-end-line="127" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/service/impl/VenueStatisticsServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="99" column="45" selection-start-line="99" selection-start-column="45" selection-end-line="99" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/springmvc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/service/impl/UserStatisticsServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2060">
+          <caret line="127" column="36" lean-forward="true" selection-start-line="127" selection-start-column="36" selection-end-line="127" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/controller/UserStatisticsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="46" column="5" lean-forward="true" selection-start-line="34" selection-start-column="4" selection-end-line="46" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/statistics/userStaistics.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="59" column="21" lean-forward="true" selection-end-line="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/user/userInfo.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="252" column="14" lean-forward="true" selection-start-line="250" selection-start-column="8" selection-end-line="252" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/user/userInfo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="59" selection-start-line="59" selection-end-line="63" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/manager/manager.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="32" column="12" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="31" column="53" lean-forward="true" selection-start-line="31" selection-start-column="53" selection-end-line="31" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/statistics/userStatistics.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="267" selection-start-line="267" selection-end-line="341" selection-end-column="1" />
+          <folding>
+            <element signature="n#!!block;n#showConsumptionStatistics#0" />
+            <element signature="n#!!block;n#showFavorite#0" />
+            <element signature="n#!!block;n#showProgram#0" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#!!block;n#showChartByUnitTime#0" />
+            <element signature="n#!!block;n#showChartByYear#0" />
+            <element signature="n#!!block;n#showChartByAll#0" />
+            <element signature="n#!!block;n#getConsumptionChartData#0" />
+            <element signature="n#!!block;n#createConsumptionChart#0" />
+            <element signature="n#!!block;n#createFavoriteChart#0" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/statistics/userStatistics.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="142" column="22" lean-forward="true" selection-start-line="95" selection-start-column="16" selection-end-line="142" selection-end-column="22" />
+          <folding>
+            <element signature="n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/booker/dao/DaoManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="44" column="86" selection-start-line="44" selection-start-column="86" selection-end-line="44" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/booker/dao/impl/ProgramDaoImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="298" selection-start-line="298" selection-end-line="298" />
+          <folding>
+            <element signature="method#addOneProgram#0;class#ProgramDaoImplTest#0" />
+            <element signature="method#addNewProgram#0;class#ProgramDaoImplTest#0" />
+            <element signature="method#modifyProgram#0;class#ProgramDaoImplTest#0" />
+            <element signature="method#getAllProgram#0;class#ProgramDaoImplTest#0" />
+            <element signature="method#getPrograms#0;class#ProgramDaoImplTest#0" />
+            <element signature="method#getPlanByState#0;class#ProgramDaoImplTest#0" />
+            <element signature="method#getPlanByState1#0;class#ProgramDaoImplTest#0" />
+            <element signature="method#getOneProgram#0;class#ProgramDaoImplTest#0" />
+            <element signature="method#getLastTime#0;class#ProgramDaoImplTest#0" />
+            <element signature="method#getMaxRecords#0;class#ProgramDaoImplTest#0" />
+            <element signature="method#getPlans1#0;class#ProgramDaoImplTest#0" />
+            <element signature="method#findPlanMaxAndMinTime#0;class#ProgramDaoImplTest#0" />
+            <element signature="method#getProgramName#0;class#ProgramDaoImplTest#0" />
+            <element signature="method#createRandomKey#0;class#ProgramDaoImplTest#0" />
+            <element signature="method#randomDate#0;class#ProgramDaoImplTest#0" />
+            <element signature="method#formate#0;class#ProgramDaoImplTest#0" />
+            <element signature="method#readProgram#0;class#ProgramDaoImplTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/statistics/venueStatistics.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="105" column="37" lean-forward="true" selection-start-line="105" selection-start-column="37" selection-end-line="105" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/manager/manager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="458" lean-forward="true" selection-start-line="458" selection-end-line="458" />
+          <folding>
+            <element signature="n#!!block;n#showPlatformDataCenter#0" />
+            <element signature="n#!!block;n#userDataCenter#0" />
+            <element signature="n#!!block;n#refuse#0" />
+            <element signature="n#!!block;n#pass#0" />
+            <element signature="n#!!block;n#allPass#0" />
+            <element signature="n#!!block;n#settle#0" />
+            <element signature="n#!!block;n#allSettle#0" />
+            <element signature="n#!!block;n#venueIDFormat#0" />
+            <element signature="n#!!block;n#venueIDDeFormat#0" />
+            <element signature="n#!!block;n#createDoughnutChart#0" />
+            <element signature="n#!!block;n#createCustmizedChart#0" />
+            <element signature="n#!!block;n#createBarChart#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/manager/manager.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="176" column="10" lean-forward="true" selection-start-line="176" selection-start-column="10" selection-end-line="176" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/dao/ManagerStatisticsDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="100" column="46" selection-start-line="100" selection-start-column="46" selection-end-line="100" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/service/impl/ManagerStatisticsServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="767">
+          <caret line="222" column="5" lean-forward="true" selection-start-line="222" selection-start-column="5" selection-end-line="222" selection-end-column="5" />
+          <folding>
+            <element signature="e#7103#7104#0" expanded="true" />
+            <element signature="e#7170#7171#0" expanded="true" />
+            <element signature="e#7358#7359#0" expanded="true" />
+            <element signature="e#7387#7388#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/dao/impl/ManagerStatisticsDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="332" column="58" selection-start-line="332" selection-start-column="58" selection-end-line="332" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/tool/bmap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="417" column="32" selection-start-line="417" selection-start-column="32" selection-end-line="417" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/service/ManagerStatisticsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="78" column="46" lean-forward="true" selection-start-line="73" selection-start-column="4" selection-end-line="78" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/booker/statistics/controller/ManagerStatisticsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="142" column="47" selection-start-line="142" selection-start-column="27" selection-end-line="142" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/statistics/managerStatistics.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="60" column="115" selection-start-line="60" selection-start-column="115" selection-end-line="60" selection-end-column="115" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/statistics/managerStatistics.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="267" column="102" selection-start-line="267" selection-start-column="102" selection-end-line="267" selection-end-column="102" />
+          <folding>
+            <element signature="n#ul#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#3;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#ul#0;n#div#0;n#div#2;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#0;n#div#1;n#div#2;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#ul#0;n#div#0;n#div#4;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#div#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#3;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#3;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/statistics/managerStatistics.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="242" column="1" lean-forward="true" selection-start-line="242" selection-start-column="1" selection-end-line="242" selection-end-column="1" />
+          <folding>
+            <element signature="n#!!block;n#showConsumptionStatistics#0" />
+            <element signature="e#574#1083#0" />
+            <element signature="n#!!block;n#showFavorite#0" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#!!block;n#showProgram#0" />
+            <element signature="e#5601#6398#0" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#!!block;n#showChartByUnitTime#0" />
+            <element signature="n#!!block;n#showProfitVenuShowByYear#1" />
+            <element signature="n#!!block;n#createConsumptionChart#0" />
+            <element signature="n#!!block;n#showProfitVenueShowByYear#1" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#!!block;n#showProfitProgramShowByYear#1" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#!!block;n#showVenueIncomeShowByYear#1" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#!!block;n#showProgramIncomeShowByYear#1" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#!!block;n#createIncomeChart#0" />
+            <element signature="n#!!block;n#createBarChart#0" />
+            <element signature="n#!!block;n#createBarChart#1" />
+            <element signature="n#!!block;n#createVenueSizeChart#0" />
+            <element signature="n#!!block;n#createVenueSizeChart#1" />
+            <element signature="e#26087#95523#0" />
+            <element signature="e#26606#26954#0" />
+            <element signature="e#33470#36854#0" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -1,0 +1,61 @@
+.system-statistics-info-panel {
+    min-height: 95%;
+}
+
+.profit-statistics {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.management-statistics {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.venue-statistics {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.member-statistics {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.return-manage-info {
+    position: absolute;
+    left: 105px;
+    top: 200px;
+}
+
+/*------------------------------------------------------------------------------------------------------------*/
+.profit-tile {
+    border-bottom: 1px solid rgba(51, 51, 51, 0.3);
+}
+
+.profit-venue-show-chart-type {
+    margin-top: 30px;
+}
+
+.profit-venue-show-chart {
+    height: 400px;
+}
+
+.profit-program-show-chart-type {
+    margin-top: 30px;
+}
+
+.profit-program-show-chart {
+    height: 400px;
+}
+
+/*---------------------------------------------------------------------------------------------------------------*/
+.management-tile {
+    border-bottom: 1px solid rgba(51, 51, 51, 0.3);
+}
+
+/*---------------------------------------------------------------------------------------------------------------*/

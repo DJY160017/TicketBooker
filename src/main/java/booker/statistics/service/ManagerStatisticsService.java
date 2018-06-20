@@ -31,7 +31,7 @@ public interface ManagerStatisticsService {
      * @param year     年份
      * @return 收入
      */
-    List<TwoDimensionModel> averageVenueIncome(UnitTime unitTime, int year);
+    List<SuperTwoDimensionModel> averageVenueIncome(UnitTime unitTime, int year);
 
     /**
      * 节目的平均收入（月，季度）
@@ -40,16 +40,15 @@ public interface ManagerStatisticsService {
      * @param year     年份
      * @return 收入
      */
-    List<TwoDimensionModel> averageProgramIncome(UnitTime unitTime, int year);
+    List<SuperTwoDimensionModel> averageProgramIncome(UnitTime unitTime, int year);
 
     /**
      * 场馆的周转(所有的场馆)
      *
-     * @param unitTime
      * @param year
      * @return
      */
-    double turnover(UnitTime unitTime, int year);
+    double turnover(int year);
 
     /**
      * 场馆经营效益与地域的关系

@@ -8,6 +8,7 @@ import booker.model.Member;
 import booker.model.Program;
 import booker.model.Venue;
 import booker.model.id.ProgramID;
+import booker.statistics.dao.ManagerStatisticsDao;
 import booker.util.enums.state.ProgramState;
 import booker.util.enums.state.VenueState;
 import booker.util.helper.TimeHelper;
@@ -32,6 +33,8 @@ public class ProgramDaoImplTest {
 
     private MemberDao memberDao;
 
+    private ManagerStatisticsDao managerStatisticsDao;
+
     private String[] type = {"动漫", "话剧", "体育比赛", "音乐会"};
 
     private String[] comic = {"阿童木", "火影忍者", "海贼王", "死神", "妖精的尾巴", "一拳超人", "家庭教师", "名侦探柯南", "星游记"};
@@ -46,6 +49,7 @@ public class ProgramDaoImplTest {
         programDao = DaoManager.programDao;
         venueDao = DaoManager.venueDao;
         memberDao = DaoManager.memberDao;
+        managerStatisticsDao = DaoManager.managerStatisticsDao;
     }
 
     @Test
@@ -254,7 +258,7 @@ public class ProgramDaoImplTest {
     }
 
     private List<Program> readProgram() {
-            String type[] = new String[]{"演唱会", "音乐会", "话剧歌剧", "体育赛事", "舞蹈芭蕾", "儿童亲子", "曲艺杂谈", "展览休闲"};
+        String type[] = new String[]{"演唱会", "音乐会", "话剧歌剧", "体育赛事", "舞蹈芭蕾", "儿童亲子", "曲艺杂谈", "展览休闲"};
         File file = new File("C:\\Users\\Byron Dong\\Desktop\\other\\program.txt");
         List<Program> result = new ArrayList<>();
         try {
@@ -279,5 +283,20 @@ public class ProgramDaoImplTest {
             e.printStackTrace();
         }
         return result;
+    }
+
+    @Test
+    public void test() {
+        List<Venue> venues = venueDao.getVenueByState(VenueState.AlreadyPassed);
+        double turnover_sum = 0;
+        int real_size = 0;
+        for (Venue venue : venues) {
+            double venue_turnover = managerStatisticsDao.turnover(venue.getVenueID(), 2017);
+            if (venue_turnover != 0) {
+                turnover_sum = turnover_sum + venue_turnover;
+                real_size++;
+            }
+        }
+        System.out.println(turnover_sum / ((double) real_size));
     }
 }

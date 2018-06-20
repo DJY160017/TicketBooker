@@ -29,11 +29,11 @@
         <!-- 连接数据库连接池最大空闲时间 -->
         <property name="maxIdleTime" value="1800"/>
         <!-- 连接池初始化连接数 -->
-        <property name="initialPoolSize" value="2"/>
-        <property name="minPoolSize" value="2"/>
-        <property name="maxPoolSize" value="2000"/>
+        <property name="initialPoolSize" value="10"/>
+        <property name="minPoolSize" value="10"/>
+        <property name="maxPoolSize" value="10000"/>
         <!--当连接池中的连接耗尽的时候c3p0一次同时获取的连接数。默认值: 3 -->
-        <property name="acquireIncrement" value="2"/>
+        <property name="acquireIncrement" value="5"/>
         <property name="acquireRetryAttempts" value="10"/>
         <!-- 关闭缓存 -->
         <property name="maxStatements" value="0"/>

@@ -94,10 +94,10 @@
                     <a href="javascript:void(0)" id="manager-settlement-a" onclick="showManagerSettlement()"
                        style="color: #1b6d85">结算</a>
                 </li>
-                <li role="presentation">
-                    <a href="javascript:void(0)" id="platform-data-center-a" onclick="showPlatformDataCenter()"
-                       style="color: #1b6d85">平台数据中心</a>
-                </li>
+                <%--<li role="presentation">--%>
+                    <%--<a href="javascript:void(0)" id="platform-data-center-a" onclick="showPlatformDataCenter()"--%>
+                       <%--style="color: #1b6d85">平台数据中心</a>--%>
+                <%--</li>--%>
             </ul>
         </div>
         <div class="col-md-9 panel panel-default manager-panel">
@@ -147,38 +147,32 @@
                     </div>
                 </div>
             </div>
-            <div class="platform-data-center" id="platform-data-center" hidden>
-                <ul id="platform-data-center-tab" class="nav nav-tabs">
-                    <li class="active" onclick="userDataCenter()"><a href="#user" data-toggle="tab">用户</a></li>
-                    <li onclick="venueDataCenter()"><a href="#venue" data-toggle="tab">场馆</a></li>
-                </ul>
-                <div id="platform-data-center-tab-content" class="tab-content">
-                    <div class="tab-pane fade in active" id="user">
-                        <div class="user-num" id="user-num" style="margin-top: 30px;">
-                            <h3 id="users"></h3>
-                        </div>
-                        <div class="user-consume" id="user-consume" style="margin-top: 70px;margin-left: 30px">
-                            <div id="consume-chart" style="width: 280px;height: 280px;"></div>
-                        </div>
-                        <div class="member-percent" id="member-percent" style="position: absolute; top: 180px;left: 450px;">
-                            <div id="member-chart" style="width: 350px;height: 300px;"></div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade in" id="venue">
-                        <div class="venue-num" id="venue-num">
-                            <h3 class="col-md-4" id="venue-pass"></h3>
-                            <h3 class="col-md-4" id="venue-unApproved"></h3>
-                            <h3 class="col-md-4" id="venue-notThrough"></h3>
-                        </div>
-                        <div class="venue-now-year" id="venue-now-year">
-                            <div id="venue-year-chart" style="width: 800px;height: 400px"></div>
-                        </div>
-                        <div class="venue-profit" id="venue-profit" style="margin-top: 50px;margin-left: 280px;">
-                            <h3 id="venue-total-price"></h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <%--<div class="platform-data-center" id="platform-data-center" hidden>--%>
+                <%--<ul id="platform-data-center-tab" class="nav nav-tabs">--%>
+                    <%--<li class="active" onclick="userDataCenter()"><a href="#user" data-toggle="tab">用户</a></li>--%>
+                    <%--<li onclick="venueDataCenter()"><a href="#venue" data-toggle="tab">场馆</a></li>--%>
+                <%--</ul>--%>
+                <%--<div id="platform-data-center-tab-content" class="tab-content">--%>
+                    <%--<div class="tab-pane fade in active" id="user">--%>
+                        <%--<div class="user-num" id="user-num" style="margin-top: 30px;">--%>
+                            <%--<h3 id="users"></h3>--%>
+                        <%--</div>--%>
+                        <%--<div class="user-consume" id="user-consume" style="margin-top: 70px;margin-left: 30px">--%>
+                            <%--<div id="consume-chart" style="width: 280px;height: 280px;"></div>--%>
+                        <%--</div>--%>
+                        <%--<div class="member-percent" id="member-percent"--%>
+                             <%--style="position: absolute; top: 180px;left: 450px;">--%>
+                            <%--<div id="member-chart" style="width: 350px;height: 300px;"></div>--%>
+                        <%--</div>--%>
+                    <%--</div>--%>
+                    <%--<div class="tab-pane fade in" id="venue">--%>
+                       <%----%>
+                    <%--</div>--%>
+                <%--</div>--%>
+            <%--</div>--%>
+        </div>
+        <div class="check-system-statistics">
+            <a href="<c:url value="/statistics/manager/"/>">平台数据分析&gt;&gt;</a>
         </div>
     </div>
 </div>
