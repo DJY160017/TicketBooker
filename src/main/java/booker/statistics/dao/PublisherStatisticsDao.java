@@ -35,6 +35,22 @@ public interface PublisherStatisticsDao {
     List<Venue> getSmallSizeVenue(String size);
 
     /**
+     * 获取同一场馆类型,不同节目的座位类型价格区间(1,0,0)
+     *
+     * @param venueID 场馆ID
+     * @return
+     */
+    Map<String, Double[]> getSmallVenueSeatPriceRange(int venueID);
+
+    /**
+     * 获取同一场馆,相同节目类型座位类型价格区间(1,0,3)
+     *
+     * @param venueID 场馆ID
+     * @return
+     */
+    Map<String, Double[]> getSmallVenueSeatPriceRange(int venueID, String programType);
+
+    /**
      * 统计一个节目的各种座位类型的价格
      *
      * @param programID

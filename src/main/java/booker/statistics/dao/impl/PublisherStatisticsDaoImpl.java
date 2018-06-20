@@ -100,6 +100,73 @@ public class PublisherStatisticsDaoImpl implements PublisherStatisticsDao {
     }
 
     /**
+     * 获取同一场馆类型,不同节目的座位类型价格区间(1,0,0)
+     *
+     * @param venueID 场馆ID
+     * @return
+     */
+    @Override
+    public Map<String, Double[]> getSmallVenueSeatPriceRange(int venueID) {
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
+
+        String hql = "select max(t.price), min(t.price), t.seat_type from ticket as t  where t.vid=:venueID GROUP BY t.seat_type";
+        Query query = session.createNativeQuery(hql);
+        query.setParameter("venueID", venueID);
+        List<Object[]> result = query.list();
+        Map<String, Double[]> data = new HashMap<>();
+        for (Object[] objects : result) {
+            String seat = String.valueOf(objects[2]);
+            Double[] price = new Double[2];
+            price[1] = (Double) objects[0];
+            if (objects[1] == null) {
+                price[0] = (double) 0;
+            } else {
+                price[0] = (Double) objects[1];
+            }
+            data.put(seat, price);
+        }
+        transaction.commit();
+        session.close();
+        return data;
+    }
+
+    /**
+     * 获取同一场馆,相同节目类型座位类型价格区间(1,0,3)
+     *
+     * @param venueID     场馆ID
+     * @param programType
+     * @return
+     */
+    @Override
+    public Map<String, Double[]> getSmallVenueSeatPriceRange(int venueID, String programType) {
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
+
+        String hql = "SELECT max(t.price), min(t.price), t.seat_type FROM ticket AS t JOIN program AS p ON t.vid = p.vid and t.reserve_time=p.reserve_time " +
+                "WHERE t.vid =:venueID and p.type=:programType GROUP BY t.seat_type";
+        Query query = session.createNativeQuery(hql);
+        query.setParameter("venueID", venueID);
+        query.setParameter("programType", programType);
+        List<Object[]> result = query.list();
+        Map<String, Double[]> data = new HashMap<>();
+        for (Object[] objects : result) {
+            String seat = String.valueOf(objects[2]);
+            Double[] price = new Double[2];
+            price[1] = (Double) objects[0];
+            if (objects[1] == null) {
+                price[0] = (double) 0;
+            } else {
+                price[0] = (Double) objects[1];
+            }
+            data.put(seat, price);
+        }
+        transaction.commit();
+        session.close();
+        return data;
+    }
+
+    /**
      * 统计一个节目的各种座位类型的价格
      *
      * @param programID

@@ -126,39 +126,16 @@ public class PublisherStatisticsServiceImpl implements PublisherStatisticsServic
     }
 
     /**
-     * 获取同一场馆类型不同节目的座位类型价格区间
+     * 获取同一场馆，类型不同节目的座位类型价格区间
      *
      * @param venueID 场馆ID
      * @return
      */
     @Override
     public List<Map<String, Double[]>> getSmallVenueSeatPriceRange(int venueID) {
-        Venue venue = venueDao.getVenue(venueID);
-        List<Program> programs = venue.getPrograms();
-        List<Map<String, Double[]>> data = new ArrayList<>();
-        for (Program program : programs) {
-            Map<String, Double> map = publisherStatisticsDao.countProgramRange(program.getProgramID());
-            Map<String, Double[]> result = new HashMap<>();
-            for (String key : map.keySet()) {
-                String real_key = program.getName() + "/" + key;
-                if (!result.keySet().contains(real_key)) {
-                    result.put(real_key, new Double[]{0.0, map.get(key)});
-                } else {
-                    Double[] price = result.get(real_key);
-                    double need_price = map.get(key);
-                    if (need_price < price[0]) {
-                        price[0] = need_price;
-                    } else if (need_price > price[1]) {
-                        price[1] = need_price;
-                    } else if (price[0] == 0.0) { //当且仅当price[0] =0.0
-                        price[0] = need_price;
-                    }
-                    result.put(real_key, price);
-                }
-            }
-            data.add(result);
-        }
-        return data;
+        List<Map<String, Double[]>> result = new ArrayList<>();
+        result.add(publisherStatisticsDao.getSmallVenueSeatPriceRange(venueID));
+        return result;
     }
 
     /**
@@ -172,7 +149,7 @@ public class PublisherStatisticsServiceImpl implements PublisherStatisticsServic
         List<Venue> venues = publisherStatisticsDao.getSmallSizeVenue(size);
         List<Map<String, Double[]>> result = new ArrayList<>();
         for (Venue venue : venues) {
-            Map<String, Double[]> data = getVenueSeatPriceRange(venue.getPrograms());
+            Map<String, Double[]> data = publisherStatisticsDao.getSmallVenueSeatPriceRange(venue.getVenueID());
             result.add(data);
         }
         return result;
@@ -187,34 +164,9 @@ public class PublisherStatisticsServiceImpl implements PublisherStatisticsServic
      */
     @Override
     public List<Map<String, Double[]>> getSmallVenueSeatPriceRange(int venueID, String programType) {
-        Venue venue = venueDao.getVenue(venueID);
-        List<Program> programs = venue.getPrograms();
-        List<Map<String, Double[]>> data = new ArrayList<>();
-        for (Program program : programs) {
-            if (program.getProgramType().equals(programType)) {
-                Map<String, Double[]> result = new HashMap<>();
-                Map<String, Double> map = publisherStatisticsDao.countProgramRange(program.getProgramID());
-                for (String key : map.keySet()) {
-                    String real_key = program.getName() + "/" + key;
-                    if (!result.keySet().contains(real_key)) {
-                        result.put(real_key, new Double[]{0.0, map.get(key)});
-                    } else {
-                        Double[] price = result.get(real_key);
-                        double need_price = map.get(key);
-                        if (need_price < price[0]) {
-                            price[0] = need_price;
-                        } else if (need_price > price[1]) {
-                            price[1] = need_price;
-                        } else if (price[0] == 0.0) { //当且仅当price[0] =0.0
-                            price[0] = need_price;
-                        }
-                        result.put(real_key, price);
-                    }
-                }
-                data.add(result);
-            }
-        }
-        return data;
+        List<Map<String, Double[]>> result = new ArrayList<>();
+        result.add(publisherStatisticsDao.getSmallVenueSeatPriceRange(venueID, programType));
+        return result;
     }
 
     /**
@@ -229,84 +181,8 @@ public class PublisherStatisticsServiceImpl implements PublisherStatisticsServic
         List<Venue> venues = publisherStatisticsDao.getSmallSizeVenue(size);
         List<Map<String, Double[]>> data = new ArrayList<>();
         for (Venue venue : venues) {
-            List<Program> programs = venue.getPrograms();
-            for (Program program : programs) {
-                if (program.getProgramType().equals(programType)) {
-                    Map<String, Double[]> result = new HashMap<>();
-                    Map<String, Double> map = publisherStatisticsDao.countProgramRange(program.getProgramID());
-                    for (String key : map.keySet()) {
-                        String real_key = program.getName() + "/" + key;
-                        if (!result.keySet().contains(real_key)) {
-                            result.put(real_key, new Double[]{0.0, map.get(key)});
-                        } else {
-                            Double[] price = result.get(real_key);
-                            double need_price = map.get(key);
-                            if (need_price < price[0]) {
-                                price[0] = need_price;
-                            } else if (need_price > price[1]) {
-                                price[1] = need_price;
-                            } else if (price[0] == 0.0) { //当且仅当price[0] =0.0
-                                price[0] = need_price;
-                            }
-                            result.put(real_key, price);
-                        }
-                    }
-                    data.add(result);
-                }
-            }
+            data.add(publisherStatisticsDao.getSmallVenueSeatPriceRange(venue.getVenueID(), programType));
         }
         return data;
-    }
-
-    /**
-     * @param localDateTime
-     * @return
-     */
-    private Integer createTag(UnitTime unitTime, LocalDateTime localDateTime) {
-        if (unitTime.equals(UnitTime.MONTH)) {
-            return localDateTime.getMonthValue();
-        } else {
-            int month = localDateTime.getMonthValue();
-            if (month <= 3) {
-                return 1;
-            } else if (month <= 6) {
-                return 2;
-            } else if (month <= 9) {
-                return 3;
-            } else {
-                return 4;
-            }
-        }
-    }
-
-    /**
-     * 降低一次取场馆的消耗
-     *
-     * @return
-     */
-    private Map<String, Double[]> getVenueSeatPriceRange(List<Program> programs) {
-        Map<String, Double[]> result = new HashMap<>();
-        for (Program program : programs) {
-            Map<String, Double> map = publisherStatisticsDao.countProgramRange(program.getProgramID());
-            for (String key : map.keySet()) {
-                String real_key = program.getName() + "/" + key;
-                if (!result.keySet().contains(real_key)) {
-                    result.put(real_key, new Double[]{0.0, map.get(key)});
-                } else {
-                    Double[] price = result.get(real_key);
-                    double need_price = map.get(key);
-                    if (need_price < price[0]) {
-                        price[0] = need_price;
-                    } else if (need_price > price[1]) {
-                        price[1] = need_price;
-                    } else if (price[0] == 0.0) { //当且仅当price[0] =0.0
-                        price[0] = need_price;
-                    }
-                    result.put(real_key, price);
-                }
-            }
-
-        }
-        return result;
     }
 }

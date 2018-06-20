@@ -60,15 +60,14 @@ public class PublisherStatisticsController {
         Map<String, Double[]> need_result = new HashMap<>();
         for (Map<String, Double[]> map : result) {
             for (String key : map.keySet()) {
-                String real_key = key.split("/")[1];
-                if (!need_result.keySet().contains(real_key)) {
-                    need_result.put(real_key, map.get(key));
+                if (!need_result.keySet().contains(key)) {
+                    need_result.put(key, map.get(key));
                 } else {
                     Double[] prices = map.get(key);
-                    Double[] pre_prices = need_result.get(real_key);
+                    Double[] pre_prices = need_result.get(key);
                     pre_prices[0] = (pre_prices[0] + prices[0]) / 2.0;
                     pre_prices[1] = (pre_prices[1] + prices[1]) / 2.0;
-                    need_result.put(real_key, pre_prices);
+                    need_result.put(key, pre_prices);
                 }
             }
         }
