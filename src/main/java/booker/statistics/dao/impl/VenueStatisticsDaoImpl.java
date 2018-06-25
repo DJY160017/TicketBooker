@@ -327,7 +327,7 @@ public class VenueStatisticsDaoImpl implements VenueStatisticsDao {
         List<TwoDimensionModel> result = new ArrayList<>();
         for (Object[] objects : times) {
             LocalDateTime start = (LocalDateTime) objects[0];
-            int day = ((Long) objects[1]).intValue();
+            int day = (int) objects[1];
             TwoDimensionModel<LocalDateTime, Integer> twoDimensionModel = new TwoDimensionModel<>(start, day);
             result.add(twoDimensionModel);
         }

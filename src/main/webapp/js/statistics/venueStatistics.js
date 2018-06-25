@@ -184,34 +184,27 @@ function createMarketChart(id, data) {
     }
 
     var needData = splitData(data);
+    console.log(needData);
     var chart = echarts.init(document.getElementById(id));
     chart.showLoading();
     var option = {
+        tooltip: {
+            trigger: 'axis'
+        },
         radar: [{
             indicator: needData.indicator,
             center: ['50%', '50%'],
-            radius: 120,
-            startAngle: 90,
-            splitNumber: 4
+            radius: 120
         }],
         series: [{
-            name: '场馆',
+            tooltip: {
+                trigger: 'item'
+            },
             type: 'radar',
+            itemStyle: {normal: {areaStyle: {type: 'default'}}},
             data: [{
                 value: needData.values,
-                name: '场馆',
-                areaStyle: {
-                    normal: {
-                        opacity: 0.9,
-                        color: new echarts.graphic.RadialGradient(0.5, 0.5, 1, [{
-                            color: '#B8D3E4',
-                            offset: 0
-                        }, {
-                            color: '#72ACD1',
-                            offset: 1
-                        }])
-                    }
-                }
+                name: '场馆'
             }]
         }]
     };
@@ -295,12 +288,15 @@ function createBookIndexChart(id, data, unitTime) {
 function createScatterChart(id, data) {
     function splitData(rawData) {
         var values = [];
+        var categoies = [];
         for (var index in rawData) {
             var value = [];
+            categoies.push(rawData[index]['tag']);
             value.push(rawData[index]['tag'], rawData[index]['data']);
             values.push(value);
         }
         return {
+            categoies: categoies,
             values: values
         };
     }
@@ -315,7 +311,8 @@ function createScatterChart(id, data) {
         }],
         xAxis: {
             type: 'category',
-            scale: true
+            scale: true,
+            data: needData.categoies
         },
         yAxis: {
             type: 'value',
