@@ -1,10 +1,7 @@
 package booker.dao.impl;
 
 import booker.dao.*;
-import booker.model.Member;
-import booker.model.Order;
-import booker.model.Program;
-import booker.model.Ticket;
+import booker.model.*;
 import booker.model.id.OrderID;
 import booker.model.id.ProgramID;
 import booker.model.id.TicketID;
@@ -33,12 +30,15 @@ public class OrderDaoImplTest {
 
     private MemberDao memberDao;
 
+    private VenueDao venueDao;
+
     @Before
     public void setUp() throws Exception {
         orderDao = DaoManager.orderDao;
         ticketDao = DaoManager.ticketDao;
         programDao = DaoManager.programDao;
         memberDao = DaoManager.memberDao;
+        venueDao = DaoManager.venueDao;
     }
 
     @Test
@@ -79,6 +79,50 @@ public class OrderDaoImplTest {
     public void randomAddOrder() throws Exception {
         List<Member> members = memberDao.getLevelMembers();
         List<Program> programs = programDao.getPlanByState(ProgramState.AlreadyPassed);
+        for (Program program : programs) {
+            double saleRate = saleRate(program.getProgramType());
+            List<Ticket> tickets = ticketDao.getProgramTicket(program.getProgramID());
+            int sale_ticket = (int) (tickets.size() * saleRate);
+            for (int i = 0; i < sale_ticket; i++) {
+                Member member = members.get(createRandomKey(members.size()));
+                OrderID orderID = new OrderID();
+                orderID.setUserID(member.getMail());
+                orderID.setOrderTime(createRandomDate(program.getProgramID().getReserve_time()));
+                Order test_order = orderDao.getOrder(orderID);
+                while (test_order != null) {
+                    orderID.setOrderTime(createRandomDate(program.getProgramID().getReserve_time()));
+                    test_order = orderDao.getOrder(orderID);
+                }
+                Order order = new Order();
+                order.setOrderID(orderID);
+                order.setProgramID(program.getProgramID());
+                order.setAutoTicket(true);
+                order.setOrderState(OrderState.AlreadyPaid);
+                order.setTotal_price(tickets.get(i).getPrice());
+                order.setDetail("无");
+                Ticket ticket = tickets.get(i);
+                ticket.setTicketState(TicketState.AlreadyPaid);
+                ticket.setOrder(order);
+                List<Ticket> new_tickets = new ArrayList<>();
+                new_tickets.add(ticket);
+                order.setTickets(new_tickets);
+                orderDao.addOrder(order);
+                System.out.println("add order: " + order.getOrderID().getUserID() + "---" + order.getOrderID().getOrderTime().toString());
+            }
+            for (int i = sale_ticket; i < tickets.size(); i++) {
+                Ticket ticket = tickets.get(i);
+                ticket.setTicketState(TicketState.Invalid);
+                ticketDao.updateOneTicket(ticket);
+                System.out.println("update unuse ticket: " + ticket.getTicketID().getProgramID().getVenueID() + "--" + ticket.getTicketID().getCol_num() + "--" + ticket.getTicketID().getRaw_num());
+            }
+        }
+    }
+
+    @Test
+    public void randomAddOrder2() throws Exception {
+        Venue venue = venueDao.getVenue(342);
+        List<Member> members = memberDao.getLevelMembers();
+        List<Program> programs = venue.getPrograms();
         for (Program program : programs) {
             double saleRate = saleRate(program.getProgramType());
             List<Ticket> tickets = ticketDao.getProgramTicket(program.getProgramID());

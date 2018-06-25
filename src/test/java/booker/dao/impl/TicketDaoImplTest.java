@@ -3,8 +3,10 @@ package booker.dao.impl;
 import booker.dao.DaoManager;
 import booker.dao.ProgramDao;
 import booker.dao.TicketDao;
+import booker.dao.VenueDao;
 import booker.model.Program;
 import booker.model.Ticket;
+import booker.model.Venue;
 import booker.model.id.ProgramID;
 import booker.model.id.TicketID;
 import booker.util.enums.state.ProgramState;
@@ -23,6 +25,8 @@ public class TicketDaoImplTest {
 
     private ProgramDao programDao;
 
+    private VenueDao venueDao;
+
     /**
      * 行方向加价规则
      */
@@ -37,6 +41,7 @@ public class TicketDaoImplTest {
     public void setUp() throws Exception {
         ticketDao = DaoManager.ticketDao;
         programDao = DaoManager.programDao;
+        venueDao = DaoManager.venueDao;
     }
 
     @Test
@@ -63,6 +68,35 @@ public class TicketDaoImplTest {
                 }
             }
             ticketDao.addTickets(tickets);
+        }
+    }
+
+    @Test
+    public void addTickets2() throws Exception {
+        Venue venue = venueDao.getVenue(342);
+        List<Program> programs = venue.getPrograms();
+        for (Program program : programs) {
+            List<Ticket> tickets = new ArrayList<>();
+            int raw = program.getVenue().getRaw_num();
+            int col = program.getVenue().getCol_num();
+            for (int i = 1; i <= raw; i++) {
+                for (int j = 1; j < col; j++) {
+                    Ticket ticket = new Ticket();
+                    TicketID ticketID = new TicketID();
+                    ticketID.setProgramID(program.getProgramID());
+                    ticketID.setRaw_num(i);
+                    ticketID.setCol_num(j);
+                    ticket.setTicketID(ticketID);
+                    ticket.setSeatType(createAreaName(j, i, col, raw));
+                    ticket.setPrice(calculatePrice(ticket.getSeatType()));
+                    ticket.setTicketState(TicketState.PendingReservation);
+                    ticket.setCheck(false);
+                    tickets.add(ticket);
+                    System.out.println("col:" + j + " row:" + i + " area:" + ticket.getSeatType());
+                }
+            }
+            ticketDao.addTickets(tickets);
+            System.out.println("-----------------------------------------------------------------");
         }
     }
 

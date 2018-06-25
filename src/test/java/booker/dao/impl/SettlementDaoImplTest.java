@@ -12,11 +12,10 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.time.*;
-import java.time.temporal.ChronoField;
 import java.util.Date;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class SettlementDaoImplTest {
 
@@ -102,6 +101,35 @@ public class SettlementDaoImplTest {
             settlement.setProgramID(program.getProgramID());
             settlement.setSettlementState(SettlementState.AlreadySettled);
 
+            settlementDao.add(settlement);
+        }
+    }
+
+    @Test
+    public void addSettlement2() {
+        Venue venue = venueDao.getVenue(342);
+        List<Program> programs = venue.getPrograms();
+        for (Program program : programs) {
+            BankAccount catererAccount = externalBalanceDao.getUserAccount(program.getCaterer());
+            BankAccount venueAccount = externalBalanceDao.getUserAccount(String.valueOf(venue.getVenueID()));
+            double storePrice = orderDao.countSumPrice(program.getProgramID());
+            Duration duration = Duration.between(program.getStart_time(), program.getEnd_time());
+            double venuePrice = venue.getPrice() * duration.toDays();
+            SettlementID settlementID = new SettlementID();
+            settlementID.setStoreAccount(catererAccount.getAccount());
+            settlementID.setVenueAccount(venueAccount.getAccount());
+            settlementID.setSettlement_time(randomeLocalDateTime(program.getEnd_time(), program.getEnd_time().plusDays(5)));
+            Settlement test_settlement = settlementDao.getOne(settlementID);
+            while (test_settlement != null) {
+                settlementID.setSettlement_time(randomeLocalDateTime(program.getEnd_time(), program.getEnd_time().plusDays(5)));
+                test_settlement = settlementDao.getOne(settlementID);
+            }
+            Settlement settlement = new Settlement();
+            settlement.setSettlementID(settlementID);
+            settlement.setStoreTotalPrice(storePrice);
+            settlement.setVenueTotalPrice(venuePrice);
+            settlement.setProgramID(program.getProgramID());
+            settlement.setSettlementState(SettlementState.AlreadySettled);
             settlementDao.add(settlement);
         }
     }

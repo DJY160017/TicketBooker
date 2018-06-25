@@ -112,6 +112,43 @@ public class ProgramDaoImplTest {
     }
 
     @Test
+    public void addProgram(){
+        Venue venue = venueDao.getVenue(342);
+        Member member = memberDao.get("15338595517@163.com");
+        List<Program> programs = readProgram();
+        int year = 2018;
+        int month = 6;
+        for (int i = 1; i <= month; i++) {
+            Program program = programs.get(createRandomKey(programs.size()));
+            LocalDate startDate = randomAftDate(year, i);
+            LocalDateTime start = LocalDateTime.of(startDate, LocalTime.of(0, 0, 0));
+            LocalDateTime end = LocalDateTime.of(startDate.plusDays(3), LocalTime.of(0, 0, 0));
+            LocalDateTime reserveTime = LocalDateTime.of(end.toLocalDate().minusDays(1), LocalTime.of(19, 0, 0));
+            ProgramID programID = new ProgramID();
+            programID.setVenueID(venue.getVenueID());
+            programID.setReserve_time(reserveTime);
+            Program testProgram = programDao.getOneProgram(programID);
+            while (testProgram != null) {
+                startDate = randomPreDate(year, i);
+                start = LocalDateTime.of(startDate, LocalTime.of(0, 0, 0));
+                end = LocalDateTime.of(startDate.plusDays(3), LocalTime.of(0, 0, 0));
+                reserveTime = LocalDateTime.of(end.toLocalDate().minusDays(1), LocalTime.of(19, 0, 0));
+                programID.setReserve_time(reserveTime);
+                testProgram = programDao.getOneProgram(programID);
+            }
+            program.setProgramID(programID);
+            program.setStart_time(start);
+            program.setEnd_time(end);
+            program.setProgramState(ProgramState.AlreadyPassed);
+            program.setCaterer(member.getMail());
+            venue.getPrograms().add(program);
+            program.setVenue(venue);
+            programDao.addOneProgram(program);
+            System.out.println(program.getProgramID().getVenueID() + " " + program.getProgramID().getReserve_time());
+        }
+    }
+
+    @Test
     public void modifyProgram() throws Exception {
         List<Program> programs = programDao.getPlanByState(ProgramState.AlreadyPassed);
         for (Program program : programs) {
@@ -233,6 +270,25 @@ public class ProgramDaoImplTest {
             v = 0;
         }
         return v;
+    }
+
+    private LocalDate randomPreDate(int year, int month) {
+        double rate = Math.random();
+        int day = (int) (rate * (11));
+        if (day <= 0) {
+            day = 1;
+        }
+        return LocalDate.of(year, month, day);
+    }
+
+    private LocalDate randomAftDate(int year, int month) {
+        double rate = Math.random();
+        int monthLength = TimeHelper.getMonthLength(year, month);
+        int day = (int) (rate * (monthLength - 15) + 13);
+        if (day > monthLength) {
+            day = monthLength;
+        }
+        return LocalDate.of(year, month, day);
     }
 
     private LocalDate randomDate(int year) {
