@@ -66,5 +66,4 @@ public interface UserStatisticsService {
      * @return 价格区间
      */
     double[] countCostRange(String userID);
-
 }

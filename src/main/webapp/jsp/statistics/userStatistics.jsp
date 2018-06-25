@@ -162,7 +162,11 @@
                 <div class="program-income-tile" style="border-bottom: 1px solid rgba(51, 51, 51, 0.3);">
                     <p class="program-income-title-p">节目收入统计</p>
                 </div>
-                <div class="chart-type col-md-offset-8 col-md-4">
+                <div class="seat-order-chart-show col-md-offset-1 col-md-10 col-md-offset-1" id="seat-order-chart-show"
+                     style=" margin-top: 40px;">
+                    <div class="seat-order-chart" id="seat-order-chart" style="height: 400px;"></div>
+                </div>
+                <div class="chart-type-other col-md-offset-8 col-md-4" style="margin-top: 15px;">
                     <div class="btn-group">
                         <button type="button" class="btn btn-default dropdown-toggle btn-sm" id="program-show-year"
                                 data-toggle="dropdown">
@@ -210,8 +214,10 @@
                         </button>
                     </div>
                 </div>
-                <div class="program-income-chart col-md-offset-1 col-md-10 col-md-offset-1" id="program-income-chart"
-                     style=" margin-top: 15px;height: 400px;"></div>
+                <div class="program-income-chart-show col-md-offset-1 col-md-10 col-md-offset-1"
+                     id="program-income-chart-show" style=" margin-top: 15px;">
+                    <div class="program-income-chart" id="program-income-chart" style="height: 400px;"></div>
+                </div>
             </div>
         </div>
         <div class="return-my-info">

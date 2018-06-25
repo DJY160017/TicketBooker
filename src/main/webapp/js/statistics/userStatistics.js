@@ -134,9 +134,9 @@ function showProgram() {
             unit_time_year: '2018'
         },
         success: function (data) {
-            $('#program-income-chart').remove();
-            var new_chart_div = $('<div class="program-chart col-md-offset-1 col-md-10 col-md-offset-1" id="program-income-chart" style=" margin-top: 15px;height: 400px;"></div>');
-            $("#my-program-statistics").append(new_chart_div);
+            $('#program-income-chart-show').empty();
+            var new_chart_div = $('<div class="program-income-chart" id="program-income-chart" style="height: 400px;"></div>');
+            $("#program-income-chart-show").append(new_chart_div);
 
             var myData = [];
             for (var index in data['result']) {
@@ -145,8 +145,21 @@ function showProgram() {
                 item.push(data['result'][index]['data']);
                 myData.push(item);
             }
-            console.log('enter');
             createIncomeChart('program-income-chart', myData, '您的2018年详细节目收入统计');
+        },
+        error: function (result) {
+            console.log(result);
+        }
+    });
+    $.ajax({
+        type: "post",
+        dataType: 'json',
+        url: "/statistics/publisher/req_seatOrderRate",
+        success: function (data) {
+            $('#seat-order-chart-show').empty();
+            var new_chart_div = $('<div class="seat-order-chart" id="seat-order-chart" style="height: 400px;"></div>');
+            $("#seat-order-chart-show").append(new_chart_div);
+            createSeatRateChart('seat-order-chart', data['result']);
         },
         error: function (result) {
             console.log(result);
@@ -619,6 +632,181 @@ function createIncomeChart(id, data, seriesTitle) {
                 }
             }
         ]
+    };
+    chart.setOption(option);
+    chart.hideLoading();
+    return chart;
+}
+
+function createSeatRateChart(id, data) {
+    function splitData(rawData) {
+        var values = [];
+        var reverse_values = [];
+        var categories = [];
+        for (var index in rawData) {
+            var name = rawData[index]['tag'];
+            var value = rawData[index]['data'];
+            var reverse_value = 1 - value;
+            reverse_values.push(reverse_value.toFixed(3));
+            values.push(value);
+            categories.push(name.split('T')[0]);
+        }
+        return {
+            categories: categories,
+            values: values,
+            reverse_values: reverse_values
+        };
+    }
+
+    var needData = splitData(data);
+    var chart = echarts.init(document.getElementById(id));
+    chart.showLoading();
+    var option = {
+        title: {
+            text: "节目上座率统计",
+            x: "4%"
+        },
+        tooltip: {
+            trigger: "axis",
+            axisPointer: {
+                type: "shadow",
+                textStyle: {
+                    color: "#fff"
+                }
+
+            }
+        },
+        grid: {
+            borderWidth: 0,
+            top: 110,
+            bottom: 95,
+            textStyle: {
+                color: "#fff"
+            }
+        },
+        legend: {
+            x: '4%',
+            top: '11%',
+            textStyle: {
+                color: '#90979c'
+            },
+            data: ['上座率', '缺失率']
+        },
+        calculable: true,
+        xAxis: [{
+            type: "category",
+            splitLine: {
+                show: false
+            },
+            axisTick: {
+                show: false
+            },
+            splitArea: {
+                show: false
+            },
+            axisLabel: {
+                interval: 0
+            },
+            data: needData.categories
+        }],
+        yAxis: [{
+            type: "value",
+            splitLine: {
+                show: false
+            },
+            axisTick: {
+                show: false
+            },
+            axisLabel: {
+                interval: 0
+
+            },
+            splitArea: {
+                show: false
+            }
+        }],
+        dataZoom: [{
+            show: true,
+            height: 30,
+            xAxisIndex: [
+                0
+            ],
+            bottom: 30,
+            start: 70,
+            end: 80,
+            handleSize: '110%',
+            handleStyle: {
+                color: "#d3dee5"
+            },
+            borderColor: "#90979c"
+        }, {
+            type: "inside",
+            show: true,
+            height: 15,
+            start: 1,
+            end: 35
+        }],
+        series: [{
+            name: "上座率",
+            type: "bar",
+            stack: "总量",
+            barMaxWidth: 35,
+            barGap: "10%",
+            itemStyle: {
+                normal: {
+                    color: "rgba(255,144,128,1)",
+                    label: {
+                        show: true,
+                        textStyle: {
+                            color: "#fff"
+                        },
+                        position: "insideTop",
+                        formatter: function (p) {
+                            return p.value > 0 ? (p.value) : '';
+                        }
+                    }
+                }
+            },
+            data: needData.values
+        }, {
+            name: "缺失率",
+            type: "bar",
+            stack: "总量",
+            itemStyle: {
+                normal: {
+                    color: "rgba(0,191,183,1)",
+                    barBorderRadius: 0,
+                    label: {
+                        show: true,
+                        position: "top",
+                        formatter: function (p) {
+                            return p.value > 0 ? (p.value) : '';
+                        }
+                    }
+                }
+            },
+            data: needData.reverse_values
+        }, {
+            name: "上座率展示",
+            type: "line",
+            stack: "总量",
+            symbolSize: 10,
+            symbol: 'circle',
+            itemStyle: {
+                normal: {
+                    color: "rgba(252,230,48,1)",
+                    barBorderRadius: 0,
+                    label: {
+                        show: true,
+                        position: "top",
+                        formatter: function (p) {
+                            return p.value > 0 ? (p.value) : '';
+                        }
+                    }
+                }
+            },
+            data: needData.values
+        }]
     };
     chart.setOption(option);
     chart.hideLoading();

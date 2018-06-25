@@ -100,4 +100,18 @@ public class PublisherStatisticsController {
         jsonObject.put("result", result);
         return jsonObject.toString();
     }
+
+    /**
+     * 【请求】获取节目发布者节目的上座率
+     */
+    @PostMapping(value = "/req_seatOrderRate", produces = "text/json;charset=UTF-8;")
+    public @ResponseBody
+    String reqSeatOrderRate(HttpServletRequest request, HttpServletResponse response) {
+        HttpSession session = request.getSession(false);
+        String userID = String.valueOf(session.getAttribute("user_mail"));
+        List<TwoDimensionModel> result = publisherStatisticsService.countSeatRate(userID);
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("result", result);
+        return jsonObject.toString();
+    }
 }

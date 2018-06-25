@@ -58,4 +58,11 @@ public interface PublisherStatisticsDao {
      */
     Map<String, Double> countProgramRange(ProgramID programID);
 
+    /**
+     * 计算节目的上座率
+     *
+     * @param carter 节目发布者
+     * @return 所有节目的上座率
+     */
+    List<TwoDimensionModel> countSeatRate(String carter);
 }

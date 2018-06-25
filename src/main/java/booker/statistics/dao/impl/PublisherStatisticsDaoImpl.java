@@ -13,6 +13,9 @@ import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.math.BigDecimal;
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -184,6 +187,81 @@ public class PublisherStatisticsDaoImpl implements PublisherStatisticsDao {
         Map<String, Double> data = new HashMap<>();
         for (Object[] objects : result) {
             data.put(String.valueOf(objects[0]), (Double) objects[1]);
+        }
+        transaction.commit();
+        session.close();
+        return data;
+    }
+
+    /**
+     * 计算节目的上座率
+     *
+     * @param carter 节目发布者
+     * @return 所有节目的上座率
+     */
+    @Override
+    public List<TwoDimensionModel> countSeatRate(String carter) {
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
+
+        String sql = "SELECT\n" +
+                "\t(t1.num /(t1.num + t2.num)), t1.reserve_time\n" +
+                "FROM\n" +
+                "\t(\n" +
+                "\t\tSELECT\n" +
+                "\t\t\tcount(*) AS num,\n" +
+                "\t\t\tt.vid,\n" +
+                "\t\t\tt.reserve_time\n" +
+                "\t\tFROM\n" +
+                "\t\t\t(\n" +
+                "\t\t\t\tSELECT\n" +
+                "\t\t\t\t\t*\n" +
+                "\t\t\t\tFROM\n" +
+                "\t\t\t\t\tprogram\n" +
+                "\t\t\t\tWHERE\n" +
+                "\t\t\t\t\tcaterer =:userID1\n" +
+                "\t\t\t) AS p\n" +
+                "\t\tJOIN ticket AS t ON p.vid = t.vid\n" +
+                "\t\tAND p.reserve_time = t.reserve_time\n" +
+                "\t\tAND t.state = '2'\n" +
+                "\t\tGROUP BY\n" +
+                "\t\t\tt.vid,\n" +
+                "\t\t\tt.reserve_time\n" +
+                "\t) AS t1,\n" +
+                "\t(\n" +
+                "\t\tSELECT\n" +
+                "\t\t\tcount(*) AS num,\n" +
+                "\t\t\tt.vid,\n" +
+                "\t\t\tt.reserve_time\n" +
+                "\t\tFROM\n" +
+                "\t\t\t(\n" +
+                "\t\t\t\tSELECT\n" +
+                "\t\t\t\t\t*\n" +
+                "\t\t\t\tFROM\n" +
+                "\t\t\t\t\tprogram\n" +
+                "\t\t\t\tWHERE\n" +
+                "\t\t\t\t\tcaterer =:userID2\n" +
+                "\t\t\t) AS p\n" +
+                "\t\tJOIN ticket AS t ON p.vid = t.vid\n" +
+                "\t\tAND p.reserve_time = t.reserve_time\n" +
+                "\t\tAND t.state = '3'\n" +
+                "\t\tGROUP BY\n" +
+                "\t\t\tt.vid,\n" +
+                "\t\t\tt.reserve_time\n" +
+                "\t) AS t2\n" +
+                "WHERE\n" +
+                "\tt1.vid = t2.vid\n" +
+                "AND t1.reserve_time = t2.reserve_time order by t1.reserve_time";
+        Query query = session.createNativeQuery(sql);
+        query.setParameter("userID1", carter);
+        query.setParameter("userID2", carter);
+        List<Object[]> result = query.list();
+        List<TwoDimensionModel> data = new ArrayList<>();
+        for (Object[] objects : result) {
+            LocalDateTime localDateTime = ((Timestamp) objects[1]).toLocalDateTime();
+            Double rate = ((BigDecimal) objects[0]).setScale(3, BigDecimal.ROUND_HALF_UP).doubleValue();
+            TwoDimensionModel<LocalDateTime, Double> timeDoubleTwoDimensionModel = new TwoDimensionModel<>(localDateTime, rate);
+            data.add(timeDoubleTwoDimensionModel);
         }
         transaction.commit();
         session.close();

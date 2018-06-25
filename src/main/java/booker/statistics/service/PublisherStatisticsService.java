@@ -75,4 +75,12 @@ public interface PublisherStatisticsService {
      * @return
      */
     List<Map<String, Double[]>> getSmallSizeSeatPriceRange(String size, String programType);
+
+    /**
+     * 计算节目的上座率
+     *
+     * @param carter 节目发布者
+     * @return 所有节目的上座率
+     */
+    List<TwoDimensionModel> countSeatRate(String carter);
 }
